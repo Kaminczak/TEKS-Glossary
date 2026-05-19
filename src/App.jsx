@@ -38,8 +38,8 @@ export default function App() {
     return <AdminShell subview={route.subview} navigate={navigate} />;
   }
 
-  // Default: list view
-  return <TEKListPage navigate={navigate} />;
+  // Default: list view (route.filters may pre-fill course/strand)
+  return <TEKListPage navigate={navigate} initialFilters={route.filters || {}} />;
 }
 
 function AdminShell({ subview, navigate }) {

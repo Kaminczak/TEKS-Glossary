@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import teksData from "../data/teksData.json";
 import { tekPath } from "../hooks/useHashRoute";
 import {
@@ -182,10 +182,22 @@ function TopBar({ search, setSearch, course, setCourse, strand, setStrand, count
   );
 }
 
-export default function TEKListPage({ navigate }) {
+export default function TEKListPage({ navigate, initialFilters = {} }) {
   const [search, setSearch] = useState("");
-  const [course, setCourse] = useState("All courses");
-  const [strand, setStrand] = useState("All strands");
+  const [course, setCourse] = useState(initialFilters.course || "All courses");
+  const [strand, setStrand] = useState(initialFilters.strand || "All strands");
+
+  // If URL filters change (back/forward navigation), sync local state
+  useEffect(() => {
+    if (initialFilters.course && initialFilters.course !== course) {
+      setCourse(initialFilters.course);
+    }
+    if (initialFilters.strand && initialFilters.strand !== strand) {
+      setStrand(initialFilters.strand);
+    }
+    // Only sync when URL filters change, not when user edits dropdown
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [initialFilters.course, initialFilters.strand]);
 
   const filtered = useMemo(() => {
     const q = search.trim().toLowerCase();

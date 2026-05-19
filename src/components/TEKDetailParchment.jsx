@@ -10,6 +10,19 @@ import {
   IconWorld, IconHome,
   GLYPH,
 } from './icons/TablerIcons';
+import { listPath } from '../hooks/useHashRoute';
+
+// ELA strands (canonical order matches the HANDOFF strand/substrand lookup).
+// Other subjects' strands aren't in data yet.
+const ELA_STRANDS = [
+  'Foundational Language Skills',
+  'Comprehension Skills',
+  'Response Skills',
+  'Multiple Genres',
+  "Author's Purpose and Craft",
+  'Composition',
+  'Inquiry & Research',
+];
 
 const SUBJECT_NAV = [
   { id: 'home', label: 'Home', icon: IconHome, accent: null, kind: 'link' },
@@ -221,11 +234,12 @@ function GlyphStrip({ glyphs }) {
   );
 }
 
-function SidebarSubject({ subject, activeSubject, expanded, onToggle }) {
+function SidebarSubject({ subject, activeSubject, expanded, onToggle, onNavigate, activeStrand }) {
   const isActive = subject.id === activeSubject;
   const isExpanded = expanded;
   const Icon = subject.icon;
   const [aiOpen, setAiOpen] = useState(isActive); // ELA's AI Tools open by default
+  const [teksOpen, setTeksOpen] = useState(isActive); // Show strands by default for active subject
 
   if (subject.kind === 'link') {
     return (
@@ -278,7 +292,17 @@ function SidebarSubject({ subject, activeSubject, expanded, onToggle }) {
           className="ml-3 my-1 pl-3 flex flex-col gap-0.5"
           style={{ borderLeft: `2px solid ${subject.accent}` }}
         >
+          {/* {Subject} TEKs — expandable accordion showing strands underneath */}
           <button
+            onClick={(e) => {
+              e.stopPropagation();
+              // Only ELA has strand data right now
+              if (subject.id === 'ela') {
+                setTeksOpen(!teksOpen);
+              } else {
+                onNavigate?.(listPath());
+              }
+            }}
             className="flex items-center gap-2 px-2 py-1.5 rounded text-xs text-left hover:bg-white/40 transition-colors"
             style={{ color: PALETTE.inkSecondary }}
           >
@@ -292,9 +316,49 @@ function SidebarSubject({ subject, activeSubject, expanded, onToggle }) {
                 border: `1px solid ${PALETTE.tagBorder}`,
               }}
             >
-              278
+              {subject.id === 'ela' ? '278' : '—'}
             </span>
+            {subject.id === 'ela' && (
+              <span
+                className="text-[10px] transition-transform"
+                style={{
+                  color: PALETTE.stone,
+                  transform: teksOpen ? 'rotate(90deg)' : 'none',
+                }}
+              >
+                <IconChevronRight size={11} />
+              </span>
+            )}
           </button>
+
+          {/* Strands shown when expanded — clickable, filter the list */}
+          {subject.id === 'ela' && teksOpen && (
+            <div className="ml-4 my-0.5 flex flex-col">
+              {ELA_STRANDS.map((strandName) => {
+                const isStrandActive = strandName === activeStrand;
+                return (
+                  <button
+                    key={strandName}
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      onNavigate?.(listPath({ strand: strandName }));
+                    }}
+                    className="flex items-center gap-2 px-2 py-1 rounded text-[11px] text-left hover:bg-white/40 transition-colors"
+                    style={{
+                      color: isStrandActive ? PALETTE.inkPrimary : PALETTE.inkSecondary,
+                      fontWeight: isStrandActive ? 600 : 400,
+                    }}
+                  >
+                    <span
+                      className="w-1 h-1 rounded-full inline-block"
+                      style={{ background: subject.accent }}
+                    />
+                    <span className="flex-1">{strandName}</span>
+                  </button>
+                );
+              })}
+            </div>
+          )}
 
           <button
             className="flex items-center gap-2 px-2 py-1.5 rounded text-xs text-left hover:bg-white/40 transition-colors"
@@ -357,7 +421,7 @@ function SidebarSubject({ subject, activeSubject, expanded, onToggle }) {
   );
 }
 
-function Sidebar({ activeSubject = 'ela' }) {
+function Sidebar({ activeSubject = 'ela', onNavigate, activeStrand }) {
   const [expandedId, setExpandedId] = useState(activeSubject);
 
   return (
@@ -385,6 +449,8 @@ function Sidebar({ activeSubject = 'ela' }) {
           key={subject.id}
           subject={subject}
           activeSubject={activeSubject}
+          activeStrand={activeStrand}
+          onNavigate={onNavigate}
           expanded={expandedId === subject.id}
           onToggle={() => setExpandedId(expandedId === subject.id ? null : subject.id)}
         />
@@ -680,7 +746,11 @@ export default function TEKDetailParchment({
       <TopBar onNavHome={onNavHome} />
 
       <div className="flex">
-        <Sidebar activeSubject="ela" />
+        <Sidebar
+          activeSubject="ela"
+          activeStrand={tek.strand}
+          onNavigate={(path) => { window.location.hash = path; }}
+        />
 
         <main className="flex-1 max-w-[1500px] mx-auto w-full px-4 sm:px-6 lg:px-8 pb-20 pt-6 relative">
 

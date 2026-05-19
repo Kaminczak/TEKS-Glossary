@@ -40,10 +40,17 @@ export function useHashRoute() {
 function parseHash(hash) {
   // Strip leading "#" and "/" then split
   const path = hash.replace(/^#\/?/, "");
-  const parts = path.split("/").filter(Boolean);
+  const parts = path.split("/").filter(Boolean).map(decodeURIComponent);
 
   if (parts.length === 0 || parts[0] === "list") {
-    return { view: "list" };
+    // #/list/strand/{name}, #/list/course/{name}, or combined
+    const filters = {};
+    for (let i = 1; i < parts.length - 1; i += 2) {
+      const key = parts[i];
+      const val = parts[i + 1];
+      if (key && val) filters[key] = val;
+    }
+    return { view: "list", filters };
   }
 
   if (parts[0] === "tek") {
@@ -58,7 +65,7 @@ function parseHash(hash) {
   }
 
   // Unknown route — default to list
-  return { view: "list" };
+  return { view: "list", filters: {} };
 }
 
 /**
@@ -86,4 +93,20 @@ export function tekPath(entry) {
   // Letter might be "1B" or "7D.i" — split on dot
   const [base, roman] = entry.letter.split(".");
   return `/tek/${entry.courseCode}/${base}${roman ? `/${roman}` : ""}`;
+}
+
+/**
+ * Build a hash path for the list view with optional filters.
+ *   listPath({ course: 'English I', strand: 'Response Skills' })
+ *     -> '/list/course/English%20I/strand/Response%20Skills'
+ */
+export function listPath(filters = {}) {
+  const segs = ["list"];
+  for (const [key, val] of Object.entries(filters)) {
+    if (val) {
+      segs.push(encodeURIComponent(key));
+      segs.push(encodeURIComponent(val));
+    }
+  }
+  return "/" + segs.join("/");
 }
