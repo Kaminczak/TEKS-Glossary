@@ -140,7 +140,7 @@ function ChipRow({ items }) {
   // On narrow screens where they wrap, fall back to a normal gap layout so a
   // single-chip last row doesn't get stretched into the void.
   return (
-    <div className="flex flex-wrap gap-2 justify-between sm:justify-between [@media(max-width:640px)]:justify-start">
+    <div className="flex flex-wrap gap-2 justify-center">
       {items.map((label) => (
         <span
           key={label}
