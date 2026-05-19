@@ -558,10 +558,9 @@ export default function TEKDetailParchment({
               {tek.overview}
             </p>
 
-            {/* Glyph strip + stat tiles: glyphs land in the same row as the
-                first stat tile on wide screens, wrapping naturally on narrow. */}
+            {/* Stat tiles. (Glyph strip removed — chip row below carries the
+                visual fingerprint with actual words.) */}
             <div className="flex flex-wrap gap-3 mt-7 items-stretch">
-              <GlyphStrip glyphs={tek.glyphs} />
               <StatTile icon={IconBrain} eyebrow="Cognitive Depth" value={`DOK ${tek.dok}`} />
               <StatTile icon={IconTarget} eyebrow="Bloom's Taxonomy" value={tek.bloom} />
               <StatTile icon={IconClock} eyebrow="Estimated Time" value={tek.estimatedTime} />
