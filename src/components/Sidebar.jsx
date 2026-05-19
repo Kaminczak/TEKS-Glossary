@@ -2,9 +2,11 @@ import { useEffect, useState } from "react";
 import {
   IconNotebook, IconLayoutList, IconCalendarTime, IconWand,
   IconChevronRight, IconClock, IconCalculator, IconFlask,
-  IconWorld, IconHome,
+  IconWorld, IconHome, IconArrowUpRight,
 } from "./icons/TablerIcons";
-import { listPath } from "../hooks/useHashRoute";
+import { listPath, tekPath } from "../hooks/useHashRoute";
+import { useTEKCart } from "../hooks/useTEKCart";
+import teksData from "../data/teksData.json";
 
 const PALETTE = {
   parchment: "#F6F2EC",
@@ -263,6 +265,138 @@ function SidebarSubject({ subject, activeSubject, expanded, onToggle, onNavigate
   );
 }
 
+function LessonCartPanel({ onNavigate }) {
+  const { cart, remove, clear, count } = useTEKCart();
+  const [open, setOpen] = useState(true);
+
+  // Resolve codes to full TEK records for display
+  const byCode = Object.fromEntries(teksData.map((t) => [t.code, t]));
+
+  return (
+    <div
+      className="mt-5 mx-2 rounded-lg overflow-hidden"
+      style={{
+        background: PALETTE.bone,
+        border: `1px solid ${PALETTE.tagBorder}`,
+      }}
+    >
+      <button
+        onClick={() => setOpen(!open)}
+        className="w-full flex items-center gap-2 px-3 py-2.5 text-left hover:bg-black/[0.02] transition-colors"
+      >
+        <IconNotebook size={14} style={{ color: "var(--accent)" }} />
+        <span
+          className="font-mono uppercase text-[10px] tracking-[0.18em] flex-1"
+          style={{ color: PALETTE.monoGold }}
+        >
+          Lesson Cart
+        </span>
+        <span
+          className="text-[10px] font-mono px-1.5 rounded"
+          style={{
+            color: count > 0 ? PALETTE.bone : PALETTE.stone,
+            background: count > 0 ? "var(--accent)" : PALETTE.sand,
+            border: `1px solid ${count > 0 ? "var(--accent)" : PALETTE.tagBorder}`,
+            minWidth: 18,
+            textAlign: "center",
+          }}
+        >
+          {count}
+        </span>
+        <span
+          className="text-[10px] transition-transform"
+          style={{
+            color: PALETTE.stone,
+            transform: open ? "rotate(90deg)" : "none",
+          }}
+        >
+          <IconChevronRight size={11} />
+        </span>
+      </button>
+
+      {open && (
+        <div
+          className="px-3 pb-3 flex flex-col gap-1"
+          style={{ borderTop: count > 0 ? `1px solid ${PALETTE.hairline}` : "none" }}
+        >
+          {count === 0 ? (
+            <p className="text-[11px] leading-relaxed mt-2" style={{ color: PALETTE.inkTertiary }}>
+              Add TEKs from any page. Build the set first, then generate a worksheet, exit ticket, or lesson plan that covers all of them at once.
+            </p>
+          ) : (
+            <>
+              <ul className="mt-2 flex flex-col gap-1">
+                {cart.map((code) => {
+                  const t = byCode[code];
+                  return (
+                    <li
+                      key={code}
+                      className="flex items-center gap-2 text-[11px] rounded px-1.5 py-1 hover:bg-black/[0.03] group"
+                    >
+                      <button
+                        onClick={() => t && onNavigate?.(tekPath(t))}
+                        className="flex-1 min-w-0 text-left flex items-center gap-2"
+                        title={t ? `${code} — ${t.title}` : code}
+                      >
+                        <span
+                          className="font-mono px-1.5 rounded shrink-0"
+                          style={{
+                            background: PALETTE.ink,
+                            color: "#D9BE7A",
+                            fontSize: "10px",
+                          }}
+                        >
+                          {code}
+                        </span>
+                        <span
+                          className="truncate"
+                          style={{ color: PALETTE.inkSecondary }}
+                        >
+                          {t?.title || ""}
+                        </span>
+                      </button>
+                      <button
+                        onClick={() => remove(code)}
+                        title="Remove from lesson cart"
+                        className="opacity-40 group-hover:opacity-100 transition-opacity shrink-0 px-1"
+                        style={{ color: PALETTE.stone }}
+                      >
+                        ×
+                      </button>
+                    </li>
+                  );
+                })}
+              </ul>
+
+              <div className="mt-2 flex items-center gap-2">
+                <button
+                  disabled
+                  className="flex-1 inline-flex items-center justify-center gap-1.5 px-2 py-1.5 rounded text-[11px] font-medium opacity-50 cursor-not-allowed"
+                  style={{
+                    background: "var(--accent)",
+                    color: PALETTE.bone,
+                  }}
+                  title="Generators coming soon"
+                >
+                  Generate from selection
+                  <IconArrowUpRight size={11} />
+                </button>
+                <button
+                  onClick={clear}
+                  className="text-[10px] font-mono uppercase tracking-[0.12em] px-2 py-1.5 rounded hover:bg-black/[0.03]"
+                  style={{ color: PALETTE.stone }}
+                >
+                  Clear
+                </button>
+              </div>
+            </>
+          )}
+        </div>
+      )}
+    </div>
+  );
+}
+
 /**
  * Shared sidebar — used on both list and detail views.
  *
@@ -316,22 +450,7 @@ export default function Sidebar({ activeSubject = "ela", activeStrand, onNavigat
         />
       ))}
 
-      <div
-        className="mt-5 mx-2 px-3 py-3 rounded-lg text-xs"
-        style={{
-          background: PALETTE.bone,
-          border: `1px solid ${PALETTE.tagBorder}`,
-          color: PALETTE.inkTertiary,
-        }}
-      >
-        <p
-          className="font-mono uppercase text-[10px] tracking-[0.18em] mb-1"
-          style={{ color: PALETTE.monoGold }}
-        >
-          Resource Center
-        </p>
-        <p>Generators, lesson packs, and TEK explainers — all aligned.</p>
-      </div>
+      <LessonCartPanel onNavigate={onNavigate} />
     </aside>
   );
 }

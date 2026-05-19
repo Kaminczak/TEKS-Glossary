@@ -11,6 +11,7 @@ import {
   GLYPH,
 } from './icons/TablerIcons';
 import Sidebar from './Sidebar';
+import { useTEKCart } from '../hooks/useTEKCart';
 
 const GENERATORS = [
   {
@@ -438,6 +439,8 @@ export default function TEKDetailParchment({
 }) {
   const [showAllStems, setShowAllStems] = useState(false);
   const visibleStems = showAllStems ? tek.questionStems : tek.questionStems.slice(0, 4);
+  const { has: cartHas, toggle: cartToggle } = useTEKCart();
+  const inCart = cartHas(tek.code);
 
   return (
     <div
@@ -483,8 +486,23 @@ export default function TEKDetailParchment({
                 '0 1px 0 rgba(255,255,253,0.8) inset, 0 12px 40px -20px rgba(26,23,19,0.18), 0 2px 8px -2px rgba(26,23,19,0.06)',
             }}
           >
-            {/* Floating prev/next arrows — top-right corner of the page-card */}
+            {/* Floating action cluster — top-right corner of the page-card */}
             <div className="absolute top-5 right-5 sm:top-7 sm:right-7 flex items-center gap-2">
+              {/* Add to lesson cart toggle */}
+              <button
+                onClick={() => cartToggle(tek.code)}
+                title={inCart ? "Remove from lesson cart" : "Add this TEK to your lesson cart"}
+                className="inline-flex items-center gap-1.5 h-11 px-3.5 rounded-full text-xs font-medium transition-all hover:scale-105"
+                style={{
+                  background: inCart ? "var(--accent)" : PALETTE.linen,
+                  color: inCart ? PALETTE.bone : PALETTE.inkSecondary,
+                  border: `1px solid ${inCart ? "var(--accent)" : PALETTE.tagBorder}`,
+                }}
+              >
+                <span style={{ fontSize: 14, lineHeight: 1 }}>{inCart ? "✓" : "+"}</span>
+                <span className="hidden sm:inline">{inCart ? "In lesson" : "Add to lesson"}</span>
+              </button>
+
               <button
                 onClick={onNavPrev || undefined}
                 disabled={!onNavPrev}
@@ -542,9 +560,9 @@ export default function TEKDetailParchment({
             </div>
 
             {/* Title — keeps right padding to avoid colliding with the floating
-                prev/next arrows that are absolute-positioned in the corner. */}
+                action cluster (cart button + prev/next arrows) in the corner. */}
             <h1
-              className="font-semibold leading-tight pr-32 sm:pr-36"
+              className="font-semibold leading-tight pr-40 sm:pr-72"
               style={{
                 color: PALETTE.inkPrimary,
                 fontSize: 'clamp(1.85rem, 2.4vw + 1rem, 2.6rem)',
