@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import teksData from "../data/teksData.json";
 import { tekPath } from "../hooks/useHashRoute";
+import Sidebar from "../components/Sidebar";
 import {
   IconSearch, IconNotebook, IconArrowUpRight, IconBrain,
 } from "../components/icons/TablerIcons";
@@ -257,7 +258,14 @@ export default function TEKListPage({ navigate, initialFilters = {} }) {
         count={filtered.length}
       />
 
-      <main className="max-w-[1500px] mx-auto px-5 sm:px-8 lg:px-12 py-10">
+      <div className="flex">
+        <Sidebar
+          activeSubject="ela"
+          activeStrand={strand !== "All strands" ? strand : null}
+          onNavigate={navigate}
+        />
+
+        <main className="flex-1 max-w-[1500px] mx-auto px-5 sm:px-8 lg:px-12 py-10">
         <header className="mb-8">
           <p
             className="text-[10px] font-mono uppercase tracking-[0.22em]"
@@ -341,7 +349,8 @@ export default function TEKListPage({ navigate, initialFilters = {} }) {
             </div>
           )
         )}
-      </main>
+        </main>
+      </div>
     </div>
   );
 }
