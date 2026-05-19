@@ -136,12 +136,15 @@ function StatTile({ icon: Icon, eyebrow, value }) {
 }
 
 function ChipRow({ items }) {
+  // Spread chips edge-to-edge so the row balances across the card width.
+  // On narrow screens where they wrap, fall back to a normal gap layout so a
+  // single-chip last row doesn't get stretched into the void.
   return (
-    <div className="flex flex-wrap gap-2">
+    <div className="flex flex-wrap gap-2 justify-between sm:justify-between [@media(max-width:640px)]:justify-start">
       {items.map((label) => (
         <span
           key={label}
-          className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-[11px] font-mono"
+          className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md text-[11px] font-mono"
           style={{
             color: PALETTE.inkSecondary,
             background: PALETTE.sand,
