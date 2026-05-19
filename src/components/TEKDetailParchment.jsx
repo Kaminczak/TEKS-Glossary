@@ -410,15 +410,19 @@ function Sidebar({ activeSubject = 'ela' }) {
   );
 }
 
-function TopBar() {
+function TopBar({ onNavHome }) {
   return (
     <div
       className="sticky top-0 z-30 flex items-center gap-4 px-6 lg:px-10 h-14"
       style={{ background: PALETTE.bone, borderBottom: `1px solid ${PALETTE.standardBorder}` }}
     >
-      <span className="font-semibold tracking-tight" style={{ color: PALETTE.inkPrimary }}>
+      <button
+        onClick={onNavHome}
+        className="font-semibold tracking-tight hover:opacity-80 transition-opacity"
+        style={{ color: PALETTE.inkPrimary }}
+      >
         TEKS Glossary
-      </span>
+      </button>
       <nav className="hidden md:flex items-center gap-5 ml-6 text-sm">
         {['Standards', 'Resources', 'Generators', 'Glossary'].map((label) => (
           <a key={label} className="hover:underline" style={{ color: PALETTE.inkTertiary }} href="#">
@@ -651,7 +655,14 @@ function GeneratorCard({ gen, tekCode }) {
   );
 }
 
-export default function TEKDetailParchment({ tek }) {
+export default function TEKDetailParchment({
+  tek,
+  onNavPrev,
+  onNavNext,
+  onNavHome,
+  prevSibling,
+  nextSibling,
+}) {
   const [showAllStems, setShowAllStems] = useState(false);
   const visibleStems = showAllStems ? tek.questionStems : tek.questionStems.slice(0, 4);
 
@@ -666,7 +677,7 @@ export default function TEKDetailParchment({ tek }) {
         fontFamily: '"Manrope", system-ui, sans-serif',
       }}
     >
-      <TopBar />
+      <TopBar onNavHome={onNavHome} />
 
       <div className="flex">
         <Sidebar activeSubject="ela" />
@@ -698,8 +709,14 @@ export default function TEKDetailParchment({ tek }) {
             {/* Floating prev/next arrows — top-right corner of the page-card */}
             <div className="absolute top-5 right-5 sm:top-7 sm:right-7 flex items-center gap-2">
               <button
-                title={`Previous: ${tek.verticalPrev.code}`}
-                className="inline-flex items-center justify-center w-11 h-11 rounded-full transition-all hover:scale-105"
+                onClick={onNavPrev || undefined}
+                disabled={!onNavPrev}
+                title={
+                  prevSibling
+                    ? `Previous: ${prevSibling.code} — ${prevSibling.title}`
+                    : "First TEK in this course"
+                }
+                className="inline-flex items-center justify-center w-11 h-11 rounded-full transition-all enabled:hover:scale-105 disabled:opacity-30 disabled:cursor-not-allowed"
                 style={{
                   background: PALETTE.linen,
                   color: PALETTE.inkSecondary,
@@ -709,10 +726,16 @@ export default function TEKDetailParchment({ tek }) {
                 <IconArrowLeft size={20} />
               </button>
               <button
-                title={`Next: ${tek.verticalNext.code}`}
-                className="inline-flex items-center justify-center w-11 h-11 rounded-full transition-all hover:scale-105"
+                onClick={onNavNext || undefined}
+                disabled={!onNavNext}
+                title={
+                  nextSibling
+                    ? `Next: ${nextSibling.code} — ${nextSibling.title}`
+                    : "Last TEK in this course"
+                }
+                className="inline-flex items-center justify-center w-11 h-11 rounded-full transition-all enabled:hover:scale-105 disabled:opacity-30 disabled:cursor-not-allowed"
                 style={{
-                  background: 'var(--accent)',
+                  background: "var(--accent)",
                   color: PALETTE.bone,
                   border: `1px solid var(--accent)`,
                 }}
