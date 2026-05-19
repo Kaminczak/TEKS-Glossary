@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import teksData from "../data/teksData.json";
 import { tekPath } from "../hooks/useHashRoute";
+import { useTEKCart } from "../hooks/useTEKCart";
 import Sidebar from "../components/Sidebar";
 import {
   IconSearch, IconNotebook, IconArrowUpRight, IconBrain,
@@ -42,15 +43,17 @@ const ALL_STRANDS = (() => {
   return ["All strands", ...Array.from(s).sort()];
 })();
 
-function TEKCard({ tek, onOpen }) {
+function TEKCard({ tek, onOpen, inCart }) {
   return (
     <button
       onClick={() => onOpen(tek)}
-      className="text-left flex flex-col gap-3 p-5 rounded-2xl transition-all duration-200 group"
+      className="text-left flex flex-col gap-3 p-5 rounded-2xl transition-all duration-200 group relative"
       style={{
         background: PALETTE.bone,
-        border: `1px solid ${PALETTE.tagBorder}`,
-        boxShadow: "0 1px 0 rgba(255,253,247,0.6) inset",
+        border: `1px solid ${inCart ? "var(--accent)" : PALETTE.tagBorder}`,
+        boxShadow: inCart
+          ? "0 0 0 1px var(--accent) inset, 0 1px 0 rgba(255,253,247,0.6) inset"
+          : "0 1px 0 rgba(255,253,247,0.6) inset",
       }}
       onMouseEnter={(e) => {
         e.currentTarget.style.boxShadow = "0 4px 16px -8px rgba(26,23,19,0.18)";
@@ -72,12 +75,26 @@ function TEKCard({ tek, onOpen }) {
         >
           {tek.code}
         </span>
-        <span
-          className="opacity-0 group-hover:opacity-100 transition-opacity"
-          style={{ color: "var(--accent)" }}
-        >
-          <IconArrowUpRight size={16} />
-        </span>
+        <div className="flex items-center gap-2">
+          {inCart && (
+            <span
+              className="inline-flex items-center gap-1 px-1.5 py-0.5 rounded text-[10px] font-mono uppercase tracking-[0.12em]"
+              title="In your lesson cart"
+              style={{
+                background: "var(--accent)",
+                color: PALETTE.bone,
+              }}
+            >
+              ✓ In lesson
+            </span>
+          )}
+          <span
+            className="opacity-0 group-hover:opacity-100 transition-opacity"
+            style={{ color: "var(--accent)" }}
+          >
+            <IconArrowUpRight size={16} />
+          </span>
+        </div>
       </div>
 
       <h3
@@ -187,6 +204,7 @@ export default function TEKListPage({ navigate, initialFilters = {} }) {
   const [search, setSearch] = useState("");
   const [course, setCourse] = useState(initialFilters.course || "All courses");
   const [strand, setStrand] = useState(initialFilters.strand || "All strands");
+  const { has: cartHas } = useTEKCart();
 
   // If URL filters change (back/forward navigation), sync local state
   useEffect(() => {
@@ -302,7 +320,7 @@ export default function TEKListPage({ navigate, initialFilters = {} }) {
           course !== "All courses" || strand !== "All strands" || search ? (
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
               {filtered.map((t) => (
-                <TEKCard key={t.code} tek={t} onOpen={handleOpen} />
+                <TEKCard key={t.code} tek={t} onOpen={handleOpen} inCart={cartHas(t.code)} />
               ))}
             </div>
           ) : (
@@ -338,7 +356,8 @@ export default function TEKListPage({ navigate, initialFilters = {} }) {
                         </p>
                         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                           {items.map((t) => (
-                            <TEKCard key={t.code} tek={t} onOpen={handleOpen} />
+                            <TEKCard key={t.code} tek={t} onOpen={handleOpen} inCart={cartHas(t.code)} />
+
                           ))}
                         </div>
                       </div>
