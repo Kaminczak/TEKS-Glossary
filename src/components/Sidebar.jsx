@@ -317,49 +317,56 @@ function LessonCartPanel({ onNavigate }) {
       {open && (
         <div
           className="px-3 pb-3 flex flex-col gap-1"
-          style={{ borderTop: count > 0 ? `1px solid ${PALETTE.hairline}` : "none" }}
+          style={{ borderTop: `1px solid ${PALETTE.hairline}` }}
         >
+          <p
+            className="mt-2 text-[11px] leading-relaxed underline decoration-1 underline-offset-[3px]"
+            style={{
+              color: count > 0 ? PALETTE.inkPrimary : PALETTE.inkTertiary,
+              textDecorationColor: count > 0 ? "var(--accent)" : PALETTE.boneStone,
+              fontWeight: count > 0 ? 600 : 400,
+            }}
+          >
+            {count > 0
+              ? "TEKs chosen for lesson/activity:"
+              : "No TEKs added yet — your lesson cart is empty."}
+          </p>
+
           {count === 0 ? (
-            <p className="text-[11px] leading-relaxed mt-2" style={{ color: PALETTE.inkTertiary }}>
-              Add TEKs from any page. Build the set first, then generate a worksheet, exit ticket, or lesson plan that covers all of them at once.
+            <p className="text-[11px] leading-relaxed mt-1.5" style={{ color: PALETTE.inkTertiary }}>
+              Hit{" "}
+              <span
+                className="font-mono px-1 rounded text-[10px]"
+                style={{ background: PALETTE.sand, color: PALETTE.inkSecondary }}
+              >
+                + Add to lesson
+              </span>{" "}
+              on any TEK page. Build the set first, then generate a worksheet, exit ticket, or lesson plan that covers them all.
             </p>
           ) : (
             <>
-              <ul className="mt-2 flex flex-col gap-1">
+              <ul className="mt-1.5 flex flex-col">
                 {cart.map((code) => {
                   const t = byCode[code];
+                  const label = t ? `${code} — ${t.title}` : code;
                   return (
                     <li
                       key={code}
-                      className="flex items-center gap-2 text-[11px] rounded px-1.5 py-1 hover:bg-black/[0.03] group"
+                      className="flex items-start gap-2 text-[11px] rounded px-1 py-1 hover:bg-black/[0.03] group leading-snug"
                     >
                       <button
                         onClick={() => t && onNavigate?.(tekPath(t))}
-                        className="flex-1 min-w-0 text-left flex items-center gap-2"
-                        title={t ? `${code} — ${t.title}` : code}
+                        className="flex-1 min-w-0 text-left"
+                        style={{ color: PALETTE.inkSecondary }}
+                        title={label}
                       >
-                        <span
-                          className="font-mono px-1.5 rounded shrink-0"
-                          style={{
-                            background: PALETTE.ink,
-                            color: "#D9BE7A",
-                            fontSize: "10px",
-                          }}
-                        >
-                          {code}
-                        </span>
-                        <span
-                          className="truncate"
-                          style={{ color: PALETTE.inkSecondary }}
-                        >
-                          {t?.title || ""}
-                        </span>
+                        {label}
                       </button>
                       <button
                         onClick={() => remove(code)}
                         title="Remove from lesson cart"
-                        className="opacity-40 group-hover:opacity-100 transition-opacity shrink-0 px-1"
-                        style={{ color: PALETTE.stone }}
+                        className="opacity-40 group-hover:opacity-100 transition-opacity shrink-0 px-1 leading-none"
+                        style={{ color: PALETTE.stone, fontSize: 14 }}
                       >
                         ×
                       </button>
@@ -368,7 +375,7 @@ function LessonCartPanel({ onNavigate }) {
                 })}
               </ul>
 
-              <div className="mt-2 flex items-center gap-2">
+              <div className="mt-3 flex items-center gap-2">
                 <button
                   disabled
                   className="flex-1 inline-flex items-center justify-center gap-1.5 px-2 py-1.5 rounded text-[11px] font-medium opacity-50 cursor-not-allowed"
