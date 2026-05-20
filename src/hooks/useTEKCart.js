@@ -1,75 +1,101 @@
-import { useCallback, useEffect, useState } from "react";
-
-const STORAGE_KEY = "teks-glossary.lesson-cart.v1";
+import { useSyncExternalStore } from "react";
 
 /**
  * Persistent "Lesson Cart" — an ordered list of TEK codes the teacher
  * has flagged for use by an upcoming worksheet / lesson / assessment /
  * exit ticket. Backed by localStorage so it survives reloads on the
- * same device. No cross-device sync yet (would need a backend).
+ * same device.
  *
- * Returns:
- *   cart        — string[] of TEK codes in the order they were added
- *   add(code)   — append to cart if not already present
- *   remove(code)— drop the code from the cart
- *   toggle(code)— add if missing, remove if present
- *   has(code)   — boolean
- *   clear()     — empty the cart
- *   count       — cart.length
+ * Single shared store at module scope so every component using
+ * useTEKCart() sees the same cart and re-renders on any change,
+ * regardless of which component made the change.
  */
-export function useTEKCart() {
-  const [cart, setCart] = useState(() => {
+
+const STORAGE_KEY = "teks-glossary.lesson-cart.v1";
+
+function readFromStorage() {
+  try {
+    const raw = window.localStorage.getItem(STORAGE_KEY);
+    if (!raw) return EMPTY;
+    const parsed = JSON.parse(raw);
+    return Array.isArray(parsed) ? parsed : EMPTY;
+  } catch {
+    return EMPTY;
+  }
+}
+
+function writeToStorage(value) {
+  try {
+    window.localStorage.setItem(STORAGE_KEY, JSON.stringify(value));
+  } catch {
+    // disabled / quota — silent failure is fine
+  }
+}
+
+// Stable empty-array reference so getSnapshot() returns the same value when
+// nothing has changed (required by useSyncExternalStore — different array
+// identities trigger spurious re-renders / "infinite loop" warnings).
+const EMPTY = [];
+
+let state = readFromStorage();
+const listeners = new Set();
+
+function setState(next) {
+  if (next === state) return;
+  state = next;
+  writeToStorage(state);
+  listeners.forEach((l) => l());
+}
+
+function subscribe(listener) {
+  listeners.add(listener);
+  return () => listeners.delete(listener);
+}
+
+function getSnapshot() {
+  return state;
+}
+
+// Cross-tab sync: a change in another tab updates this tab's store
+if (typeof window !== "undefined") {
+  window.addEventListener("storage", (e) => {
+    if (e.key !== STORAGE_KEY) return;
     try {
-      const raw = window.localStorage.getItem(STORAGE_KEY);
-      if (!raw) return [];
-      const parsed = JSON.parse(raw);
-      return Array.isArray(parsed) ? parsed : [];
+      const parsed = e.newValue ? JSON.parse(e.newValue) : EMPTY;
+      if (Array.isArray(parsed)) {
+        state = parsed;
+        listeners.forEach((l) => l());
+      }
     } catch {
-      return [];
+      // ignore malformed cross-tab updates
     }
   });
+}
 
-  // Persist on every change
-  useEffect(() => {
-    try {
-      window.localStorage.setItem(STORAGE_KEY, JSON.stringify(cart));
-    } catch {
-      // localStorage can throw if disabled / quota — silent failure is fine
-    }
-  }, [cart]);
+// Actions — closures over the module-level state. Each call computes the next
+// array and pushes it through setState, which notifies all subscribers.
+function add(code) {
+  setState(state.includes(code) ? state : [...state, code]);
+}
+function remove(code) {
+  setState(state.filter((c) => c !== code));
+}
+function toggle(code) {
+  setState(state.includes(code) ? state.filter((c) => c !== code) : [...state, code]);
+}
+function clear() {
+  setState(EMPTY);
+}
 
-  // Listen for changes from other tabs of the same site
-  useEffect(() => {
-    const onStorage = (e) => {
-      if (e.key !== STORAGE_KEY) return;
-      try {
-        const parsed = e.newValue ? JSON.parse(e.newValue) : [];
-        if (Array.isArray(parsed)) setCart(parsed);
-      } catch {
-        // ignore malformed cross-tab updates
-      }
-    };
-    window.addEventListener("storage", onStorage);
-    return () => window.removeEventListener("storage", onStorage);
-  }, []);
-
-  const add = useCallback((code) => {
-    setCart((prev) => (prev.includes(code) ? prev : [...prev, code]));
-  }, []);
-
-  const remove = useCallback((code) => {
-    setCart((prev) => prev.filter((c) => c !== code));
-  }, []);
-
-  const toggle = useCallback((code) => {
-    setCart((prev) =>
-      prev.includes(code) ? prev.filter((c) => c !== code) : [...prev, code]
-    );
-  }, []);
-
-  const has = useCallback((code) => cart.includes(code), [cart]);
-
-  const clear = useCallback(() => setCart([]), []);
-
-  return { cart, add, remove, toggle, has, clear, count: cart.length };
+export function useTEKCart() {
+  const cart = useSyncExternalStore(subscribe, getSnapshot, getSnapshot);
+  return {
+    cart,
+    add,
+    remove,
+    toggle,
+    clear,
+    has: (code) => cart.includes(code),
+    count: cart.length,
+  };
 }
