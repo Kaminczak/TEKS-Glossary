@@ -13,6 +13,28 @@ import {
 import Sidebar from './Sidebar';
 import { useTEKCart } from '../hooks/useTEKCart';
 
+/**
+ * Prepend Vite's BASE_URL to absolute-looking asset paths.
+ *
+ * teksData.json stores videoUrl as `/videos/X.mp4` (root-absolute). In dev
+ * BASE_URL is `/` so the path is unchanged. In the GitHub Pages production
+ * build BASE_URL is `/TEKS-Glossary/`, so the resolved URL becomes
+ * `/TEKS-Glossary/videos/X.mp4` — which is what the deployed site actually
+ * serves.
+ *
+ * Pass-through for absolute http(s) URLs and for paths that are already
+ * BASE_URL-prefixed (so we don't double-prefix something like the sample
+ * vault TEK which builds the URL via `${import.meta.env.BASE_URL}videos/...`).
+ */
+function resolveAssetUrl(url) {
+  if (!url) return url;
+  if (/^https?:\/\//i.test(url)) return url;
+  const base = import.meta.env.BASE_URL || '/';
+  if (url.startsWith(base)) return url;
+  const clean = url.replace(/^\//, '');
+  return `${base}${clean}`;
+}
+
 const GENERATORS = [
   {
     key: 'worksheet',
@@ -459,6 +481,7 @@ export default function TEKDetailParchment({
         <Sidebar
           activeSubject="ela"
           activeStrand={tek.strand}
+          activeCourse={tek.course}
           onNavigate={(path) => { window.location.hash = path; }}
         />
 
@@ -734,7 +757,11 @@ export default function TEKDetailParchment({
 
               {/* Video / placeholder. Prefer local MP4 (videoUrl), fall back to
                   YouTube embed (youtubeId), then placeholder. Local is more reliable
-                  in incognito + dev — no third-party cookie or embed restriction. */}
+                  in incognito + dev — no third-party cookie or embed restriction.
+
+                  resolveAssetUrl handles BASE_URL prefix so paths like '/videos/X.mp4'
+                  stored in teksData.json work both in dev (served from /) and in
+                  the GitHub Pages production build (served from /TEKS-Glossary/). */}
               <div className="px-7">
                 {tek.explainerVideo?.videoUrl ? (
                   <div
@@ -743,7 +770,7 @@ export default function TEKDetailParchment({
                   >
                     <video
                       className="w-full h-full"
-                      src={tek.explainerVideo.videoUrl}
+                      src={resolveAssetUrl(tek.explainerVideo.videoUrl)}
                       controls
                       preload="metadata"
                       playsInline
@@ -888,6 +915,81 @@ export default function TEKDetailParchment({
             </div>
           </section>
         </main>
+      </div>
+
+      {/* Floating bottom-right prev/next bar — always visible while scrolling.
+          Highlights next (accent) so the eye knows where forward motion is.
+          Shows the upcoming TEK's title + code inline so user can hunt without clicking blind. */}
+      <div
+        className="fixed bottom-5 right-5 z-40 flex items-center gap-2"
+        style={{
+          background: PALETTE.bone,
+          border: `1px solid ${PALETTE.standardBorder}`,
+          borderRadius: '999px',
+          padding: '6px 8px 6px 6px',
+          boxShadow:
+            '0 6px 24px -10px rgba(26,23,19,0.25), 0 2px 8px -2px rgba(26,23,19,0.10)',
+        }}
+      >
+        <button
+          onClick={onNavPrev || undefined}
+          disabled={!onNavPrev}
+          title={
+            prevSibling
+              ? `Previous: ${prevSibling.code} — ${prevSibling.title}`
+              : 'First TEK in this course'
+          }
+          className="inline-flex items-center justify-center w-10 h-10 rounded-full transition-all enabled:hover:scale-105 disabled:opacity-30 disabled:cursor-not-allowed"
+          style={{
+            background: PALETTE.linen,
+            color: PALETTE.inkSecondary,
+            border: `1px solid ${PALETTE.tagBorder}`,
+          }}
+        >
+          <IconArrowLeft size={18} />
+        </button>
+
+        {nextSibling && (
+          <div
+            className="hidden md:flex flex-col text-left px-1 max-w-[18rem]"
+            style={{ color: PALETTE.inkSecondary }}
+          >
+            <span
+              className="text-[10px] font-mono uppercase tracking-[0.18em]"
+              style={{ color: PALETTE.monoGold }}
+            >
+              Next · {nextSibling.code}
+              {nextSibling.explainerVideo?.videoUrl ||
+              nextSibling.explainerVideo?.youtubeId
+                ? ' · ▶ video'
+                : ''}
+            </span>
+            <span
+              className="text-xs font-medium leading-tight truncate"
+              style={{ color: PALETTE.inkPrimary }}
+            >
+              {nextSibling.title}
+            </span>
+          </div>
+        )}
+
+        <button
+          onClick={onNavNext || undefined}
+          disabled={!onNavNext}
+          title={
+            nextSibling
+              ? `Next: ${nextSibling.code} — ${nextSibling.title}`
+              : 'Last TEK in this course'
+          }
+          className="inline-flex items-center justify-center w-10 h-10 rounded-full transition-all enabled:hover:scale-105 disabled:opacity-30 disabled:cursor-not-allowed"
+          style={{
+            background: 'var(--accent)',
+            color: PALETTE.bone,
+            border: `1px solid var(--accent)`,
+          }}
+        >
+          <IconArrowRight size={18} />
+        </button>
       </div>
     </div>
   );

@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import teksData from "../data/teksData.json";
-import { tekPath } from "../hooks/useHashRoute";
+import { tekPath, listPath } from "../hooks/useHashRoute";
 import { useTEKCart } from "../hooks/useTEKCart";
 import Sidebar from "../components/Sidebar";
 import {
@@ -36,6 +36,28 @@ const COURSE_ACCENT = {
 
 const COURSES = ["All courses", "English I", "English II", "English III", "English IV"];
 
+// Strand → accent color. Tuned to harmonize with the parchment/ink palette.
+// Each strand gets a single canonical color; substrand variations are conveyed
+// via the strand+substrand line at the bottom of each card.
+export const STRAND_COLORS = {
+  "Foundational Language Skills": "oklch(0.45 0.08 150)", // Pine
+  "Comprehension Skills":         "oklch(0.42 0.13 25)",  // Burgundy
+  "Response Skills":              "oklch(0.48 0.08 240)", // Slate Blue
+  "Multiple Genres":              "oklch(0.42 0.10 310)", // Plum
+  "Author's Purpose and Craft":   "oklch(0.55 0.10 75)",  // Ochre
+  "Composition":                  "oklch(0.50 0.12 35)",  // Terracotta
+  "Inquiry & Research":           "oklch(0.40 0.10 165)", // Forest
+};
+
+// DOK → brain icon color. Cognitive-depth scale: gray (recall) → green/amber.
+export const DOK_COLORS = {
+  1: "oklch(0.55 0.02 0)",   // muted gray
+  2: "oklch(0.55 0.10 240)", // soft blue
+  3: "oklch(0.50 0.13 145)", // green (most common, 171 TEKs)
+  4: "oklch(0.60 0.13 75)",  // warm amber/gold
+};
+export const DOK_LABELS = { 1: "Recall", 2: "Skill", 3: "Strategic", 4: "Extended" };
+
 // Strands available across the data — derived once.
 const ALL_STRANDS = (() => {
   const s = new Set();
@@ -43,14 +65,40 @@ const ALL_STRANDS = (() => {
   return ["All strands", ...Array.from(s).sort()];
 })();
 
-function TEKCard({ tek, onOpen, inCart }) {
+function TEKCard({ tek, onOpen, onFilter, inCart }) {
+  const strandColor = STRAND_COLORS[tek.strand] || PALETTE.stone;
+  const dokColor = DOK_COLORS[tek.dok] || PALETTE.stone;
+  const hasVideo = !!tek.explainerVideo?.videoUrl || !!tek.explainerVideo?.youtubeId;
+
+  // Inner-click helper: stop the outer card-open behavior and call onFilter.
+  const filterClick = (e, payload) => {
+    e.stopPropagation();
+    e.preventDefault();
+    onFilter?.(payload);
+  };
+
   return (
-    <button
+    // div + role=button instead of <button> because the card has nested
+    // interactive elements (strand/DOK/substrand filter buttons), which
+    // <button> can't legally contain.
+    <div
+      role="button"
+      tabIndex={0}
       onClick={() => onOpen(tek)}
-      className="text-left flex flex-col gap-3 p-5 rounded-2xl transition-all duration-200 group relative"
+      onKeyDown={(e) => {
+        if (e.key === "Enter" || e.key === " ") {
+          e.preventDefault();
+          onOpen(tek);
+        }
+      }}
+      className="text-left flex flex-col gap-3 p-5 rounded-2xl transition-all duration-200 group relative cursor-pointer outline-none focus-visible:ring-2"
       style={{
         background: PALETTE.bone,
-        border: `1px solid ${inCart ? "var(--accent)" : PALETTE.tagBorder}`,
+        // Left rail = strand color (3px), rest = subtle (or accent if in cart)
+        borderTop: `1px solid ${inCart ? "var(--accent)" : PALETTE.tagBorder}`,
+        borderRight: `1px solid ${inCart ? "var(--accent)" : PALETTE.tagBorder}`,
+        borderBottom: `1px solid ${inCart ? "var(--accent)" : PALETTE.tagBorder}`,
+        borderLeft: `4px solid ${strandColor}`,
         boxShadow: inCart
           ? "0 0 0 1px var(--accent) inset, 0 1px 0 rgba(255,253,247,0.6) inset"
           : "0 1px 0 rgba(255,253,247,0.6) inset",
@@ -76,6 +124,15 @@ function TEKCard({ tek, onOpen, inCart }) {
           {tek.code}
         </span>
         <div className="flex items-center gap-2">
+          {hasVideo && (
+            <span
+              title="Has explainer video"
+              className="inline-flex items-center justify-center w-5 h-5 rounded-full"
+              style={{ background: strandColor, color: PALETTE.bone }}
+            >
+              <IconArrowUpRight size={11} />
+            </span>
+          )}
           {inCart && (
             <span
               className="inline-flex items-center gap-1 px-1.5 py-0.5 rounded text-[10px] font-mono uppercase tracking-[0.12em]"
@@ -88,12 +145,6 @@ function TEKCard({ tek, onOpen, inCart }) {
               ✓ In lesson
             </span>
           )}
-          <span
-            className="opacity-0 group-hover:opacity-100 transition-opacity"
-            style={{ color: "var(--accent)" }}
-          >
-            <IconArrowUpRight size={16} />
-          </span>
         </div>
       </div>
 
@@ -117,26 +168,76 @@ function TEKCard({ tek, onOpen, inCart }) {
         className="mt-auto pt-3 flex items-center justify-between text-[11px] font-mono uppercase tracking-[0.18em]"
         style={{ color: PALETTE.monoGold, borderTop: `1px solid ${PALETTE.hairline}` }}
       >
-        <span>{tek.course}</span>
-        <span className="flex items-center gap-1.5">
-          <IconBrain size={12} /> DOK {tek.dok}
-        </span>
+        <button
+          type="button"
+          onClick={(e) => filterClick(e, { course: tek.course })}
+          className="hover:underline underline-offset-2 transition-colors"
+          title={`Filter to ${tek.course} only`}
+        >
+          {tek.course}
+        </button>
+        <button
+          type="button"
+          onClick={(e) => filterClick(e, { dok: tek.dok })}
+          className="flex items-center gap-1.5 hover:underline underline-offset-2 transition-colors"
+          title={`Filter to DOK ${tek.dok} (${DOK_LABELS[tek.dok] || ""}) only`}
+        >
+          <span style={{ color: dokColor }}>
+            <IconBrain size={14} />
+          </span>
+          DOK {tek.dok}
+        </button>
       </div>
 
-      <div className="text-[11px]" style={{ color: PALETTE.inkTertiary }}>
-        {tek.strand}
-        {tek.substrand ? ` · ${tek.substrand}` : ""}
+      <div className="text-[11px] flex flex-wrap items-center gap-1" style={{ color: PALETTE.inkTertiary }}>
+        <button
+          type="button"
+          onClick={(e) => filterClick(e, { strand: tek.strand })}
+          className="hover:underline underline-offset-2 transition-colors"
+          title={`Filter to ${tek.strand}`}
+          style={{ color: strandColor, fontWeight: 600 }}
+        >
+          {tek.strand}
+        </button>
+        {tek.substrand && (
+          <>
+            <span>·</span>
+            <button
+              type="button"
+              onClick={(e) => filterClick(e, { substrand: tek.substrand })}
+              className="hover:underline underline-offset-2 transition-colors"
+              title={`Filter to ${tek.substrand}`}
+            >
+              {tek.substrand}
+            </button>
+          </>
+        )}
       </div>
-    </button>
+    </div>
   );
 }
 
-function TopBar({ search, setSearch, course, setCourse, strand, setStrand, count }) {
+function TopBar({
+  search, setSearch,
+  course, setCourse,
+  strand, setStrand,
+  dok, setDok,
+  substrand, setSubstrand,
+  onClearFilter,
+  count,
+}) {
+  const hasActiveFilters =
+    course !== "All courses" ||
+    strand !== "All strands" ||
+    dok ||
+    substrand;
+
   return (
     <div
-      className="sticky top-0 z-30 flex items-center gap-3 px-6 lg:px-10 h-14 flex-wrap"
+      className="sticky top-0 z-30 flex flex-col px-6 lg:px-10 pt-3 pb-2"
       style={{ background: PALETTE.bone, borderBottom: `1px solid ${PALETTE.standardBorder}` }}
     >
+    <div className="flex items-center gap-3 flex-wrap">
       <span className="font-semibold tracking-tight" style={{ color: PALETTE.inkPrimary }}>
         TEKS Glossary
       </span>
@@ -196,7 +297,97 @@ function TopBar({ search, setSearch, course, setCourse, strand, setStrand, count
           </option>
         ))}
       </select>
+
+      <select
+        value={dok || ""}
+        onChange={(e) => setDok(e.target.value ? Number(e.target.value) : null)}
+        className="text-sm px-3 py-1.5 rounded-md outline-none"
+        style={{
+          background: PALETTE.sand,
+          border: `1px solid ${PALETTE.soft}`,
+          color: PALETTE.inkPrimary,
+        }}
+      >
+        <option value="">All DOK</option>
+        <option value="1">DOK 1 · Recall</option>
+        <option value="2">DOK 2 · Skill</option>
+        <option value="3">DOK 3 · Strategic</option>
+        <option value="4">DOK 4 · Extended</option>
+      </select>
     </div>
+
+    {/* Active filter chips row — shows what's currently filtered, each clickable to clear.
+        Clearing pushes to URL so refresh/back-button stays consistent. */}
+    {hasActiveFilters && (
+      <div className="flex items-center gap-1.5 flex-wrap mt-2">
+        <span
+          className="text-[10px] font-mono uppercase tracking-[0.18em]"
+          style={{ color: PALETTE.monoGold }}
+        >
+          Filters:
+        </span>
+        {course !== "All courses" && (
+          <FilterChip
+            label={course}
+            onClear={() => onClearFilter("course")}
+          />
+        )}
+        {strand !== "All strands" && (
+          <FilterChip
+            label={strand}
+            accent={STRAND_COLORS[strand]}
+            onClear={() => onClearFilter("strand")}
+          />
+        )}
+        {substrand && (
+          <FilterChip
+            label={substrand}
+            onClear={() => onClearFilter("substrand")}
+          />
+        )}
+        {dok && (
+          <FilterChip
+            label={`DOK ${dok} · ${DOK_LABELS[dok] || ""}`}
+            accent={DOK_COLORS[dok]}
+            onClear={() => onClearFilter("dok")}
+          />
+        )}
+        <button
+          type="button"
+          onClick={() => onClearFilter("all")}
+          className="text-[10px] font-mono uppercase tracking-[0.18em] underline underline-offset-2 ml-1"
+          style={{ color: PALETTE.stone }}
+        >
+          Clear all
+        </button>
+      </div>
+    )}
+    </div>
+  );
+}
+
+function FilterChip({ label, accent, onClear }) {
+  return (
+    <button
+      type="button"
+      onClick={onClear}
+      className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full text-[11px] transition-all hover:opacity-80"
+      style={{
+        background: PALETTE.linen,
+        border: `1px solid ${accent || PALETTE.tagBorder}`,
+        color: PALETTE.inkSecondary,
+      }}
+      title="Click to remove this filter"
+    >
+      {accent && (
+        <span
+          className="w-1.5 h-1.5 rounded-full inline-block"
+          style={{ background: accent }}
+        />
+      )}
+      <span>{label}</span>
+      <span style={{ color: PALETTE.stone, fontSize: 13, lineHeight: 1 }}>×</span>
+    </button>
   );
 }
 
@@ -204,9 +395,12 @@ export default function TEKListPage({ navigate, initialFilters = {} }) {
   const [search, setSearch] = useState("");
   const [course, setCourse] = useState(initialFilters.course || "All courses");
   const [strand, setStrand] = useState(initialFilters.strand || "All strands");
+  const [substrand, setSubstrand] = useState(initialFilters.substrand || null);
+  const [dok, setDok] = useState(initialFilters.dok ? Number(initialFilters.dok) : null);
   const { has: cartHas } = useTEKCart();
 
-  // If URL filters change (back/forward navigation), sync local state
+  // If URL filters change (back/forward navigation, deep links, click-to-filter
+  // from card), sync local state.
   useEffect(() => {
     if (initialFilters.course && initialFilters.course !== course) {
       setCourse(initialFilters.course);
@@ -214,15 +408,49 @@ export default function TEKListPage({ navigate, initialFilters = {} }) {
     if (initialFilters.strand && initialFilters.strand !== strand) {
       setStrand(initialFilters.strand);
     }
-    // Only sync when URL filters change, not when user edits dropdown
+    const incomingSubstrand = initialFilters.substrand || null;
+    if (incomingSubstrand !== substrand) setSubstrand(incomingSubstrand);
+    const incomingDok = initialFilters.dok ? Number(initialFilters.dok) : null;
+    if (incomingDok !== dok) setDok(incomingDok);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [initialFilters.course, initialFilters.strand]);
+  }, [initialFilters.course, initialFilters.strand, initialFilters.substrand, initialFilters.dok]);
+
+  // Build the current filter set, including any patch overrides.
+  const buildFilters = (patch = {}) => {
+    const next = {
+      course: patch.course ?? (course !== "All courses" ? course : undefined),
+      strand: patch.strand ?? (strand !== "All strands" ? strand : undefined),
+      substrand: patch.substrand ?? substrand ?? undefined,
+      dok: patch.dok ?? dok ?? undefined,
+    };
+    return Object.fromEntries(
+      Object.entries(next).filter(([, v]) => v !== undefined && v !== null && v !== "")
+    );
+  };
+
+  // Click-to-filter from cards: merge new filter dim into current state, push to URL.
+  const handleCardFilter = (patch) => {
+    navigate(listPath(buildFilters(patch)));
+  };
+
+  // Chip-clear / clear-all: remove a single filter dim from URL (or all of them).
+  const handleClearFilter = (key) => {
+    if (key === "all") {
+      navigate(listPath({}));
+      return;
+    }
+    const current = buildFilters();
+    delete current[key];
+    navigate(listPath(current));
+  };
 
   const filtered = useMemo(() => {
     const q = search.trim().toLowerCase();
     return teksData.filter((t) => {
       if (course !== "All courses" && t.course !== course) return false;
       if (strand !== "All strands" && t.strand !== strand) return false;
+      if (substrand && t.substrand !== substrand) return false;
+      if (dok && t.dok !== dok) return false;
       if (!q) return true;
       const hay = [
         t.code,
@@ -237,7 +465,7 @@ export default function TEKListPage({ navigate, initialFilters = {} }) {
         .toLowerCase();
       return hay.includes(q);
     });
-  }, [search, course, strand]);
+  }, [search, course, strand, substrand, dok]);
 
   // Group filtered TEKs by course → strand for visual clarity.
   const grouped = useMemo(() => {
@@ -273,6 +501,11 @@ export default function TEKListPage({ navigate, initialFilters = {} }) {
         setCourse={setCourse}
         strand={strand}
         setStrand={setStrand}
+        dok={dok}
+        setDok={setDok}
+        substrand={substrand}
+        setSubstrand={setSubstrand}
+        onClearFilter={handleClearFilter}
         count={filtered.length}
       />
 
@@ -280,6 +513,7 @@ export default function TEKListPage({ navigate, initialFilters = {} }) {
         <Sidebar
           activeSubject="ela"
           activeStrand={strand !== "All strands" ? strand : null}
+          activeCourse={course !== "All courses" ? course : null}
           onNavigate={navigate}
         />
 
@@ -317,10 +551,16 @@ export default function TEKListPage({ navigate, initialFilters = {} }) {
         ) : (
           // When a filter is active that flattens results, just show a grid.
           // Otherwise, group by course → strand with section headers for orientation.
-          course !== "All courses" || strand !== "All strands" || search ? (
+          course !== "All courses" || strand !== "All strands" || substrand || dok || search ? (
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
               {filtered.map((t) => (
-                <TEKCard key={t.code} tek={t} onOpen={handleOpen} inCart={cartHas(t.code)} />
+                <TEKCard
+                  key={t.code}
+                  tek={t}
+                  onOpen={handleOpen}
+                  onFilter={handleCardFilter}
+                  inCart={cartHas(t.code)}
+                />
               ))}
             </div>
           ) : (
@@ -356,8 +596,13 @@ export default function TEKListPage({ navigate, initialFilters = {} }) {
                         </p>
                         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                           {items.map((t) => (
-                            <TEKCard key={t.code} tek={t} onOpen={handleOpen} inCart={cartHas(t.code)} />
-
+                            <TEKCard
+                              key={t.code}
+                              tek={t}
+                              onOpen={handleOpen}
+                              onFilter={handleCardFilter}
+                              inCart={cartHas(t.code)}
+                            />
                           ))}
                         </div>
                       </div>

@@ -75,7 +75,13 @@ function parseHash(hash) {
  */
 export function reconstructCode(courseCode, letter, roman) {
   if (!courseCode || !letter) return null;
-  const m = /^(\d+)([A-Z])$/.exec(letter);
+  // Standalone-standard TEKs (like 110.36(3) Self-Sustained Reading) have
+  // no expectation letter — letter is just the standard number.
+  const bareNum = /^(\d+)$/.exec(letter);
+  if (bareNum) {
+    return `${courseCode}(${bareNum[1]})`;
+  }
+  const m = /^(\d+)([A-Z]+)$/.exec(letter);
   if (!m) return null;
   const stdNum = m[1];
   const expLetter = m[2];

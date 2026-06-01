@@ -39,6 +39,24 @@ export const ELA_STRANDS = [
   "Inquiry & Research",
 ];
 
+export const ELA_COURSES = ["English I", "English II", "English III", "English IV"];
+
+// Pre-compute counts per (course, strand) so we don't recalc on every render.
+const COURSE_COUNTS = Object.fromEntries(
+  ELA_COURSES.map((c) => [c, teksData.filter((t) => t.course === c).length])
+);
+const COURSE_STRAND_COUNTS = Object.fromEntries(
+  ELA_COURSES.map((c) => [
+    c,
+    Object.fromEntries(
+      ELA_STRANDS.map((s) => [
+        s,
+        teksData.filter((t) => t.course === c && t.strand === s).length,
+      ])
+    ),
+  ])
+);
+
 const SUBJECT_NAV = [
   { id: "home", label: "Home", icon: IconHome, accent: null, kind: "link" },
   {
@@ -82,12 +100,18 @@ const AI_TOOL_NAMES = [
   "STAAR® Blitz",
 ];
 
-function SidebarSubject({ subject, activeSubject, expanded, onToggle, onNavigate, activeStrand }) {
+function SidebarSubject({ subject, activeSubject, expanded, onToggle, onNavigate, activeStrand, activeCourse }) {
   const isActive = subject.id === activeSubject;
   const isExpanded = expanded;
   const Icon = subject.icon;
   const [aiOpen, setAiOpen] = useState(isActive);
   const [teksOpen, setTeksOpen] = useState(isActive);
+  // Which course is currently expanded inside the ELA TEKs tree.
+  // Default to the active course if one is set, otherwise none.
+  const [openCourse, setOpenCourse] = useState(activeCourse || null);
+  useEffect(() => {
+    if (activeCourse) setOpenCourse(activeCourse);
+  }, [activeCourse]);
 
   if (subject.kind === "link") {
     return (
@@ -178,28 +202,104 @@ function SidebarSubject({ subject, activeSubject, expanded, onToggle, onNavigate
 
           {subject.id === "ela" && teksOpen && (
             <div className="ml-4 my-0.5 flex flex-col">
-              {ELA_STRANDS.map((strandName) => {
-                const isStrandActive = strandName === activeStrand;
+              {ELA_COURSES.map((courseName) => {
+                const isCourseActive = courseName === activeCourse;
+                const isCourseOpen = openCourse === courseName;
+                const strandCounts = COURSE_STRAND_COUNTS[courseName] || {};
                 return (
-                  <button
-                    key={strandName}
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      onNavigate?.(listPath({ strand: strandName }));
-                    }}
-                    className="flex items-center gap-2 px-2 py-1 rounded text-[11px] text-left hover:bg-white/40 transition-colors"
-                    style={{
-                      color: isStrandActive ? PALETTE.inkPrimary : PALETTE.inkSecondary,
-                      fontWeight: isStrandActive ? 600 : 400,
-                      background: isStrandActive ? PALETTE.bone : "transparent",
-                    }}
-                  >
-                    <span
-                      className="w-1 h-1 rounded-full inline-block"
-                      style={{ background: subject.accent }}
-                    />
-                    <span className="flex-1">{strandName}</span>
-                  </button>
+                  <div key={courseName} className="flex flex-col">
+                    {/* Course header row — toggles expansion AND filters to this course */}
+                    <div className="flex items-center">
+                      <button
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          onNavigate?.(listPath({ course: courseName }));
+                        }}
+                        className="flex-1 flex items-center gap-2 px-2 py-1 rounded text-[11px] text-left hover:bg-white/40 transition-colors"
+                        style={{
+                          color: isCourseActive ? PALETTE.inkPrimary : PALETTE.inkSecondary,
+                          fontWeight: isCourseActive ? 600 : 500,
+                          background: isCourseActive ? PALETTE.bone : "transparent",
+                        }}
+                      >
+                        <span
+                          className="w-1 h-1 rounded-full inline-block"
+                          style={{ background: subject.accent }}
+                        />
+                        <span className="flex-1">{courseName}</span>
+                        <span
+                          className="text-[10px] font-mono px-1 rounded"
+                          style={{
+                            color: subject.accent,
+                            background: PALETTE.bone,
+                            border: `1px solid ${PALETTE.tagBorder}`,
+                          }}
+                        >
+                          {COURSE_COUNTS[courseName]}
+                        </span>
+                      </button>
+                      <button
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          setOpenCourse(isCourseOpen ? null : courseName);
+                        }}
+                        className="px-1.5 py-1 rounded hover:bg-white/40 transition-colors"
+                        title={isCourseOpen ? "Collapse" : "Expand strands"}
+                      >
+                        <span
+                          className="text-[10px] transition-transform inline-block"
+                          style={{
+                            color: PALETTE.stone,
+                            transform: isCourseOpen ? "rotate(90deg)" : "none",
+                          }}
+                        >
+                          <IconChevronRight size={11} />
+                        </span>
+                      </button>
+                    </div>
+
+                    {/* Strands nested under each course */}
+                    {isCourseOpen && (
+                      <div
+                        className="ml-3 my-0.5 pl-3 flex flex-col gap-0.5"
+                        style={{ borderLeft: `1px dashed ${PALETTE.tagBorder}` }}
+                      >
+                        {ELA_STRANDS.map((strandName) => {
+                          const n = strandCounts[strandName] || 0;
+                          if (n === 0) return null;
+                          const isStrandActive =
+                            isCourseActive && strandName === activeStrand;
+                          return (
+                            <button
+                              key={strandName}
+                              onClick={(e) => {
+                                e.stopPropagation();
+                                onNavigate?.(
+                                  listPath({ course: courseName, strand: strandName })
+                                );
+                              }}
+                              className="flex items-center gap-2 px-2 py-0.5 rounded text-[10.5px] text-left hover:bg-white/40 transition-colors"
+                              style={{
+                                color: isStrandActive
+                                  ? PALETTE.inkPrimary
+                                  : PALETTE.inkTertiary,
+                                fontWeight: isStrandActive ? 600 : 400,
+                                background: isStrandActive ? PALETTE.bone : "transparent",
+                              }}
+                            >
+                              <span className="flex-1">{strandName}</span>
+                              <span
+                                className="text-[9px] font-mono"
+                                style={{ color: PALETTE.stone }}
+                              >
+                                {n}
+                              </span>
+                            </button>
+                          );
+                        })}
+                      </div>
+                    )}
+                  </div>
                 );
               })}
             </div>
@@ -417,7 +517,7 @@ function LessonCartPanel({ onNavigate }) {
  *                    strand or "{Subject} TEKs" link. Receives a path like
  *                    '/list/strand/Response%20Skills' or '/'.
  */
-export default function Sidebar({ activeSubject = "ela", activeStrand, onNavigate }) {
+export default function Sidebar({ activeSubject = "ela", activeStrand, activeCourse, onNavigate }) {
   // Re-expand the active subject whenever activeSubject changes (e.g. when
   // navigating between pages or filtering to a different strand within ELA).
   const [expandedId, setExpandedId] = useState(activeSubject);
@@ -451,6 +551,7 @@ export default function Sidebar({ activeSubject = "ela", activeStrand, onNavigat
           subject={subject}
           activeSubject={activeSubject}
           activeStrand={activeStrand}
+          activeCourse={activeCourse}
           onNavigate={onNavigate}
           expanded={expandedId === subject.id}
           onToggle={() => setExpandedId(expandedId === subject.id ? null : subject.id)}

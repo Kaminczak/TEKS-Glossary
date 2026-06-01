@@ -11067,7 +11067,11 @@
       "DOK 3 justification: students must select evidence strategically AND construct original analytical commentary that makes a defensible interpretive claim — going beyond retrieval or simple application into genuine reasoning about textual meaning.",
       "STAAR tests this TEK primarily through literary and informational response prompts scored on the STAAR Writing rubric; the question stems above are framed as item-set questions that assess evidence selection and commentary quality in student-written response excerpts — the format used on STAAR's analytical writing assessments."
     ],
-    "explainerVideo": null,
+    "explainerVideo": {
+      "videoUrl": "/videos/110-37-5-C.mp4",
+      "label": "Teacher Explainer — Section 1 (stevek voice test)",
+      "duration": "30s"
+    },
     "_sourceFile": "110 37 5C.md",
     "_format": "new"
   },
@@ -14010,7 +14014,11 @@
       "DOK 3 justification: the skill requires students to explain relationships between specific textual choices and cognitive/emotional effects on readers — going beyond retrieval (DOK 1–2) into strategic analysis of mechanism.",
       "This standard sits at the intersection of literary analysis and rhetorical awareness; it is taught in both fiction and nonfiction contexts and links directly to composition standards (students who understand how language shapes perception in reading are better positioned to make intentional language choices in writing)."
     ],
-    "explainerVideo": null,
+    "explainerVideo": {
+      "videoUrl": "/videos/110-37-8-D.mp4",
+      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "duration": "45s"
+    },
     "_sourceFile": "110 37 8D.md",
     "_format": "new"
   },
@@ -15736,7 +15744,11 @@
       "DOK 3 justification: composing a genre-appropriate piece requires strategic application of multiple conventions and craft decisions; DOK 4 elements emerge in revision tasks that ask students to evaluate and defend their choices.",
       "These question stems are written as STAAR-style revision-and-craft prompts, the primary mode through which informational composition TEKs appear on the assessment. The TEK itself is a production standard, not a reading standard, so STAAR tests it through revision scenarios — selecting, improving, or justifying a writing move."
     ],
-    "explainerVideo": null,
+    "explainerVideo": {
+      "videoUrl": "/videos/110-37-10-B.mp4",
+      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "duration": "30s"
+    },
     "_sourceFile": "110 37 10B.md",
     "_format": "new"
   },
@@ -15859,7 +15871,11 @@
       "DOK 4 justification: extended composition requiring original synthesis, structural decision-making, and defense of a position across a complete genre-appropriate text. Students must apply multiple criteria simultaneously — claim quality, evidence selection, reasoning, counterargument, craft — not execute a single procedure.",
       "STAAR analog: this TEK is tested through the STAAR Expository/Argumentative writing prompt (Expository in earlier grades; Argumentative in high school). Stems above reflect the revision-task strand of STAAR Writing as well as the analytical reading of argumentative mentor texts."
     ],
-    "explainerVideo": null,
+    "explainerVideo": {
+      "videoUrl": "/videos/110-37-10-C.mp4",
+      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "duration": "30s"
+    },
     "_sourceFile": "110 37 10C.md",
     "_format": "new"
   },
@@ -15978,7 +15994,11 @@
       "DOK 2 justification: the skill requires applying established structural conventions to a specific purpose and audience — a procedural skill with decision-making embedded, not pure recall, but not yet extended analysis or critique.",
       "STAAR analog note: correspondence as a standalone genre does not appear as a reading passage on STAAR, but writing-prompt scenarios often require students to recognize appropriate register and structure; the question stems above are modeled on how STAAR tests genre awareness through revision tasks and author's-purpose questions applied to student-produced texts."
     ],
-    "explainerVideo": null,
+    "explainerVideo": {
+      "videoUrl": "/videos/110-37-10-D.mp4",
+      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "duration": "30s"
+    },
     "_sourceFile": "110 37 10D.md",
     "_format": "new"
   },
@@ -16101,7 +16121,11 @@
       "DOK 3 justification: generating and evaluating inquiry questions requires strategic thinking — students must reason about what makes a question researchable, anticipate what kinds of evidence it invites, and revise based on intellectual feedback. This is above recall or application.",
       "This TEK has limited direct STAAR testing but surfaces in research-embedded on-demand tasks; the question stems above mirror how STAAR tests research process through paired-passage and author-purpose frames. Note in planning that the standard's work is best assessed through the research project itself, not a standalone passage response."
     ],
-    "explainerVideo": null,
+    "explainerVideo": {
+      "videoUrl": "/videos/110-37-11-A.mp4",
+      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "duration": "30s"
+    },
     "_sourceFile": "110 37 11A.md",
     "_format": "new"
   },
@@ -16224,7 +16248,11 @@
       "DOK 3 / Apply-Evaluate: selecting and executing an appropriate mode requires strategic thinking about rhetorical context, not just task completion; Evaluate enters when students must justify the choice against alternatives.",
       "This TEK has no direct STAAR analog as a standalone performance standard, but the reasoning it demands — matching form to purpose and audience — maps closely to author's craft questions on STAAR (e.g., why does the author present this information visually rather than in prose?). Stems written to mirror that analog."
     ],
-    "explainerVideo": null,
+    "explainerVideo": {
+      "videoUrl": "/videos/110-37-11-AI.mp4",
+      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "duration": "30s"
+    },
     "_sourceFile": "110 37 11AI.md",
     "_format": "new"
   },
@@ -16343,7 +16371,11 @@
       "DOK 4 justification: the standard requires extended, self-directed evaluation across multiple steps with no single correct answer — students must apply criteria they develop against their own process, then act on judgments they reach.",
       "This TEK has no direct STAAR analog as a standalone tested expectation, but the skill surfaces in research-scenario reading passages where students evaluate a fictional researcher's decision-making. Question stems above mirror that STAAR framing."
     ],
-    "explainerVideo": null,
+    "explainerVideo": {
+      "videoUrl": "/videos/110-37-11-B.mp4",
+      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "duration": "30s"
+    },
     "_sourceFile": "110 37 11B.md",
     "_format": "new"
   },
@@ -16462,7 +16494,11 @@
       "TEA expectation is minimal (\"develop and revise a plan\") — scope, revision criteria, and plan components are teacher-defined. Align plan requirements with the paired composition strand (Std 9) so research planning and writing process reinforce each other.",
       "STAAR does not test this TEK directly; stems above mirror how released STAAR items frame research-process scenarios (student plans, research excerpts, revision decisions) in the Expository and Argumentative composition contexts."
     ],
-    "explainerVideo": null,
+    "explainerVideo": {
+      "videoUrl": "/videos/110-37-11-C.mp4",
+      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "duration": "30s"
+    },
     "_sourceFile": "110 37 11C.md",
     "_format": "new"
   },
@@ -16581,7 +16617,11 @@
       "DOK 3 justification: Students must evaluate the fit between evidence and question, then produce a revised question — this requires strategic thinking and self-monitoring, not just recall or skill application.",
       "This TEK has no direct STAAR analog in the tested genres; question stems above mirror how STAAR would frame research-process evaluation through a passage about a researcher's methodology or through a multi-source research simulation prompt."
     ],
-    "explainerVideo": null,
+    "explainerVideo": {
+      "videoUrl": "/videos/110-37-11-D.mp4",
+      "label": "Teacher Explainer — Section 1 (Define)",
+      "duration": "30s"
+    },
     "_sourceFile": "110 37 11D.md",
     "_format": "new"
   },
