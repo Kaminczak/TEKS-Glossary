@@ -65,6 +65,12 @@ const ALL_STRANDS = (() => {
   return ["All strands", ...Array.from(s).sort()];
 })();
 
+// TEKs that already have an explainer video wired — featured at the top of the
+// unfiltered browse view so visitors land on working video content first.
+const VIDEO_TEKS = teksData.filter(
+  (t) => t.explainerVideo?.videoUrl || t.explainerVideo?.youtubeId
+);
+
 function TEKCard({ tek, onOpen, onFilter, inCart }) {
   const strandColor = STRAND_COLORS[tek.strand] || PALETTE.stone;
   const dokColor = DOK_COLORS[tek.dok] || PALETTE.stone;
@@ -127,10 +133,10 @@ function TEKCard({ tek, onOpen, onFilter, inCart }) {
           {hasVideo && (
             <span
               title="Has explainer video"
-              className="inline-flex items-center justify-center w-5 h-5 rounded-full"
+              className="inline-flex items-center gap-1 px-1.5 py-0.5 rounded text-[10px] font-mono uppercase tracking-[0.12em]"
               style={{ background: strandColor, color: PALETTE.bone }}
             >
-              <IconArrowUpRight size={11} />
+              ▶ video
             </span>
           )}
           {inCart && (
@@ -565,6 +571,43 @@ export default function TEKListPage({ navigate, initialFilters = {} }) {
             </div>
           ) : (
             <div className="flex flex-col gap-12">
+              {VIDEO_TEKS.length > 0 && (
+                <section>
+                  <div className="flex items-end justify-between mb-4 flex-wrap gap-2">
+                    <div>
+                      <p
+                        className="text-[10px] font-mono uppercase tracking-[0.22em]"
+                        style={{ color: PALETTE.monoGold }}
+                      >
+                        ▶ Teacher explainers · watch Mr. K unpack the standard
+                      </p>
+                      <h2
+                        className="font-semibold mt-1"
+                        style={{ color: PALETTE.inkPrimary, fontSize: "1.4rem" }}
+                      >
+                        TEKs with video
+                      </h2>
+                    </div>
+                    <span
+                      className="text-[10px] font-mono uppercase tracking-[0.22em]"
+                      style={{ color: PALETTE.monoGold }}
+                    >
+                      {VIDEO_TEKS.length} live · more in production
+                    </span>
+                  </div>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                    {VIDEO_TEKS.map((t) => (
+                      <TEKCard
+                        key={`vid-${t.code}`}
+                        tek={t}
+                        onOpen={handleOpen}
+                        onFilter={handleCardFilter}
+                        inCart={cartHas(t.code)}
+                      />
+                    ))}
+                  </div>
+                </section>
+              )}
               {Array.from(grouped.entries()).map(([courseName, strandMap]) => (
                 <section key={courseName}>
                   <div className="flex items-end justify-between mb-4 flex-wrap gap-2">
