@@ -727,7 +727,11 @@
       "DOK 3 justification: students must use context strategically to distinguish between two types of meaning and explain how an author's choice produces a specific effect — this is reasoning with evidence, not recall or procedure.",
       "STAAR relevance: this TEK is directly tested in author's craft questions asking why a word was chosen and what effect it produces. Nearly every diction-focused stem on STAAR depends on the distinction this TEK teaches."
     ],
-    "explainerVideo": null,
+    "explainerVideo": {
+      "videoUrl": "/videos/110-36-2-B.mp4",
+      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "duration": "30s"
+    },
     "_sourceFile": "110 36 2B.md",
     "_format": "new"
   },
@@ -1692,7 +1696,11 @@
       "DOK 3 justification: moving from literal comprehension to inference requires reasoning across the text, not just retrieval; supporting an inference with evidence requires strategic thinking about why a detail connects to a claim.",
       "This TEK underpins nearly every reading standard in the course. If students cannot infer, they cannot analyze author's craft, evaluate argument, or synthesize across sources — treat it as a gateway skill, not a discreet unit."
     ],
-    "explainerVideo": null,
+    "explainerVideo": {
+      "videoUrl": "/videos/110-36-4-F.mp4",
+      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "duration": "30s"
+    },
     "_sourceFile": "110 36 4F.md",
     "_format": "new"
   },
@@ -2914,7 +2922,11 @@
       "DOK 3 justification: Students must move beyond retrieval (explicit) and into strategic reasoning (implicit), then translate that reasoning into organized written and oral response — requiring inference, synthesis, and evidence selection.",
       "STAAR analog: Explicit/implicit meaning is among the most heavily tested skills on STAAR Reading — nearly every literary and informational response question tests one layer or the other, or the relationship between them. Stems here model the exact phrasing students will encounter."
     ],
-    "explainerVideo": null,
+    "explainerVideo": {
+      "videoUrl": "/videos/110-36-5-G.mp4",
+      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "duration": "30s"
+    },
     "_sourceFile": "110 36 5G.md",
     "_format": "new"
   },
@@ -3399,7 +3411,11 @@
       "DOK 3 justification: Students must apply an interpretive frame (theme as claim) to specific textual evidence, explain the relationship between characterization/plot and meaning, and sustain that reasoning across a complete text. Strategic thinking is required; this is not recall or summary.",
       "This TEK spans genres (\"a variety of literary texts\") — short stories, novels, drama, and narrative poetry all qualify. Misconceptions and assignments should rotate across genres throughout the year."
     ],
-    "explainerVideo": null,
+    "explainerVideo": {
+      "videoUrl": "/videos/110-36-6-A.mp4",
+      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "duration": "30s"
+    },
     "_sourceFile": "110 36 6A.md",
     "_format": "new"
   },
@@ -6226,7 +6242,11 @@
       "DOK 3 justification: students must apply revision strategies strategically across multiple dimensions (clarity, development, organization, diction, syntax), requiring judgment about which revision moves serve the draft's specific needs — not rule-application, but reasoning about effect.",
       "This TEK is closely linked to reading standards — students who analyze how published authors use syntax (8D) are better positioned to revise their own syntactic choices intentionally."
     ],
-    "explainerVideo": null,
+    "explainerVideo": {
+      "videoUrl": "/videos/110-36-9-C.mp4",
+      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "duration": "30s"
+    },
     "_sourceFile": "110 36 9C.md",
     "_format": "new"
   },
@@ -9497,7 +9517,11 @@
       "DOK 3 justification: Students must apply semantic understanding to unfamiliar contexts, use textual evidence to support claims about meaning, and draw inferences about authorial intent — requiring strategic thinking beyond simple retrieval.",
       "STAAR alignment: This is one of the most directly and frequently tested vocabulary TEKs. STAAR uses \"MOST nearly means,\" \"connotation,\" and figurative language identification regularly across both fiction and informational passages. All 10 stems above are grounded in authentic STAAR phrasing."
     ],
-    "explainerVideo": null,
+    "explainerVideo": {
+      "videoUrl": "/videos/110-37-2-B.mp4",
+      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "duration": "30s"
+    },
     "_sourceFile": "110 37 2B.md",
     "_format": "new"
   },
