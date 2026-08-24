@@ -1,11 +1,8 @@
 import { useEffect, useState } from "react";
 import {
-  IconNotebook, IconLayoutList, IconCalendarTime, IconWand,
-  IconChevronRight, IconClock, IconCalculator, IconFlask,
-  IconWorld, IconHome, IconArrowUpRight,
+  IconNotebook, IconLayoutList, IconChevronRight, IconHome,
 } from "./icons/TablerIcons";
-import { listPath, tekPath } from "../hooks/useHashRoute";
-import { useTEKCart } from "../hooks/useTEKCart";
+import { listPath } from "../hooks/useHashRoute";
 import teksData from "../data/teksData.json";
 
 const PALETTE = {
@@ -60,51 +57,18 @@ const COURSE_STRAND_COUNTS = Object.fromEntries(
 const SUBJECT_NAV = [
   { id: "home", label: "Home", icon: IconHome, accent: null, kind: "link" },
   {
-    id: "math",
-    label: "Math",
-    icon: IconCalculator,
-    accent: "oklch(0.45 0.10 30)", // Brick
-    kind: "subject",
-  },
-  {
-    id: "science",
-    label: "Science",
-    icon: IconFlask,
-    accent: "oklch(0.45 0.10 260)", // Indigo
-    kind: "subject",
-  },
-  {
     id: "ela",
     label: "ELA",
     icon: IconNotebook,
     accent: "oklch(0.45 0.08 150)", // Pine
     kind: "subject",
   },
-  {
-    id: "social",
-    label: "Social Studies",
-    icon: IconWorld,
-    accent: "oklch(0.45 0.08 70)", // Saddle
-    kind: "subject",
-  },
-];
-
-const AI_TOOL_NAMES = [
-  "Focus Package",
-  "Warm-Ups",
-  "Lessons",
-  "Assignments",
-  "Exit Passes",
-  "Unit Tests",
-  "Pick 4 Essays",
-  "STAAR® Blitz",
 ];
 
 function SidebarSubject({ subject, activeSubject, expanded, onToggle, onNavigate, activeStrand, activeCourse }) {
   const isActive = subject.id === activeSubject;
   const isExpanded = expanded;
   const Icon = subject.icon;
-  const [aiOpen, setAiOpen] = useState(isActive);
   const [teksOpen, setTeksOpen] = useState(isActive);
   // Which course is currently expanded inside the ELA TEKs tree.
   // Default to the active course if one is set, otherwise none.
@@ -305,199 +269,6 @@ function SidebarSubject({ subject, activeSubject, expanded, onToggle, onNavigate
             </div>
           )}
 
-          <button
-            className="flex items-center gap-2 px-2 py-1.5 rounded text-xs text-left hover:bg-white/40 transition-colors"
-            style={{ color: PALETTE.inkSecondary }}
-          >
-            <IconCalendarTime size={13} />
-            <span>Your Scope &amp; Sequence</span>
-          </button>
-
-          <button
-            onClick={(e) => { e.stopPropagation(); setAiOpen(!aiOpen); }}
-            className="flex items-center gap-2 px-2 py-1.5 rounded text-xs text-left hover:bg-white/40 transition-colors"
-            style={{ color: PALETTE.inkSecondary }}
-          >
-            <IconWand size={13} style={{ color: subject.accent }} />
-            <span>AI Tools</span>
-            <span
-              className="ml-auto text-[10px] transition-transform"
-              style={{
-                color: PALETTE.stone,
-                transform: aiOpen ? "rotate(90deg)" : "none",
-              }}
-            >
-              <IconChevronRight size={11} />
-            </span>
-          </button>
-
-          {aiOpen && (
-            <div className="ml-4 my-0.5 flex flex-col">
-              {AI_TOOL_NAMES.map((toolName, i) => {
-                const available = i < 2;
-                return (
-                  <button
-                    key={toolName}
-                    className="flex items-center gap-2 px-2 py-1 rounded text-[11px] text-left hover:bg-white/40 transition-colors"
-                    style={{
-                      color: available ? PALETTE.inkSecondary : PALETTE.boneStone,
-                      fontStyle: available ? "normal" : "italic",
-                    }}
-                  >
-                    <span
-                      className="w-1 h-1 rounded-full inline-block"
-                      style={{ background: available ? subject.accent : PALETTE.boneStone }}
-                    />
-                    <span className="flex-1">{toolName}</span>
-                    {!available && (
-                      <span style={{ color: PALETTE.boneStone }}>
-                        <IconClock size={10} />
-                      </span>
-                    )}
-                  </button>
-                );
-              })}
-            </div>
-          )}
-        </div>
-      )}
-    </div>
-  );
-}
-
-function LessonCartPanel({ onNavigate }) {
-  const { cart, remove, clear, count } = useTEKCart();
-  const [open, setOpen] = useState(true);
-
-  // Resolve codes to full TEK records for display
-  const byCode = Object.fromEntries(teksData.map((t) => [t.code, t]));
-
-  return (
-    <div
-      className="mt-5 mx-2 rounded-lg overflow-hidden"
-      style={{
-        background: PALETTE.bone,
-        border: `1px solid ${PALETTE.tagBorder}`,
-      }}
-    >
-      <button
-        onClick={() => setOpen(!open)}
-        className="w-full flex items-center gap-2 px-3 py-2.5 text-left hover:bg-black/[0.02] transition-colors"
-      >
-        <IconNotebook size={14} style={{ color: "var(--accent)" }} />
-        <span
-          className="font-mono uppercase text-[10px] tracking-[0.18em] flex-1"
-          style={{ color: PALETTE.monoGold }}
-        >
-          Lesson Cart
-        </span>
-        <span
-          className="text-[10px] font-mono px-1.5 rounded"
-          style={{
-            color: count > 0 ? PALETTE.bone : PALETTE.stone,
-            background: count > 0 ? "var(--accent)" : PALETTE.sand,
-            border: `1px solid ${count > 0 ? "var(--accent)" : PALETTE.tagBorder}`,
-            minWidth: 18,
-            textAlign: "center",
-          }}
-        >
-          {count}
-        </span>
-        <span
-          className="text-[10px] transition-transform"
-          style={{
-            color: PALETTE.stone,
-            transform: open ? "rotate(90deg)" : "none",
-          }}
-        >
-          <IconChevronRight size={11} />
-        </span>
-      </button>
-
-      {open && (
-        <div
-          className="px-3 pb-3 flex flex-col gap-1"
-          style={{ borderTop: `1px solid ${PALETTE.hairline}` }}
-        >
-          <p
-            className="mt-2 text-[11px] leading-relaxed underline decoration-1 underline-offset-[3px]"
-            style={{
-              color: count > 0 ? PALETTE.inkPrimary : PALETTE.inkTertiary,
-              textDecorationColor: count > 0 ? "var(--accent)" : PALETTE.boneStone,
-              fontWeight: count > 0 ? 600 : 400,
-            }}
-          >
-            {count > 0
-              ? "TEKs chosen for lesson/activity:"
-              : "No TEKs added yet — your lesson cart is empty."}
-          </p>
-
-          {count === 0 ? (
-            <p className="text-[11px] leading-relaxed mt-1.5" style={{ color: PALETTE.inkTertiary }}>
-              Hit{" "}
-              <span
-                className="font-mono px-1 rounded text-[10px]"
-                style={{ background: PALETTE.sand, color: PALETTE.inkSecondary }}
-              >
-                + Add to lesson
-              </span>{" "}
-              on any TEK page. Build the set first, then generate a worksheet, exit ticket, or lesson plan that covers them all.
-            </p>
-          ) : (
-            <>
-              <ul className="mt-1.5 flex flex-col">
-                {cart.map((code) => {
-                  const t = byCode[code];
-                  const label = t ? `${code} — ${t.title}` : code;
-                  return (
-                    <li
-                      key={code}
-                      className="flex items-start gap-2 text-[11px] rounded px-1 py-1 hover:bg-black/[0.03] group leading-snug"
-                    >
-                      <button
-                        onClick={() => t && onNavigate?.(tekPath(t))}
-                        className="flex-1 min-w-0 text-left"
-                        style={{ color: PALETTE.inkSecondary }}
-                        title={label}
-                      >
-                        {label}
-                      </button>
-                      <button
-                        onClick={() => remove(code)}
-                        title="Remove from lesson cart"
-                        className="opacity-40 group-hover:opacity-100 transition-opacity shrink-0 px-1 leading-none"
-                        style={{ color: PALETTE.stone, fontSize: 14 }}
-                      >
-                        ×
-                      </button>
-                    </li>
-                  );
-                })}
-              </ul>
-
-              <div className="mt-3 flex items-center gap-2">
-                <button
-                  disabled
-                  className="flex-1 inline-flex items-center justify-center gap-1.5 px-2 py-1.5 rounded text-[11px] font-medium opacity-50 cursor-not-allowed"
-                  style={{
-                    background: "var(--accent)",
-                    color: PALETTE.bone,
-                  }}
-                  title="Generators coming soon"
-                >
-                  Generate from selection
-                  <IconArrowUpRight size={11} />
-                </button>
-                <button
-                  onClick={clear}
-                  className="text-[10px] font-mono uppercase tracking-[0.12em] px-2 py-1.5 rounded hover:bg-black/[0.03]"
-                  style={{ color: PALETTE.stone }}
-                >
-                  Clear
-                </button>
-              </div>
-            </>
-          )}
         </div>
       )}
     </div>
@@ -541,7 +312,7 @@ export default function Sidebar({ activeSubject = "ela", activeStrand, activeCou
           Curriculum Archive
         </p>
         <p className="text-xs mt-0.5" style={{ color: PALETTE.inkTertiary }}>
-          Texas Education Agency · TEKS
+          Texas Education Agency · TEKS · English I–IV
         </p>
       </div>
 
@@ -558,7 +329,6 @@ export default function Sidebar({ activeSubject = "ela", activeStrand, activeCou
         />
       ))}
 
-      <LessonCartPanel onNavigate={onNavigate} />
     </aside>
   );
 }

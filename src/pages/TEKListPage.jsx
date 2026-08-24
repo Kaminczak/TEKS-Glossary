@@ -1,7 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import teksData from "../data/teksData.json";
 import { tekPath, listPath } from "../hooks/useHashRoute";
-import { useTEKCart } from "../hooks/useTEKCart";
 import Sidebar from "../components/Sidebar";
 import {
   IconSearch, IconNotebook, IconArrowUpRight, IconBrain,
@@ -71,7 +70,7 @@ const VIDEO_TEKS = teksData.filter(
   (t) => t.explainerVideo?.videoUrl || t.explainerVideo?.youtubeId
 );
 
-function TEKCard({ tek, onOpen, onFilter, inCart }) {
+function TEKCard({ tek, onOpen, onFilter }) {
   const strandColor = STRAND_COLORS[tek.strand] || PALETTE.stone;
   const dokColor = DOK_COLORS[tek.dok] || PALETTE.stone;
   const hasVideo = !!tek.explainerVideo?.videoUrl || !!tek.explainerVideo?.youtubeId;
@@ -100,14 +99,12 @@ function TEKCard({ tek, onOpen, onFilter, inCart }) {
       className="text-left flex flex-col gap-3 p-5 rounded-2xl transition-all duration-200 group relative cursor-pointer outline-none focus-visible:ring-2"
       style={{
         background: PALETTE.bone,
-        // Left rail = strand color (3px), rest = subtle (or accent if in cart)
-        borderTop: `1px solid ${inCart ? "var(--accent)" : PALETTE.tagBorder}`,
-        borderRight: `1px solid ${inCart ? "var(--accent)" : PALETTE.tagBorder}`,
-        borderBottom: `1px solid ${inCart ? "var(--accent)" : PALETTE.tagBorder}`,
+        // Left rail = strand color (3px), rest subtle
+        borderTop: `1px solid ${PALETTE.tagBorder}`,
+        borderRight: `1px solid ${PALETTE.tagBorder}`,
+        borderBottom: `1px solid ${PALETTE.tagBorder}`,
         borderLeft: `4px solid ${strandColor}`,
-        boxShadow: inCart
-          ? "0 0 0 1px var(--accent) inset, 0 1px 0 rgba(255,253,247,0.6) inset"
-          : "0 1px 0 rgba(255,253,247,0.6) inset",
+        boxShadow: "0 1px 0 rgba(255,253,247,0.6) inset",
       }}
       onMouseEnter={(e) => {
         e.currentTarget.style.boxShadow = "0 4px 16px -8px rgba(26,23,19,0.18)";
@@ -137,18 +134,6 @@ function TEKCard({ tek, onOpen, onFilter, inCart }) {
               style={{ background: strandColor, color: PALETTE.bone }}
             >
               ▶ video
-            </span>
-          )}
-          {inCart && (
-            <span
-              className="inline-flex items-center gap-1 px-1.5 py-0.5 rounded text-[10px] font-mono uppercase tracking-[0.12em]"
-              title="In your lesson cart"
-              style={{
-                background: "var(--accent)",
-                color: PALETTE.bone,
-              }}
-            >
-              ✓ In lesson
             </span>
           )}
         </div>
@@ -403,7 +388,6 @@ export default function TEKListPage({ navigate, initialFilters = {} }) {
   const [strand, setStrand] = useState(initialFilters.strand || "All strands");
   const [substrand, setSubstrand] = useState(initialFilters.substrand || null);
   const [dok, setDok] = useState(initialFilters.dok ? Number(initialFilters.dok) : null);
-  const { has: cartHas } = useTEKCart();
 
   // If URL filters change (back/forward navigation, deep links, click-to-filter
   // from card), sync local state.
@@ -565,7 +549,6 @@ export default function TEKListPage({ navigate, initialFilters = {} }) {
                   tek={t}
                   onOpen={handleOpen}
                   onFilter={handleCardFilter}
-                  inCart={cartHas(t.code)}
                 />
               ))}
             </div>
@@ -602,7 +585,6 @@ export default function TEKListPage({ navigate, initialFilters = {} }) {
                         tek={t}
                         onOpen={handleOpen}
                         onFilter={handleCardFilter}
-                        inCart={cartHas(t.code)}
                       />
                     ))}
                   </div>
@@ -644,7 +626,6 @@ export default function TEKListPage({ navigate, initialFilters = {} }) {
                               tek={t}
                               onOpen={handleOpen}
                               onFilter={handleCardFilter}
-                              inCart={cartHas(t.code)}
                             />
                           ))}
                         </div>
