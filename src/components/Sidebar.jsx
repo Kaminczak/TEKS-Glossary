@@ -38,6 +38,33 @@ export const ELA_STRANDS = [
 
 export const ELA_COURSES = ["English I", "English II", "English III", "English IV"];
 
+// Per-course accent. Added 2026-08-29 for the DESIGN.md note that course headings
+// need their own colour so Steve can drill down by scanning rather than reading.
+// Muted, low-chroma, same family as the subject Pine so they sit on parchment without
+// shouting. These also drive the presenter's outfit per course in the video pipeline —
+// English I is terracotta because its 72 clips are already rendered in the rust shirt.
+// Course accent — Adobe square harmony, chosen 2026-08-29. Deep and saturated;
+// closest pair separates at RGB distance 77, and lightness varies between them.
+// The rejected alternative held lightness and chroma fixed at 0.32 / 0.07 and
+// varied only hue, which separated at 51 and read as one shade in four tints.
+// If these are ever re-tuned: vary lightness as well as hue, and keep every pair
+// above ~60 apart. Verify contrast through a canvas readback, not getComputedStyle.
+export const COURSE_ACCENT = {
+  "English I":   "oklch(0.30 0.15 28)", // oxblood
+  "English II":  "#030D66",             // navy
+  "English III": "#03661D",             // forest
+  "English IV":  "oklch(0.40 0.12 325)", // plum
+};
+// English IV went olive -> brown -> plum. Olive (#665003) and the oxblood were the
+// closest pair at 77; brown at L 0.46 opened that to 83 but Steve still read the two
+// as related, which is fair — both sit in the warm quarter of the wheel alongside
+// English I. Plum moves into the empty gap between navy (265) and oxblood (28) and
+// separates at 104, the widest of any candidate tried, with better chip contrast too.
+//
+// The four hues are 28 / 265 / 146 / 325 and lightness runs 0.247 to 0.444. Keep BOTH
+// irregular: an earlier set held lightness and chroma fixed and varied only hue, and
+// it read as one shade in four tints.
+
 // Pre-compute counts per (course, strand) so we don't recalc on every render.
 const COURSE_COUNTS = Object.fromEntries(
   ELA_COURSES.map((c) => [c, teksData.filter((t) => t.course === c).length])
@@ -60,7 +87,11 @@ const SUBJECT_NAV = [
     id: "ela",
     label: "ELA",
     icon: IconNotebook,
-    accent: "oklch(0.45 0.08 150)", // Pine
+    // Rust — 2026-08-29. Was Pine "oklch(0.45 0.08 150)". The brand is rust rather
+    // than the abandoned Koi Orange or the unused teal in index.css: 117 explainer
+    // videos are already rendered in the rust overshirt, so rust makes the presenter
+    // and the site agree, and it sits naturally on the parchment neutrals.
+    accent: "oklch(0.52 0.12 45)",
     kind: "subject",
   },
 ];
@@ -170,6 +201,7 @@ function SidebarSubject({ subject, activeSubject, expanded, onToggle, onNavigate
                 const isCourseActive = courseName === activeCourse;
                 const isCourseOpen = openCourse === courseName;
                 const strandCounts = COURSE_STRAND_COUNTS[courseName] || {};
+                const courseAccent = COURSE_ACCENT[courseName] || subject.accent;
                 return (
                   <div key={courseName} className="flex flex-col">
                     {/* Course header row — toggles expansion AND filters to this course */}
@@ -179,22 +211,23 @@ function SidebarSubject({ subject, activeSubject, expanded, onToggle, onNavigate
                           e.stopPropagation();
                           onNavigate?.(listPath({ course: courseName }));
                         }}
-                        className="flex-1 flex items-center gap-2 px-2 py-1 rounded text-[11px] text-left hover:bg-white/40 transition-colors"
+                        className="flex-1 flex items-center gap-2 px-2 py-1.5 rounded text-[13px] text-left hover:bg-white/40 transition-colors"
                         style={{
-                          color: isCourseActive ? PALETTE.inkPrimary : PALETTE.inkSecondary,
-                          fontWeight: isCourseActive ? 600 : 500,
+                          color: isCourseActive ? courseAccent : PALETTE.inkSecondary,
+                          fontWeight: isCourseActive ? 700 : 600,
                           background: isCourseActive ? PALETTE.bone : "transparent",
+                          letterSpacing: "0.005em",
                         }}
                       >
                         <span
-                          className="w-1 h-1 rounded-full inline-block"
-                          style={{ background: subject.accent }}
+                          className="w-1.5 h-1.5 rounded-full inline-block shrink-0"
+                          style={{ background: courseAccent }}
                         />
                         <span className="flex-1">{courseName}</span>
                         <span
                           className="text-[10px] font-mono px-1 rounded"
                           style={{
-                            color: subject.accent,
+                            color: courseAccent,
                             background: PALETTE.bone,
                             border: `1px solid ${PALETTE.tagBorder}`,
                           }}

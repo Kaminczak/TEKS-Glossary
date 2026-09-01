@@ -3,15 +3,30 @@
 
 @theme {
   /* === Editorial Scholar Design System (Stitch) === */
-  --color-primary: #154045;
-  --color-primary-container: #2f575d;
-  --color-primary-fixed: #c0eaf1;
-  --color-primary-fixed-dim: #a4ced4;
+
+  /* Primary retired teal -> rust, 2026-09-01. The teal shipped with the Stitch
+     scaffolding and was only ever consumed by GeneratePage and EditorToolbar
+     (admin, behind #/admin/toolkit) — the public site never showed it, so it sat
+     unnoticed while the sidebar ran rust. Rust is the brand because 254 explainer
+     videos are already rendered with the presenter in a rust overshirt; that is
+     the one layer that cannot be changed without re-rendering, so the CSS matches
+     it rather than the other way round.
+
+     Built at hue 45 (from Sidebar's oklch(0.52 0.12 45)) on the SAME lightness
+     ladder the teal used, so every contrast relationship is preserved: white on
+     --color-primary is 12.0:1, on --color-primary-hover 8.5:1, and
+     --color-on-primary-fixed on --color-primary-fixed is 13.4:1. Chroma is capped
+     at each tone's in-gamut maximum (0.098 at L .344, 0.05 at L .910) — do not
+     raise it without re-checking sRGB clipping. */
+  --color-primary: #602400;
+  --color-primary-container: #833404;
+  --color-primary-fixed: #fcd9c9;
+  --color-primary-fixed-dim: #eab8a3;
   --color-on-primary: #ffffff;
-  --color-on-primary-fixed: #001f24;
-  --color-on-primary-fixed-variant: #244d52;
-  --color-inverse-primary: #a4ced4;
-  --color-surface-tint: #3d656b;
+  --color-on-primary-fixed: #2e1003;
+  --color-on-primary-fixed-variant: #742d00;
+  --color-inverse-primary: #eab8a3;
+  --color-surface-tint: #934319;
 
   --color-secondary: #77583a;
   --color-secondary-container: #ffd5b0;
@@ -69,7 +84,7 @@
   --font-label: 'Manrope', system-ui, sans-serif;
 
   /* Legacy aliases for existing components */
-  --color-primary-hover: #2f575d;
+  --color-primary-hover: #833404;
   --color-text: #1a1c1b;
   --color-text-muted: #414849;
   --color-border: #c0c8c9;

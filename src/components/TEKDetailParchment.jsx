@@ -34,6 +34,12 @@ function resolveAssetUrl(url) {
   return `${base}${clean}`;
 }
 
+// Generators are NOT wired to anything — GeneratorCard's onClick fires a developer
+// alert("...wire this to your AI Toolkit endpoint"). Hidden from the public site
+// 2026-08-26 until they actually generate something. Flip to true to restore; the
+// data and components below are intentionally left intact.
+const SHOW_GENERATORS = false;
+
 const GENERATORS = [
   {
     key: 'worksheet',
@@ -219,7 +225,7 @@ function TopBar({ onNavHome }) {
         TEKS Glossary
       </button>
       <nav className="hidden md:flex items-center gap-5 ml-6 text-sm">
-        {['Standards', 'Resources', 'Generators', 'Glossary'].map((label) => (
+        {(SHOW_GENERATORS ? ['Standards', 'Resources', 'Generators', 'Glossary'] : ['Standards', 'Resources', 'Glossary']).map((label) => (
           <a key={label} className="hover:underline" style={{ color: PALETTE.inkTertiary }} href="#">
             {label}
           </a>
@@ -854,6 +860,7 @@ export default function TEKDetailParchment({
           </article>{/* close the page-card */}
 
           {/* Generators — OUTSIDE the page-card, on parchment, as the "now build something" zone */}
+          {SHOW_GENERATORS && (
           <section className="mt-10 px-2">
             <div className="flex items-end justify-between mb-5 flex-wrap gap-2">
               <div>
@@ -896,6 +903,7 @@ export default function TEKDetailParchment({
               ))}
             </div>
           </section>
+          )}
         </main>
       </div>
 

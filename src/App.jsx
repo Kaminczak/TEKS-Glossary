@@ -59,7 +59,7 @@ function AdminShell({ subview, navigate }) {
           >
             ← Glossary
           </button>
-          <span className="font-headline font-extrabold text-[#154045] text-xl tracking-tight">
+          <span className="font-headline font-extrabold text-primary text-xl tracking-tight">
             Admin · {current.label}
           </span>
         </div>
@@ -70,7 +70,7 @@ function AdminShell({ subview, navigate }) {
               onClick={() => navigate(`/admin/${key}`)}
               className={`font-headline font-semibold text-sm px-4 py-2 rounded-lg transition-all ${
                 subview === key
-                  ? "bg-[#154045] text-white"
+                  ? "bg-primary text-white"
                   : "text-[#414849] hover:bg-[#e8e8e6]"
               }`}
             >

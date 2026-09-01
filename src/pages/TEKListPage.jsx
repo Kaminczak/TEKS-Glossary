@@ -1,7 +1,8 @@
 import { useEffect, useMemo, useState } from "react";
 import teksData from "../data/teksData.json";
 import { tekPath, listPath } from "../hooks/useHashRoute";
-import Sidebar from "../components/Sidebar";
+import Sidebar, { COURSE_ACCENT } from "../components/Sidebar";
+import { StrandChip } from "../components/icons/StrandIcons";
 import {
   IconSearch, IconNotebook, IconArrowUpRight, IconBrain,
 } from "../components/icons/TablerIcons";
@@ -25,27 +26,32 @@ const PALETTE = {
   tagBorder: "rgba(26,23,19,0.12)",
 };
 
-// Course → CSS accent (oklch). Same lightness/chroma per HANDOFF.md doctrine.
-const COURSE_ACCENT = {
-  "English I": "oklch(0.45 0.08 150)", // Pine
-  "English II": "oklch(0.45 0.08 150)",
-  "English III": "oklch(0.45 0.08 150)",
-  "English IV": "oklch(0.45 0.08 150)",
-};
+// COURSE_ACCENT now lives in Sidebar.jsx and is imported above — it used to be
+// duplicated here with all four courses set to the same pine, which meant course
+// colour was stubbed out and never actually differentiated anything.
 
 const COURSES = ["All courses", "English I", "English II", "English III", "English IV"];
 
 // Strand → accent color. Tuned to harmonize with the parchment/ink palette.
 // Each strand gets a single canonical color; substrand variations are conveyed
 // via the strand+substrand line at the bottom of each card.
+// Hues respaced 2026-08-29. The original set put Comprehension at 25 and Composition
+// at 35 (10 apart) and Foundational at 150 and Inquiry at 165 (15 apart) — two pairs
+// that read as the same colour, which Steve spotted immediately once the TEK chip
+// started carrying strand colour. Seven strands need the hue wheel divided seven ways.
+//
+// RULES when editing: keep every pair >=35 hue apart, and keep lightness <=0.50 so the
+// #F3E3BE chip text stays above WCAG AA 4.5:1 at 11px. Verify with the canvas contrast
+// check before committing — getComputedStyle returns oklch() unresolved, so naive
+// parsing silently reports nonsense.
 export const STRAND_COLORS = {
-  "Foundational Language Skills": "oklch(0.45 0.08 150)", // Pine
   "Comprehension Skills":         "oklch(0.42 0.13 25)",  // Burgundy
+  "Composition":                  "oklch(0.50 0.12 68)",  // Terracotta / amber
+  "Author's Purpose and Craft":   "oklch(0.48 0.10 105)", // Olive
+  "Foundational Language Skills": "oklch(0.45 0.08 150)", // Pine
+  "Inquiry & Research":           "oklch(0.44 0.08 195)", // Teal
   "Response Skills":              "oklch(0.48 0.08 240)", // Slate Blue
   "Multiple Genres":              "oklch(0.42 0.10 310)", // Plum
-  "Author's Purpose and Craft":   "oklch(0.55 0.10 75)",  // Ochre
-  "Composition":                  "oklch(0.50 0.12 35)",  // Terracotta
-  "Inquiry & Research":           "oklch(0.40 0.10 165)", // Forest
 };
 
 // DOK → brain icon color. Cognitive-depth scale: gray (recall) → green/amber.
@@ -71,7 +77,10 @@ const VIDEO_TEKS = teksData.filter(
 );
 
 function TEKCard({ tek, onOpen, onFilter }) {
-  const strandColor = STRAND_COLORS[tek.strand] || PALETTE.stone;
+  // 2026-08-29: the card's colour encodes the COURSE, not the strand, so every
+  // English I card looks alike and a teacher's own course reads as one set. Strand
+  // is carried by the icon glyph in the identity row, which needs no colour at all.
+  const courseColor = COURSE_ACCENT[tek.course] || PALETTE.stone;
   const dokColor = DOK_COLORS[tek.dok] || PALETTE.stone;
   const hasVideo = !!tek.explainerVideo?.videoUrl || !!tek.explainerVideo?.youtubeId;
 
@@ -103,15 +112,21 @@ function TEKCard({ tek, onOpen, onFilter }) {
         borderTop: `1px solid ${PALETTE.tagBorder}`,
         borderRight: `1px solid ${PALETTE.tagBorder}`,
         borderBottom: `1px solid ${PALETTE.tagBorder}`,
-        borderLeft: `4px solid ${strandColor}`,
-        boxShadow: "0 1px 0 rgba(255,253,247,0.6) inset",
+        borderLeft: `6px solid ${courseColor}`,
+        // Resting shadow, added 2026-08-29. Cards previously sat flat with only an
+        // inset highlight, so a grid of them read as one field and the strand rail
+        // went unnoticed. A real drop shadow separates each card from the parchment
+        // and gives the rail an edge to sit against.
+        boxShadow: "0 1px 0 rgba(255,253,247,0.6) inset, 0 2px 10px -4px rgba(26,23,19,0.14)",
       }}
       onMouseEnter={(e) => {
-        e.currentTarget.style.boxShadow = "0 4px 16px -8px rgba(26,23,19,0.18)";
+        e.currentTarget.style.boxShadow =
+          "0 1px 0 rgba(255,253,247,0.6) inset, 0 10px 26px -10px rgba(26,23,19,0.28)";
         e.currentTarget.style.transform = "translateY(-2px)";
       }}
       onMouseLeave={(e) => {
-        e.currentTarget.style.boxShadow = "0 1px 0 rgba(255,253,247,0.6) inset";
+        e.currentTarget.style.boxShadow =
+          "0 1px 0 rgba(255,253,247,0.6) inset, 0 2px 10px -4px rgba(26,23,19,0.14)";
         e.currentTarget.style.transform = "none";
       }}
     >
@@ -119,8 +134,12 @@ function TEKCard({ tek, onOpen, onFilter }) {
         <span
           className="inline-flex items-center px-2.5 py-1 rounded-md text-[11px] font-mono font-semibold"
           style={{
-            background: PALETTE.ink,
-            color: "#D9BE7A",
+            // 2026-08-29: chip carries the COURSE colour instead of flat ink. It is the
+            // largest, left-most element on the card, so it is where course actually
+            // registers — the 6px rail alone went unnoticed. Strand is carried by the
+            // footer glyph instead. Gold text holds contrast on every COURSE_ACCENT.
+            background: courseColor,
+            color: "#F3E3BE",
             letterSpacing: "0.03em",
           }}
         >
@@ -131,7 +150,7 @@ function TEKCard({ tek, onOpen, onFilter }) {
             <span
               title="Has explainer video"
               className="inline-flex items-center gap-1 px-1.5 py-0.5 rounded text-[10px] font-mono uppercase tracking-[0.12em]"
-              style={{ background: strandColor, color: PALETTE.bone }}
+              style={{ background: courseColor, color: PALETTE.bone }}
             >
               ▶ video
             </span>
@@ -155,54 +174,77 @@ function TEKCard({ tek, onOpen, onFilter }) {
         </p>
       )}
 
+      {/* One footer row. Left: strand glyph, then DOK, then the strand/substrand
+          text. Right: the course, set larger because it is the card's loudest
+          identity — the rail and chip already carry its colour. Merging what were
+          two rows puts the course on the same baseline as the strand name. */}
       <div
-        className="mt-auto pt-3 flex items-center justify-between text-[11px] font-mono uppercase tracking-[0.18em]"
-        style={{ color: PALETTE.monoGold, borderTop: `1px solid ${PALETTE.hairline}` }}
+        className="mt-auto pt-3 flex items-center justify-between gap-3"
+        style={{ borderTop: `1px solid ${PALETTE.hairline}` }}
       >
-        <button
-          type="button"
-          onClick={(e) => filterClick(e, { course: tek.course })}
-          className="hover:underline underline-offset-2 transition-colors"
-          title={`Filter to ${tek.course} only`}
-        >
-          {tek.course}
-        </button>
-        <button
-          type="button"
-          onClick={(e) => filterClick(e, { dok: tek.dok })}
-          className="flex items-center gap-1.5 hover:underline underline-offset-2 transition-colors"
-          title={`Filter to DOK ${tek.dok} (${DOK_LABELS[tek.dok] || ""}) only`}
-        >
-          <span style={{ color: dokColor }}>
-            <IconBrain size={14} />
-          </span>
-          DOK {tek.dok}
-        </button>
-      </div>
-
-      <div className="text-[11px] flex flex-wrap items-center gap-1" style={{ color: PALETTE.inkTertiary }}>
+        {/* Glyph above its own label. Every card has a strand, so this block is the
+            same height everywhere — the previous two-column version stacked DOK under
+            the chip and the substrand under the strand, which left a hole on the 142
+            of 278 TEKs that have no substrand. Substrand now lives only on the detail
+            page and in the filters, where its absence costs nothing. */}
+        {/* Both sides are a single mono line at the same size and weight, on one
+            baseline. The filled tile is the footer's only accent mass; the glyph
+            shape carries the strand, so the tile itself takes the course colour.
+            DOK sits with the course rather than trailing as a footnote. */}
+        {/* 44px band. Left: washed tile + the strand name in mixed-case sans at
+            15px/600 — mixed case is narrower per character than mono uppercase with
+            letter-spacing, which is what lets the FULL names fit here when the
+            shortened uppercase ones did not. Right: course over DOK, stacked inside
+            the same band so both sides occupy one aligned block. */}
         <button
           type="button"
           onClick={(e) => filterClick(e, { strand: tek.strand })}
-          className="hover:underline underline-offset-2 transition-colors"
-          title={`Filter to ${tek.strand}`}
-          style={{ color: strandColor, fontWeight: 600 }}
+          className="flex items-center gap-3 min-w-0 text-left group/strand"
+          title={`Show all ${tek.strand}`}
+          style={{ background: "none", border: "none", padding: 0, cursor: "pointer" }}
         >
-          {tek.strand}
+          <StrandChip strand={tek.strand} color={courseColor} size={44} />
+          {/* Wraps to at most two lines instead of truncating. The band is 44px and
+              the line is 15px, so two lines fit inside it — that is what lets the
+              full names survive at three-up, where even mixed case clipped 109 of
+              294 on one line. */}
+          <span
+            className="text-[15px] group-hover/strand:underline underline-offset-2"
+            style={{
+              color: PALETTE.inkPrimary,
+              fontWeight: 600,
+              lineHeight: 1.15,
+              display: "-webkit-box",
+              WebkitLineClamp: 2,
+              WebkitBoxOrient: "vertical",
+              overflow: "hidden",
+              textWrap: "balance",
+            }}
+          >
+            {tek.strand}
+          </span>
         </button>
-        {tek.substrand && (
-          <>
-            <span>·</span>
-            <button
-              type="button"
-              onClick={(e) => filterClick(e, { substrand: tek.substrand })}
-              className="hover:underline underline-offset-2 transition-colors"
-              title={`Filter to ${tek.substrand}`}
-            >
-              {tek.substrand}
-            </button>
-          </>
-        )}
+
+        <div className="flex flex-col items-end justify-center shrink-0" style={{ minHeight: 44 }}>
+          <button
+            type="button"
+            onClick={(e) => filterClick(e, { course: tek.course })}
+            className="text-[15px] font-mono uppercase tracking-[0.08em] hover:underline underline-offset-2 transition-colors"
+            title={`Filter to ${tek.course} only`}
+            style={{ color: courseColor, fontWeight: 600 }}
+          >
+            {tek.course}
+          </button>
+          <button
+            type="button"
+            onClick={(e) => filterClick(e, { dok: tek.dok })}
+            className="text-[11px] font-mono uppercase tracking-[0.12em] hover:underline underline-offset-2 transition-colors"
+            title={`Filter to DOK ${tek.dok} (${DOK_LABELS[tek.dok] || ""}) only`}
+            style={{ color: PALETTE.stone }}
+          >
+            DOK {tek.dok}
+          </button>
+        </div>
       </div>
     </div>
   );
