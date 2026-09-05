@@ -32,6 +32,15 @@ search, sidebar counts, and prev/next) and `public/data/tek/<slug>.json` (one fu
 entry per TEK, fetched by the detail page), and writes `src/data/stats.json` for
 the counts on the landing page. `public/data/` is gitignored.
 
+**Videos:** `explainerVideo` is the single clip every TEK page has shown so far.
+`explainerVideos` (written by `scripts/teks_wire_videos_to_site.py` once a TEK has
+local renders of more than one section) lists Define / Lessons & Tips / Assess &
+Watch For, and the page shows a switcher when it is present.
+
+**Worksheets:** drop a PDF named `<slug> - <Title>.pdf` into `public/worksheets/`
+(slug is the video key, e.g. `110-36-4-G`) and the build links it from that TEK's
+page and flags the card. No JSON to edit.
+
 ## What you're looking at
 
 A single TEK detail page rendered in React, themed in a warm parchment palette

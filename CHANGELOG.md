@@ -1,5 +1,25 @@
 # Changelog
 
+## 2026-09-04 (later) — One complete TEK page: three videos + worksheet
+
+Groundwork for the "end product" page, prototyped on 110.37(5)(C):
+
+- **Section switcher.** The video card offers three word-links — Define, Lessons &
+  Tips, Assess & Watch For — when `teksData.json` carries `explainerVideos`
+  (one entry per section with a local own-voice render; written by
+  `scripts/teks_wire_videos_to_site.py`, keys `<code>-s1/-s2/-s3.mp4`). The
+  caption under the player changes with the section: the plain-language
+  standard, the classroom moves, the misconceptions. Sections not rendered yet
+  show disabled. TEKS with only the old single `explainerVideo` look as before.
+- **Worksheets by filename.** Drop `<slug> - <Title>.pdf` into
+  `public/worksheets/` (e.g. `110-36-4-G - The Detail Sorter.pdf`) and the build
+  attaches it: a "Print & practice" link under the video tips, a `worksheet` chip
+  on the card. Nothing renders for TEKS without one.
+- Pipeline (outside this repo): `Local Avatar/run_sections.ps1` voices and renders
+  every section of one TEK end to end; `scripts/teks_upload_to_r2.py` now refuses
+  a manifest older than any render, which is what silently dropped six
+  110.37(8) clips on Sep 2.
+
 ## 2026-09-04 — Landing page, `/teks`, and the audit fixes
 
 **Landing page at `/`, glossary moved to `/teks`.** Kaizen.School now opens on
