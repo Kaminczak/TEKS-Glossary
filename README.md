@@ -1,12 +1,36 @@
-# TEKS Glossary
+# Kaizen.School
 
-A teacher-facing reference for the Texas Essential Knowledge and Skills (TEKS),
-designed to help educators understand each student expectation — what the
-standard actually means, how to teach it, the common misconceptions, and the
-question stems STAAR uses to assess it.
+The site at **https://kaizen.school**: a landing page for Steve Kaminczak's work,
+and the TEKS Glossary — a teacher-facing reference for the Texas Essential
+Knowledge and Skills, designed to help educators understand each student
+expectation — what the standard actually means, how to teach it, the common
+misconceptions, and the question stems STAAR uses to assess it.
 
-This repo is the public prototype of the glossary page. The full vault and
-content-generation pipeline live in a separate project.
+The full vault and content-generation pipeline live in the parent project; this
+repo is the site that serves them.
+
+## Routes
+
+| Path | What it is |
+|---|---|
+| `/` | Landing page — three doors: the glossary, the explainer videos, the Genre Machine |
+| `/teks` | Browse all 278 English I–IV TEKS (query string carries filters: `?course=English+I&strand=…&dok=3`) |
+| `/teks?video=1` | Only the TEKS with a teacher explainer video |
+| `/teks/110.36/1B` | One TEK's glossary entry (`/teks/{courseCode}/{standard+letter}[/{roman}]`) |
+| `/admin/toolkit` | Unlinked admin tools (TipTap editor, SSE client) |
+
+Old hash links (`#/tek/110.36/1B`, `#/list/course/English%20I`) still resolve —
+`src/hooks/useRoute.js` rewrites them to the path form on load. Deep links and
+refreshes work on GitHub Pages via the `public/404.html` shim.
+
+## Data
+
+`src/data/teksData.json` is the source of truth the Python pipeline writes to.
+It is **not** bundled: `tools/build-data.mjs` (run automatically before `dev` and
+`build`) splits it into `public/data/index.json` (one slim row per TEK, for cards,
+search, sidebar counts, and prev/next) and `public/data/tek/<slug>.json` (one full
+entry per TEK, fetched by the detail page), and writes `src/data/stats.json` for
+the counts on the landing page. `public/data/` is gitignored.
 
 ## What you're looking at
 
@@ -36,8 +60,13 @@ Then open http://localhost:5173/
 ## Deploy
 
 `main` branch deploys automatically to GitHub Pages via the workflow in
-`.github/workflows/deploy.yml`. Live site:
-**https://Kaminczak.github.io/TEKS-Glossary/**
+`.github/workflows/deploy.yml`, served on the custom domain
+**https://kaizen.school** (`public/CNAME`). Explainer videos are served from
+Cloudflare R2, not this repo.
+
+`public/og.png`, `favicon.ico`, and `apple-touch-icon.png` are committed
+assets; regenerate them with `python tools/og/render.py` if the wordmark or
+thesis line changes.
 
 ## Stack
 
