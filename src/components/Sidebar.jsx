@@ -175,7 +175,7 @@ function SidebarSubject({ subject, activeSubject, expanded, onToggle, onNavigate
             style={{ color: PALETTE.inkSecondary }}
           >
             <IconLayoutList size={13} />
-            <span>{subject.label} TEKs</span>
+            <span>{subject.label} TEKS</span>
             <span
               className="ml-auto text-[10px] font-mono px-1.5 rounded"
               style={{

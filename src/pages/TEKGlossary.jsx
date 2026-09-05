@@ -112,7 +112,7 @@ export default function TEKGlossary() {
       <div className="max-w-6xl mx-auto px-8 md:px-16 py-12">
         {filtered.length === 0 ? (
           <div className="text-center py-24 text-[#71787a] font-body italic text-xl">
-            No TEKs match your filters.
+            No TEKS match your filters.
           </div>
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

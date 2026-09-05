@@ -141,7 +141,7 @@ export default function TEKDetailCard({ tek, onClose }) {
           </CollapsibleSection>
 
           {/* Connected TEKs */}
-          <CollapsibleSection title="Connected TEKs" icon="🔗">
+          <CollapsibleSection title="Connected TEKS" icon="🔗">
             <div className="flex flex-wrap gap-2">
               {tek.connected_teks.map(code => (
                 <span key={code}

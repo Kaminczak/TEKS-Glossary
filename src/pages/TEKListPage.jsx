@@ -332,7 +332,7 @@ function TopBar({
         className="text-[10px] font-mono uppercase tracking-[0.22em]"
         style={{ color: PALETTE.monoGold }}
       >
-        {count} / {stats.total} TEKs
+        {count} / {stats.total} TEKS
       </span>
 
       <div
@@ -673,7 +673,7 @@ export default function TEKListPage({ navigate, initialFilters = {} }) {
               fontSize: "clamp(1.85rem, 2.4vw + 1rem, 2.8rem)",
             }}
           >
-            {videoOnly ? "TEKS with video" : "Browse the TEKs Glossary"}
+            {videoOnly ? "TEKS with video" : "Browse the TEKS Glossary"}
           </h1>
           <p className="mt-3 text-base leading-relaxed max-w-2xl" style={{ color: PALETTE.inkSecondary }}>
             {videoOnly
@@ -702,7 +702,7 @@ export default function TEKListPage({ navigate, initialFilters = {} }) {
             className="rounded-3xl p-12 text-center"
             style={{ background: PALETTE.bone, border: `1px solid ${PALETTE.standardBorder}` }}
           >
-            <p style={{ color: PALETTE.inkTertiary }}>No TEKs match your filters.</p>
+            <p style={{ color: PALETTE.inkTertiary }}>No TEKS match your filters.</p>
           </div>
         ) : (
           // When a filter is active that flattens results, just show a grid.
@@ -739,7 +739,7 @@ export default function TEKListPage({ navigate, initialFilters = {} }) {
                         className="font-semibold mt-1"
                         style={{ color: PALETTE.inkPrimary, fontSize: "1.4rem" }}
                       >
-                        TEKs with video
+                        TEKS with video
                       </h2>
                     </div>
                     <span
@@ -789,7 +789,7 @@ export default function TEKListPage({ navigate, initialFilters = {} }) {
                       className="text-[10px] font-mono uppercase tracking-[0.22em]"
                       style={{ color: PALETTE.monoGold }}
                     >
-                      {total} TEKs
+                      {total} TEKS
                     </span>
                   </div>
 
