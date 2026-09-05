@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Kaizen.School</title>
+    <script>
+      // GitHub Pages SPA shim (the rafgraph/spa-github-pages pattern).
+      //
+      // Pages serves this file for any path it has no file for — /teks,
+      // /teks/110.36/1B, a refresh on either. We bounce to the root with the
+      // path tucked into the query string, and the matching script in
+      // index.html's <head> restores the real URL with history.replaceState
+      // before React mounts. Nothing here runs on the happy path.
+      //
+      // pathSegmentsToKeep is 0 because the site serves from the root of the
+      // custom domain. If it ever moves back to /TEKS-Glossary/ on
+      // github.io, set it to 1 (see the note in vite.config.js).
+      var pathSegmentsToKeep = 0;
+      var l = window.location;
+      l.replace(
+        l.protocol + "//" + l.hostname + (l.port ? ":" + l.port : "") +
+        l.pathname.split("/").slice(0, 1 + pathSegmentsToKeep).join("/") + "/?/" +
+        l.pathname.slice(1).split("/").slice(pathSegmentsToKeep).join("/").replace(/&/g, "~and~") +
+        (l.search ? "&" + l.search.slice(1).replace(/&/g, "~and~") : "") +
+        l.hash
+      );
+    </script>
+  </head>
+  <body>
+    <p style="font-family: system-ui, sans-serif; padding: 2rem; color: #3C352D;">
+      Redirecting to <a href="/">kaizen.school</a>…
+    </p>
+  </body>
+</html>
