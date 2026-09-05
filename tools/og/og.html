@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>og</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  /* 1200x630 Open Graph card. Rendered to public/og.png by tools/og/render.py.
+     Same parchment system as the site: parchment ground, rust rail, mono gold eyebrow. */
+  html, body { margin: 0; padding: 0; }
+  body {
+    width: 1200px; height: 630px; overflow: hidden; position: relative;
+    background: #F6F2EC; color: #1A1713;
+    font-family: "Manrope", system-ui, -apple-system, "Segoe UI", sans-serif;
+  }
+  .rail { position: absolute; left: 0; top: 0; bottom: 0; width: 16px; background: oklch(0.52 0.12 45); }
+  .card {
+    position: absolute; left: 16px; top: 0; right: 0; bottom: 0;
+    padding: 64px 80px 56px 76px; box-sizing: border-box;
+    display: flex; flex-direction: column;
+  }
+  .eyebrow {
+    font-family: ui-monospace, Consolas, "SFMono-Regular", Menlo, monospace;
+    font-size: 19px; letter-spacing: 0.22em; text-transform: uppercase; color: #6B5E3C;
+  }
+  .eyebrow b { color: #1A1713; font-weight: 600; }
+  h1 {
+    margin: 26px 0 0; font-size: 62px; line-height: 1.12; font-weight: 600;
+    letter-spacing: -0.02em; max-width: 1000px;
+  }
+  .doors { margin-top: auto; display: flex; gap: 40px; align-items: center; }
+  .door { display: flex; align-items: center; gap: 12px; font-size: 24px; font-weight: 600; color: #3C352D; }
+  .dot { width: 14px; height: 14px; border-radius: 4px; display: inline-block; }
+  .sub { font-family: ui-monospace, Consolas, Menlo, monospace; font-size: 14px; letter-spacing: 0.14em; text-transform: uppercase; color: #6B5E3C; margin-left: 4px; font-weight: 500; }
+  .foot { position: absolute; right: 80px; bottom: 56px; font-family: ui-monospace, Consolas, Menlo, monospace; font-size: 16px; letter-spacing: 0.18em; text-transform: uppercase; color: #8A7F73; }
+</style>
+</head>
+<body>
+  <div class="rail"></div>
+  <div class="card">
+    <div class="eyebrow"><b>Kaizen.School</b> &nbsp;·&nbsp; Steve Kaminczak</div>
+    <h1>I design English language arts curriculum — and I build the tools it runs on.</h1>
+    <div class="doors">
+      <div class="door"><span class="dot" style="background: oklch(0.52 0.12 45)"></span>TEKS Glossary <span class="sub">278 entries</span></div>
+      <div class="door"><span class="dot" style="background: oklch(0.45 0.08 150)"></span>Explainer Videos</div>
+      <div class="door"><span class="dot" style="background: oklch(0.42 0.10 310)"></span>The Genre Machine</div>
+    </div>
+  </div>
+</body>
+</html>

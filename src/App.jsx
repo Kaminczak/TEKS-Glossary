@@ -29,6 +29,15 @@ export default function App() {
 
   useEffect(() => {
     document.title = titleFor(route);
+    // index.html ships canonical="/" for crawlers that don't run JS (LinkedIn);
+    // for everyone else, point it at the page actually being viewed. Filters are
+    // views of /teks, so they collapse to it — except ?video=1, which is its own door.
+    const canonical = document.querySelector('link[rel="canonical"]');
+    if (canonical) {
+      const path = window.location.pathname;
+      const video = route.view === "list" && route.filters?.video ? "?video=1" : "";
+      canonical.href = `https://kaizen.school${path}${video}`;
+    }
   }, [route]);
 
   if (route.view === "landing") {
