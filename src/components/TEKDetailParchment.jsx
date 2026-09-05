@@ -335,6 +335,167 @@ function VideoCard({ video, sectionTitle }) {
   );
 }
 
+// One TEK, up to three clips. teksData.json carries `explainerVideos` — one entry per
+// section that has a local (own-voice) render, written by teks_wire_videos_to_site.py —
+// and the older single `explainerVideo` for everything that hasn't. Three word-links
+// switch the clip; the caption under it changes with the section so each one reads as
+// its own thing: Define → the standard in plain language, Lessons & Tips → the moves,
+// Assess & Watch For → the misconceptions. Sections not rendered yet show as disabled
+// so the page already has its final shape while the catalog catches up.
+const SECTION_ORDER = [
+  { n: 1, title: 'Define' },
+  { n: 2, title: 'Lessons & Tips' },
+  { n: 3, title: 'Assess & Watch For' },
+];
+
+function SectionVideo({ tek, resolveUrl }) {
+  const sections = tek.explainerVideos?.length ? tek.explainerVideos : null;
+  const first = sections ? SECTION_ORDER.find((o) => sections.some((v) => v.section === o.n)) : null;
+  const [active, setActive] = useState(first ? first.n : 2);
+  const [switched, setSwitched] = useState(false);
+
+  const current = sections ? sections.find((v) => v.section === active) : null;
+  const single = !sections ? tek.explainerVideo : null;
+  const src = current ? current.videoUrl : single?.videoUrl;
+  const duration = current ? current.duration : single?.duration;
+
+  const caption = {
+    1: {
+      eyebrow: 'What this standard asks',
+      items: [tek.studentFriendly].filter(Boolean),
+    },
+    2: {
+      eyebrow: 'Tips covered in this video',
+      items: (tek.assignments || []).slice(0, 3).map((a) => a.name),
+    },
+    3: {
+      eyebrow: 'Watch for',
+      items: (tek.misconceptions || []).slice(0, 3).map((m) => m.title),
+    },
+  }[sections ? active : 2];
+
+  return (
+    <>
+      {sections && (
+        <div className="px-7 pb-4 flex flex-wrap items-center gap-x-5 gap-y-2" role="tablist" aria-label="Explainer sections">
+          {SECTION_ORDER.map(({ n, title }) => {
+            const has = sections.some((v) => v.section === n);
+            const on = has && n === active;
+            return (
+              <button
+                key={n}
+                type="button"
+                role="tab"
+                aria-selected={on}
+                disabled={!has}
+                title={has ? `Watch: ${title}` : `${title} — not rendered yet`}
+                onClick={() => {
+                  if (!has || on) return;
+                  setActive(n);
+                  setSwitched(true);
+                }}
+                className="inline-flex items-center gap-2 min-h-6 text-[11px] font-mono uppercase tracking-[0.18em] outline-none rounded focus-visible:ring-2 focus-visible:ring-[#1A1713] disabled:cursor-not-allowed"
+                style={{
+                  color: on ? 'var(--accent)' : has ? PALETTE.inkTertiary : PALETTE.boneStone,
+                  fontWeight: on ? 700 : 500,
+                  borderBottom: on ? '2px solid var(--accent)' : '2px solid transparent',
+                  paddingBottom: 2,
+                }}
+              >
+                <span aria-hidden="true" style={{ fontSize: 9 }}>{on ? '▶' : '○'}</span>
+                {n} · {title}
+              </button>
+            );
+          })}
+        </div>
+      )}
+
+      <div className="px-7">
+        {src ? (
+          <div
+            className="rounded-2xl overflow-hidden aspect-video"
+            style={{ background: PALETTE.ink, border: `1px solid ${PALETTE.tagBorder}` }}
+          >
+            <video
+              key={src}
+              className="w-full h-full"
+              src={resolveUrl(src)}
+              controls
+              preload="metadata"
+              playsInline
+              autoPlay={switched}
+              aria-label={current ? `${current.title} — teacher explainer` : 'Teacher explainer'}
+            />
+          </div>
+        ) : tek.explainerVideo?.youtubeId ? (
+          <div
+            className="rounded-2xl overflow-hidden aspect-video"
+            style={{ background: PALETTE.ink, border: `1px solid ${PALETTE.tagBorder}` }}
+          >
+            <iframe
+              className="w-full h-full"
+              src={`https://www.youtube.com/embed/${tek.explainerVideo.youtubeId}`}
+              title={tek.explainerVideo.label}
+              allowFullScreen
+            />
+          </div>
+        ) : (
+          <div
+            className="rounded-2xl flex items-center justify-center aspect-video"
+            style={{ background: PALETTE.bone, border: `1px dashed ${PALETTE.tagBorder}` }}
+          >
+            <div className="text-center">
+              <span style={{ color: PALETTE.boneStone }}>
+                <IconPlayerPlayFilled size={40} />
+              </span>
+              <p
+                className="text-xs mt-2 font-mono uppercase tracking-[0.22em]"
+                style={{ color: PALETTE.inkTertiary }}
+              >
+                Video coming soon
+              </p>
+            </div>
+          </div>
+        )}
+      </div>
+
+      <div className="p-7 pt-5">
+        <div className="flex items-center gap-2 mb-3">
+          <span
+            className="text-[10px] font-mono uppercase tracking-[0.22em]"
+            style={{ color: PALETTE.monoGold }}
+          >
+            {caption.eyebrow}
+          </span>
+          {duration && (
+            <span
+              className="text-[10px] font-mono px-2 py-0.5 rounded"
+              style={{
+                color: 'var(--accent)',
+                background: PALETTE.bone,
+                border: `1px solid ${PALETTE.tagBorder}`,
+              }}
+            >
+              {duration}
+            </span>
+          )}
+        </div>
+        <ul className="flex flex-col gap-2 text-sm" style={{ color: PALETTE.inkSecondary }}>
+          {caption.items.map((text, i) => (
+            <li key={i} className="flex gap-2.5 leading-relaxed">
+              <span
+                className="shrink-0 mt-1.5 w-1.5 h-1.5 rounded-full"
+                style={{ background: 'var(--accent)' }}
+              />
+              <span>{text}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </>
+  );
+}
+
 function MisconceptionsAccordion({ items }) {
   const [openIdx, setOpenIdx] = useState(0);
   return (
@@ -751,96 +912,7 @@ export default function TEKDetailParchment({
                 />
               </div>
 
-              {/* Video / placeholder. Prefer local MP4 (videoUrl), fall back to
-                  YouTube embed (youtubeId), then placeholder. Local is more reliable
-                  in incognito + dev — no third-party cookie or embed restriction.
-
-                  resolveAssetUrl handles BASE_URL prefix so paths like '/videos/X.mp4'
-                  stored in teksData.json work both in dev (served from /) and in
-                  the GitHub Pages production build (served from /TEKS-Glossary/). */}
-              <div className="px-7">
-                {tek.explainerVideo?.videoUrl ? (
-                  <div
-                    className="rounded-2xl overflow-hidden aspect-video"
-                    style={{ background: PALETTE.ink, border: `1px solid ${PALETTE.tagBorder}` }}
-                  >
-                    <video
-                      className="w-full h-full"
-                      src={resolveAssetUrl(tek.explainerVideo.videoUrl)}
-                      controls
-                      preload="metadata"
-                      playsInline
-                    />
-                  </div>
-                ) : tek.explainerVideo?.youtubeId ? (
-                  <div
-                    className="rounded-2xl overflow-hidden aspect-video"
-                    style={{ background: PALETTE.ink, border: `1px solid ${PALETTE.tagBorder}` }}
-                  >
-                    <iframe
-                      className="w-full h-full"
-                      src={`https://www.youtube.com/embed/${tek.explainerVideo.youtubeId}`}
-                      title={tek.explainerVideo.label}
-                      allowFullScreen
-                    />
-                  </div>
-                ) : (
-                  <div
-                    className="rounded-2xl flex items-center justify-center aspect-video"
-                    style={{
-                      background: PALETTE.bone,
-                      border: `1px dashed ${PALETTE.tagBorder}`,
-                    }}
-                  >
-                    <div className="text-center">
-                      <span style={{ color: PALETTE.boneStone }}>
-                        <IconPlayerPlayFilled size={40} />
-                      </span>
-                      <p
-                        className="text-xs mt-2 font-mono uppercase tracking-[0.22em]"
-                        style={{ color: PALETTE.stone }}
-                      >
-                        Video coming soon
-                      </p>
-                    </div>
-                  </div>
-                )}
-              </div>
-
-              {/* Tips bullets — just the assignment names, the explanation lives in the video */}
-              <div className="p-7 pt-5">
-                <div className="flex items-center gap-2 mb-3">
-                  <span
-                    className="text-[10px] font-mono uppercase tracking-[0.22em]"
-                    style={{ color: PALETTE.monoGold }}
-                  >
-                    Tips covered in this video
-                  </span>
-                  {tek.explainerVideo && (
-                    <span
-                      className="text-[10px] font-mono px-2 py-0.5 rounded"
-                      style={{
-                        color: 'var(--accent)',
-                        background: PALETTE.bone,
-                        border: `1px solid ${PALETTE.tagBorder}`,
-                      }}
-                    >
-                      {tek.explainerVideo.duration}
-                    </span>
-                  )}
-                </div>
-                <ul className="flex flex-col gap-2 text-sm" style={{ color: PALETTE.inkSecondary }}>
-                  {tek.assignments.slice(0, 3).map((a, i) => (
-                    <li key={i} className="flex gap-2.5 leading-relaxed">
-                      <span
-                        className="shrink-0 mt-1.5 w-1.5 h-1.5 rounded-full"
-                        style={{ background: 'var(--accent)' }}
-                      />
-                      <span style={{ color: PALETTE.inkPrimary }}>{a.name}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+              <SectionVideo tek={tek} resolveUrl={resolveAssetUrl} />
             </section>
           </div>
 
