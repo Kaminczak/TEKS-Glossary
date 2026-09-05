@@ -1,6 +1,6 @@
 import TEKDetailParchment from "../components/TEKDetailParchment";
 import { useCourse, useIndex } from "../data/loader";
-import { reconstructCode, tekPath } from "../hooks/useHashRoute";
+import { reconstructCode, tekPath } from "../hooks/useRoute";
 
 const SHELL = {
   background: "#F6F2EC",
@@ -48,7 +48,7 @@ export default function ParchmentPreview({ courseCode, letter, roman, navigate }
             decoded to something we don't have. Try browsing the list.
           </p>
           <button
-            onClick={() => navigate?.("/")}
+            onClick={() => navigate?.("/teks")}
             className="mt-5 inline-flex items-center gap-2 px-4 py-2 rounded-md text-sm font-medium"
             style={{ background: "oklch(0.45 0.08 150)", color: "#FFFDF7" }}
           >
@@ -71,7 +71,7 @@ export default function ParchmentPreview({ courseCode, letter, roman, navigate }
       navigate={navigate}
       onNavPrev={prev ? () => navigate?.(tekPath(prev)) : null}
       onNavNext={next ? () => navigate?.(tekPath(next)) : null}
-      onNavHome={() => navigate?.("/")}
+      onNavHome={() => navigate?.("/teks")}
       prevSibling={prev}
       nextSibling={next}
     />

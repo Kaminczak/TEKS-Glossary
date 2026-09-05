@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import stats from "../data/stats.json";
 import { useIndex } from "../data/loader";
-import { tekPath, listPath } from "../hooks/useHashRoute";
+import { tekPath, listPath, linkProps } from "../hooks/useRoute";
 import Sidebar, { COURSE_ACCENT } from "../components/Sidebar";
 import { StrandChip } from "../components/icons/StrandIcons";
 import {
@@ -254,12 +254,15 @@ function TopBar({
   onClearFilter,
   count,
   strands,
+  videoOnly,
+  navigate,
 }) {
   const hasActiveFilters =
     course !== "All courses" ||
     strand !== "All strands" ||
     dok ||
-    substrand;
+    substrand ||
+    videoOnly;
 
   return (
     <div
@@ -267,9 +270,22 @@ function TopBar({
       style={{ background: PALETTE.bone, borderBottom: `1px solid ${PALETTE.standardBorder}` }}
     >
     <div className="flex items-center gap-3 flex-wrap">
-      <span className="font-semibold tracking-tight" style={{ color: PALETTE.inkPrimary }}>
+      <a
+        {...linkProps(navigate, "/")}
+        className="font-semibold tracking-tight outline-none rounded focus-visible:ring-2 focus-visible:ring-[#1A1713]"
+        style={{ color: PALETTE.inkPrimary }}
+        aria-label="Kaizen.School home"
+      >
+        Kaizen<span style={{ color: PALETTE.monoGold }}>.School</span>
+      </a>
+      <span aria-hidden="true" style={{ color: PALETTE.boneStone }}>/</span>
+      <a
+        {...linkProps(navigate, "/teks")}
+        className="font-semibold tracking-tight outline-none rounded focus-visible:ring-2 focus-visible:ring-[#1A1713]"
+        style={{ color: PALETTE.inkPrimary }}
+      >
         TEKS Glossary
-      </span>
+      </a>
       <span
         className="text-[10px] font-mono uppercase tracking-[0.22em]"
         style={{ color: PALETTE.monoGold }}
@@ -374,6 +390,13 @@ function TopBar({
             onClear={() => onClearFilter("substrand")}
           />
         )}
+        {videoOnly && (
+          <FilterChip
+            label="Has video"
+            accent="oklch(0.45 0.08 150)"
+            onClear={() => onClearFilter("video")}
+          />
+        )}
         {dok && (
           <FilterChip
             label={`DOK ${dok} · ${DOK_LABELS[dok] || ""}`}
@@ -427,6 +450,8 @@ export default function TEKListPage({ navigate, initialFilters = {} }) {
   const [strand, setStrand] = useState(initialFilters.strand || "All strands");
   const [substrand, setSubstrand] = useState(initialFilters.substrand || null);
   const [dok, setDok] = useState(initialFilters.dok ? Number(initialFilters.dok) : null);
+  // /teks?video=1 — the "Teacher Explainer Videos" door on the landing page.
+  const [videoOnly, setVideoOnly] = useState(!!initialFilters.video);
 
   // If URL filters change (back/forward navigation, deep links, click-to-filter
   // from card), sync local state.
@@ -441,8 +466,10 @@ export default function TEKListPage({ navigate, initialFilters = {} }) {
     if (incomingSubstrand !== substrand) setSubstrand(incomingSubstrand);
     const incomingDok = initialFilters.dok ? Number(initialFilters.dok) : null;
     if (incomingDok !== dok) setDok(incomingDok);
+    const incomingVideo = !!initialFilters.video;
+    if (incomingVideo !== videoOnly) setVideoOnly(incomingVideo);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [initialFilters.course, initialFilters.strand, initialFilters.substrand, initialFilters.dok]);
+  }, [initialFilters.course, initialFilters.strand, initialFilters.substrand, initialFilters.dok, initialFilters.video]);
 
   // Build the current filter set, including any patch overrides.
   const buildFilters = (patch = {}) => {
@@ -451,6 +478,7 @@ export default function TEKListPage({ navigate, initialFilters = {} }) {
       strand: patch.strand ?? (strand !== "All strands" ? strand : undefined),
       substrand: patch.substrand ?? substrand ?? undefined,
       dok: patch.dok ?? dok ?? undefined,
+      video: patch.video ?? (videoOnly ? "1" : undefined),
     };
     return Object.fromEntries(
       Object.entries(next).filter(([, v]) => v !== undefined && v !== null && v !== "")
@@ -486,6 +514,7 @@ export default function TEKListPage({ navigate, initialFilters = {} }) {
       if (strand !== "All strands" && t.strand !== strand) return false;
       if (substrand && t.substrand !== substrand) return false;
       if (dok && t.dok !== dok) return false;
+      if (videoOnly && !t.hasVideo) return false;
       if (!q) return true;
       const hay = [
         t.code,
@@ -500,7 +529,7 @@ export default function TEKListPage({ navigate, initialFilters = {} }) {
         .toLowerCase();
       return hay.includes(q);
     });
-  }, [teks, search, course, strand, substrand, dok]);
+  }, [teks, search, course, strand, substrand, dok, videoOnly]);
 
   // Group filtered TEKs by course → strand for visual clarity.
   const grouped = useMemo(() => {
@@ -543,6 +572,8 @@ export default function TEKListPage({ navigate, initialFilters = {} }) {
         onClearFilter={handleClearFilter}
         count={filtered.length}
         strands={strands}
+        videoOnly={videoOnly}
+        navigate={navigate}
       />
 
       <div className="flex">
@@ -560,7 +591,9 @@ export default function TEKListPage({ navigate, initialFilters = {} }) {
             className="text-[10px] font-mono uppercase tracking-[0.22em]"
             style={{ color: PALETTE.monoGold }}
           >
-            Texas Essential Knowledge and Skills · English Language Arts
+            {videoOnly
+              ? "▶ Teacher explainers · watch Mr. K unpack the standard"
+              : "Texas Essential Knowledge and Skills · English Language Arts"}
           </p>
           <h1
             className="font-semibold leading-tight mt-2"
@@ -569,12 +602,15 @@ export default function TEKListPage({ navigate, initialFilters = {} }) {
               fontSize: "clamp(1.85rem, 2.4vw + 1rem, 2.8rem)",
             }}
           >
-            Browse the TEKs Glossary
+            {videoOnly ? "TEKS with video" : "Browse the TEKs Glossary"}
           </h1>
           <p className="mt-3 text-base leading-relaxed max-w-2xl" style={{ color: PALETTE.inkSecondary }}>
-            Every English I–IV TEK, translated for teachers — what the standard means,
-            how to teach it, the misconceptions to watch for, and the STAAR-style stems
-            students will see. Click any card to open the full glossary entry.
+            {videoOnly
+              ? `A thirty-second explainer for ${stats.withVideo} of the ${stats.total} English I–IV TEKS. ` +
+                "Open a card to read the entry and play the video."
+              : "Every English I–IV TEK, translated for teachers — what the standard means, " +
+                "how to teach it, the misconceptions to watch for, and the STAAR-style stems " +
+                "students will see. Click any card to open the full glossary entry."}
           </p>
         </header>
 
@@ -600,7 +636,7 @@ export default function TEKListPage({ navigate, initialFilters = {} }) {
         ) : (
           // When a filter is active that flattens results, just show a grid.
           // Otherwise, group by course → strand with section headers for orientation.
-          course !== "All courses" || strand !== "All strands" || substrand || dok || search ? (
+          course !== "All courses" || strand !== "All strands" || substrand || dok || search || videoOnly ? (
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
               {filtered.map((t) => (
                 <TEKCard

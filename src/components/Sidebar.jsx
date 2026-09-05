@@ -2,7 +2,7 @@ import { useEffect, useMemo, useState } from "react";
 import {
   IconNotebook, IconLayoutList, IconChevronRight, IconHome,
 } from "./icons/TablerIcons";
-import { listPath } from "../hooks/useHashRoute";
+import { listPath } from "../hooks/useRoute";
 import stats from "../data/stats.json";
 
 const PALETTE = {

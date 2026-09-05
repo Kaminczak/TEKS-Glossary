@@ -11,6 +11,7 @@ import {
   GLYPH,
 } from './icons/TablerIcons';
 import Sidebar from './Sidebar';
+import { linkProps } from '../hooks/useRoute';
 
 /**
  * Prepend Vite's BASE_URL to absolute-looking asset paths.
@@ -211,15 +212,24 @@ function GlyphStrip({ glyphs }) {
 }
 
 
-function TopBar({ onNavHome }) {
+function TopBar({ onNavHome, navigate }) {
   return (
     <div
       className="sticky top-0 z-30 flex items-center gap-4 px-6 lg:px-10 h-14"
       style={{ background: PALETTE.bone, borderBottom: `1px solid ${PALETTE.standardBorder}` }}
     >
+      <a
+        {...linkProps(navigate, '/')}
+        className="font-semibold tracking-tight outline-none rounded focus-visible:ring-2 focus-visible:ring-[#1A1713]"
+        style={{ color: PALETTE.inkPrimary }}
+        aria-label="Kaizen.School home"
+      >
+        Kaizen<span style={{ color: PALETTE.monoGold }}>.School</span>
+      </a>
+      <span aria-hidden="true" style={{ color: PALETTE.boneStone }}>/</span>
       <button
         onClick={onNavHome}
-        className="font-semibold tracking-tight hover:opacity-80 transition-opacity"
+        className="font-semibold tracking-tight hover:opacity-80 transition-opacity outline-none rounded focus-visible:ring-2 focus-visible:ring-[#1A1713]"
         style={{ color: PALETTE.inkPrimary }}
       >
         TEKS Glossary
@@ -480,7 +490,7 @@ export default function TEKDetailParchment({
         fontFamily: '"Manrope", system-ui, sans-serif',
       }}
     >
-      <TopBar onNavHome={onNavHome} />
+      <TopBar onNavHome={onNavHome} navigate={navigate} />
 
       <div className="flex">
         <Sidebar
