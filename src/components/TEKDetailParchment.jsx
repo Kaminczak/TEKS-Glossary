@@ -957,10 +957,7 @@ export default function TEKDetailParchment({
               style={{ color: PALETTE.monoGold }}
             >
               Next · {nextSibling.code}
-              {nextSibling.explainerVideo?.videoUrl ||
-              nextSibling.explainerVideo?.youtubeId
-                ? ' · ▶ video'
-                : ''}
+              {nextSibling.hasVideo ? ' · ▶ video' : ''}
             </span>
             <span
               className="text-xs font-medium leading-tight truncate"

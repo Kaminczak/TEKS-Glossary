@@ -3,8 +3,9 @@
 //
 //   public/data/index.json     one slim row per TEK — enough for cards, search,
 //                              sidebar counts. ~1/20th the size of the full file.
-//   public/data/<course>.json  full entries for one course, fetched on the detail
-//                              page (and for prev/next siblings).
+//   public/data/tek/<slug>.json one full entry per TEK (110.36(1)(B) -> 110-36-1-B),
+//                              fetched by the detail page. Prev/next siblings
+//                              come from the index, so nothing else is needed.
 //   src/data/stats.json        {total, withVideo} — tiny, imported by the landing
 //                              page so it can show real numbers without a fetch.
 //
@@ -45,14 +46,16 @@ const index = teks.map((t) => ({
 }));
 writeFileSync(join(outDir, "index.json"), JSON.stringify(index));
 
+// Same slug the R2 video keys use: 110.36(7)(D)(i) -> 110-36-7-D-i
+export const tekSlug = (code) => code.replace(/[().]+/g, "-").replace(/-+$/, "");
+
 const byCourse = new Map();
+mkdirSync(join(outDir, "tek"), { recursive: true });
 for (const t of teks) {
   const key = String(t.courseCode);
   if (!byCourse.has(key)) byCourse.set(key, []);
-  byCourse.get(key).push({ ...t, courseCode: key });
-}
-for (const [code, entries] of byCourse) {
-  writeFileSync(join(outDir, `${code}.json`), JSON.stringify(entries));
+  byCourse.get(key).push(t);
+  writeFileSync(join(outDir, "tek", `${tekSlug(t.code)}.json`), JSON.stringify({ ...t, courseCode: key }));
 }
 
 const stats = {
@@ -65,5 +68,5 @@ writeFileSync(join(root, "src", "data", "stats.json"), JSON.stringify(stats, nul
 const kb = (s) => `${(Buffer.byteLength(s) / 1024).toFixed(0)} KB`;
 console.log(
   `data: ${teks.length} TEKS → index.json ${kb(JSON.stringify(index))}, ` +
-  `${byCourse.size} course files, ${stats.withVideo} with video`
+  `${teks.length} per-TEK files, ${stats.withVideo} with video`
 );

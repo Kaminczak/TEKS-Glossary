@@ -1,5 +1,5 @@
 import TEKDetailParchment from "../components/TEKDetailParchment";
-import { useCourse, useIndex } from "../data/loader";
+import { useIndex, useTek } from "../data/loader";
 import { reconstructCode, tekPath } from "../hooks/useRoute";
 
 const SHELL = {
@@ -9,16 +9,16 @@ const SHELL = {
 };
 
 /**
- * Detail-view shell. Fetches the course's JSON (public/data/<courseCode>.json),
- * finds the TEK by code, and hands it to the parchment page along with its
- * prev/next siblings. Renders a "not found" state if missing.
+ * Detail-view shell. Fetches one TEK (public/data/tek/<slug>.json) and hands it
+ * to the parchment page; prev/next siblings come from the slim index, which is
+ * shared with the sidebar. Renders a "not found" state if missing.
  */
 export default function ParchmentPreview({ courseCode, letter, roman, navigate }) {
   const resolvedCode = reconstructCode(courseCode, letter, roman);
-  const { data: course, error } = useCourse(courseCode);
+  const { data: tek, error } = useTek(resolvedCode);
   const { data: index } = useIndex();
 
-  if (!course && !error) {
+  if (!tek && !error) {
     return (
       <div className="min-h-screen flex items-center justify-center p-10" style={SHELL}>
         <p className="text-[10px] font-mono uppercase tracking-[0.22em]" style={{ color: "#6B5E3C" }}>
@@ -27,8 +27,6 @@ export default function ParchmentPreview({ courseCode, letter, roman, navigate }
       </div>
     );
   }
-
-  const tek = course?.find((t) => t.code === resolvedCode);
 
   if (!tek) {
     return (
@@ -59,10 +57,12 @@ export default function ParchmentPreview({ courseCode, letter, roman, navigate }
     );
   }
 
-  // Prev/next siblings in the same course for arrow navigation.
-  const idx = course.findIndex((t) => t.code === tek.code);
-  const prev = idx > 0 ? course[idx - 1] : null;
-  const next = idx >= 0 && idx < course.length - 1 ? course[idx + 1] : null;
+  // Prev/next siblings in the same course for arrow navigation. The index is in
+  // file order (course, then standard, then letter), same as the old course file.
+  const same = (index || []).filter((t) => t.course === tek.course);
+  const idx = same.findIndex((t) => t.code === tek.code);
+  const prev = idx > 0 ? same[idx - 1] : null;
+  const next = idx >= 0 && idx < same.length - 1 ? same[idx + 1] : null;
 
   return (
     <TEKDetailParchment

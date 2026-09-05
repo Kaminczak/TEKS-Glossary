@@ -33,10 +33,16 @@
     <!-- Fonts are @imported from index.css; warming the connection shaves the first paint -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Loaded as print media and flipped to all once it arrives, so the first
+         paint doesn't wait on a third-party stylesheet; display=swap handles
+         the swap from the system fallback. -->
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+      media="print"
+      onload="this.media='all'"
     />
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" /></noscript>
 
     <script>
       // Other half of the GitHub Pages SPA shim in public/404.html: a deep link

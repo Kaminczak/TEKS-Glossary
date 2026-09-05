@@ -22,7 +22,11 @@ function fetchJson(name) {
 }
 
 export const loadIndex = () => fetchJson("index.json");
-export const loadCourse = (courseCode) => fetchJson(`${courseCode}.json`);
+
+// Same slug tools/build-data.mjs writes and the R2 video keys use:
+// 110.36(7)(D)(i) -> 110-36-7-D-i
+export const tekSlug = (code) => code.replace(/[().]+/g, "-").replace(/-+$/, "");
+export const loadTek = (code) => fetchJson(`tek/${tekSlug(code)}.json`);
 
 function useLoaded(name, loader) {
   const [state, setState] = useState({ data: null, error: null });
@@ -45,7 +49,7 @@ export function useIndex() {
   return useLoaded("index.json", fetchJson);
 }
 
-/** Full entries for one course, e.g. useCourse("110.36"). */
-export function useCourse(courseCode) {
-  return useLoaded(courseCode ? `${courseCode}.json` : null, fetchJson);
+/** One full entry by code, e.g. useTek("110.36(1)(B)"). */
+export function useTek(code) {
+  return useLoaded(code ? `tek/${tekSlug(code)}.json` : null, fetchJson);
 }
