@@ -116,11 +116,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-36-1-A.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "35s"
     },
     "_sourceFile": "110 36 1A.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-36-1-A.mp4",
+        "duration": "35s"
+      }
+    ]
   },
   {
     "code": "110.36(1)(B)",
@@ -246,11 +254,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-36-1-B.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "32s"
     },
     "_sourceFile": "110 36 1B.md",
-    "_format": "legacy"
+    "_format": "legacy",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-36-1-B.mp4",
+        "duration": "32s"
+      }
+    ]
   },
   {
     "code": "110.36(1)(C)",
@@ -377,11 +393,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-36-1-C.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "34s"
     },
     "_sourceFile": "110 36 1C.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-36-1-C.mp4",
+        "duration": "34s"
+      }
+    ]
   },
   {
     "code": "110.36(1)(D)",
@@ -504,11 +528,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-36-1-D.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "31s"
     },
     "_sourceFile": "110 36 1D.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-36-1-D.mp4",
+        "duration": "31s"
+      }
+    ]
   },
   {
     "code": "110.36(2)(A)",
@@ -626,11 +658,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-36-2-A.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "33s"
     },
     "_sourceFile": "110 36 2A.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-36-2-A.mp4",
+        "duration": "33s"
+      }
+    ]
   },
   {
     "code": "110.36(2)(B)",
@@ -749,11 +789,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-36-2-B.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "31s"
     },
     "_sourceFile": "110 36 2B.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-36-2-B.mp4",
+        "duration": "31s"
+      }
+    ]
   },
   {
     "code": "110.36(2)(C)",
@@ -872,11 +920,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-36-2-C.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "29s"
     },
     "_sourceFile": "110 36 2C.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-36-2-C.mp4",
+        "duration": "29s"
+      }
+    ]
   },
   {
     "code": "110.36(3)",
@@ -996,11 +1052,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-36-3.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "29s"
     },
     "_sourceFile": "110 36 3.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-36-3.mp4",
+        "duration": "29s"
+      }
+    ]
   },
   {
     "code": "110.36(4)(A)",
@@ -1119,11 +1183,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-36-4-A.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "30s"
     },
     "_sourceFile": "110 36 4A.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-36-4-A.mp4",
+        "duration": "30s"
+      }
+    ]
   },
   {
     "code": "110.36(4)(B)",
@@ -1242,11 +1314,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-36-4-B.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "28s"
     },
     "_sourceFile": "110 36 4B.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-36-4-B.mp4",
+        "duration": "28s"
+      }
+    ]
   },
   {
     "code": "110.36(4)(C)",
@@ -1369,11 +1449,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-36-4-C.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "31s"
     },
     "_sourceFile": "110 36 4C.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-36-4-C.mp4",
+        "duration": "31s"
+      }
+    ]
   },
   {
     "code": "110.36(4)(D)",
@@ -1492,11 +1580,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-36-4-D.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "31s"
     },
     "_sourceFile": "110 36 4D.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-36-4-D.mp4",
+        "duration": "31s"
+      }
+    ]
   },
   {
     "code": "110.36(4)(E)",
@@ -1619,11 +1715,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-36-4-E.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "28s"
     },
     "_sourceFile": "110 36 4E.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-36-4-E.mp4",
+        "duration": "28s"
+      }
+    ]
   },
   {
     "code": "110.36(4)(F)",
@@ -1746,11 +1850,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-36-4-F.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "30s"
     },
     "_sourceFile": "110 36 4F.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-36-4-F.mp4",
+        "duration": "30s"
+      }
+    ]
   },
   {
     "code": "110.36(4)(G)",
@@ -1873,11 +1985,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-36-4-G.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "29s"
     },
     "_sourceFile": "110 36 4G.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-36-4-G.mp4",
+        "duration": "29s"
+      }
+    ]
   },
   {
     "code": "110.36(4)(H)",
@@ -2000,11 +2120,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-36-4-H.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "29s"
     },
     "_sourceFile": "110 36 4H.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-36-4-H.mp4",
+        "duration": "29s"
+      }
+    ]
   },
   {
     "code": "110.36(4)(I)",
@@ -2127,11 +2255,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-36-4-I.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "29s"
     },
     "_sourceFile": "110 36 4I.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-36-4-I.mp4",
+        "duration": "29s"
+      }
+    ]
   },
   {
     "code": "110.36(5)(A)",
@@ -2250,11 +2386,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-36-5-A.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "35s"
     },
     "_sourceFile": "110 36 5A.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-36-5-A.mp4",
+        "duration": "35s"
+      }
+    ]
   },
   {
     "code": "110.36(5)(B)",
@@ -2377,11 +2521,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-36-5-B.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "33s"
     },
     "_sourceFile": "110 36 5B.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-36-5-B.mp4",
+        "duration": "33s"
+      }
+    ]
   },
   {
     "code": "110.36(5)(C)",
@@ -2504,11 +2656,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-36-5-C.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "32s"
     },
     "_sourceFile": "110 36 5C.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-36-5-C.mp4",
+        "duration": "32s"
+      }
+    ]
   },
   {
     "code": "110.36(5)(D)",
@@ -2631,11 +2791,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-36-5-D.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "31s"
     },
     "_sourceFile": "110 36 5D.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-36-5-D.mp4",
+        "duration": "31s"
+      }
+    ]
   },
   {
     "code": "110.36(5)(E)",
@@ -2758,11 +2926,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-36-5-E.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "30s"
     },
     "_sourceFile": "110 36 5E.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-36-5-E.mp4",
+        "duration": "30s"
+      }
+    ]
   },
   {
     "code": "110.36(5)(F)",
@@ -2881,11 +3057,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-36-5-F.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "31s"
     },
     "_sourceFile": "110 36 5F.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-36-5-F.mp4",
+        "duration": "31s"
+      }
+    ]
   },
   {
     "code": "110.36(5)(G)",
@@ -3008,11 +3192,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-36-5-G.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "32s"
     },
     "_sourceFile": "110 36 5G.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-36-5-G.mp4",
+        "duration": "32s"
+      }
+    ]
   },
   {
     "code": "110.36(5)(H)",
@@ -3132,11 +3324,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-36-5-H.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "27s"
     },
     "_sourceFile": "110 36 5H.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-36-5-H.mp4",
+        "duration": "27s"
+      }
+    ]
   },
   {
     "code": "110.36(5)(I)",
@@ -3255,11 +3455,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-36-5-I.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "29s"
     },
     "_sourceFile": "110 36 5I.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-36-5-I.mp4",
+        "duration": "29s"
+      }
+    ]
   },
   {
     "code": "110.36(5)(J)",
@@ -3378,11 +3586,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-36-5-J.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "27s"
     },
     "_sourceFile": "110 36 5J.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-36-5-J.mp4",
+        "duration": "27s"
+      }
+    ]
   },
   {
     "code": "110.36(6)(A)",
@@ -3509,11 +3725,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-36-6-A.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "30s"
     },
     "_sourceFile": "110 36 6A.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-36-6-A.mp4",
+        "duration": "30s"
+      }
+    ]
   },
   {
     "code": "110.36(6)(B)",
@@ -3636,11 +3860,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-36-6-B.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "32s"
     },
     "_sourceFile": "110 36 6B.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-36-6-B.mp4",
+        "duration": "32s"
+      }
+    ]
   },
   {
     "code": "110.36(6)(C)",
@@ -3767,11 +3999,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-36-6-C.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "28s"
     },
     "_sourceFile": "110 36 6C.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-36-6-C.mp4",
+        "duration": "28s"
+      }
+    ]
   },
   {
     "code": "110.36(6)(D)",
@@ -3895,11 +4135,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-36-6-D.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "30s"
     },
     "_sourceFile": "110 36 6D.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-36-6-D.mp4",
+        "duration": "30s"
+      }
+    ]
   },
   {
     "code": "110.36(7)(A)",
@@ -4018,11 +4266,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-36-7-A.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "28s"
     },
     "_sourceFile": "110 36 7A.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-36-7-A.mp4",
+        "duration": "28s"
+      }
+    ]
   },
   {
     "code": "110.36(7)(B)",
@@ -4146,11 +4402,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-36-7-B.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "28s"
     },
     "_sourceFile": "110 36 7B.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-36-7-B.mp4",
+        "duration": "28s"
+      }
+    ]
   },
   {
     "code": "110.36(7)(C)",
@@ -4274,11 +4538,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-36-7-C.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "29s"
     },
     "_sourceFile": "110 36 7C.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-36-7-C.mp4",
+        "duration": "29s"
+      }
+    ]
   },
   {
     "code": "110.36(7)(D)(i)",
@@ -4405,11 +4677,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-36-7-D-i.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "34s"
     },
     "_sourceFile": "110 36 7D i.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-36-7-D-i.mp4",
+        "duration": "34s"
+      }
+    ]
   },
   {
     "code": "110.36(7)(D)(ii)",
@@ -4533,11 +4813,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-36-7-D-ii.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "29s"
     },
     "_sourceFile": "110 36 7D ii.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-36-7-D-ii.mp4",
+        "duration": "29s"
+      }
+    ]
   },
   {
     "code": "110.36(7)(E)(i)",
@@ -4664,11 +4952,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-36-7-E-i.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "35s"
     },
     "_sourceFile": "110 36 7E i.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-36-7-E-i.mp4",
+        "duration": "35s"
+      }
+    ]
   },
   {
     "code": "110.36(7)(E)(ii)",
@@ -4791,11 +5087,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-36-7-E-ii.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "30s"
     },
     "_sourceFile": "110 36 7E ii.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-36-7-E-ii.mp4",
+        "duration": "30s"
+      }
+    ]
   },
   {
     "code": "110.36(7)(E)(iii)",
@@ -4919,11 +5223,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-36-7-E-iii.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "31s"
     },
     "_sourceFile": "110 36 7E iii.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-36-7-E-iii.mp4",
+        "duration": "31s"
+      }
+    ]
   },
   {
     "code": "110.36(7)(F)",
@@ -5046,11 +5358,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-36-7-F.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "32s"
     },
     "_sourceFile": "110 36 7F.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-36-7-F.mp4",
+        "duration": "32s"
+      }
+    ]
   },
   {
     "code": "110.36(8)(A)",
@@ -5169,11 +5489,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-36-8-A.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "31s"
     },
     "_sourceFile": "110 36 8A.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-36-8-A.mp4",
+        "duration": "31s"
+      }
+    ]
   },
   {
     "code": "110.36(8)(B)",
@@ -5292,11 +5620,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-36-8-B.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "31s"
     },
     "_sourceFile": "110 36 8B.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-36-8-B.mp4",
+        "duration": "31s"
+      }
+    ]
   },
   {
     "code": "110.36(8)(C)",
@@ -5415,11 +5751,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-36-8-C.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "31s"
     },
     "_sourceFile": "110 36 8C.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-36-8-C.mp4",
+        "duration": "31s"
+      }
+    ]
   },
   {
     "code": "110.36(8)(D)",
@@ -5542,11 +5886,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-36-8-D.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "28s"
     },
     "_sourceFile": "110 36 8D.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-36-8-D.mp4",
+        "duration": "28s"
+      }
+    ]
   },
   {
     "code": "110.36(8)(E)",
@@ -5669,11 +6021,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-36-8-E.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "31s"
     },
     "_sourceFile": "110 36 8E.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-36-8-E.mp4",
+        "duration": "31s"
+      }
+    ]
   },
   {
     "code": "110.36(8)(F)",
@@ -5792,11 +6152,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-36-8-F.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "36s"
     },
     "_sourceFile": "110 36 8F.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-36-8-F.mp4",
+        "duration": "36s"
+      }
+    ]
   },
   {
     "code": "110.36(8)(G)",
@@ -5919,11 +6287,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-36-8-G.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "30s"
     },
     "_sourceFile": "110 36 8G.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-36-8-G.mp4",
+        "duration": "30s"
+      }
+    ]
   },
   {
     "code": "110.36(9)(A)",
@@ -6046,11 +6422,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-36-9-A.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "27s"
     },
     "_sourceFile": "110 36 9A.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-36-9-A.mp4",
+        "duration": "27s"
+      }
+    ]
   },
   {
     "code": "110.36(9)(B)(i)",
@@ -6173,11 +6557,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-36-9-B-i.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "32s"
     },
     "_sourceFile": "110 36 9B i.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-36-9-B-i.mp4",
+        "duration": "32s"
+      }
+    ]
   },
   {
     "code": "110.36(9)(B)(ii)",
@@ -6301,11 +6693,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-36-9-B-ii.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "27s"
     },
     "_sourceFile": "110 36 9B ii.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-36-9-B-ii.mp4",
+        "duration": "27s"
+      }
+    ]
   },
   {
     "code": "110.36(9)(C)",
@@ -6428,11 +6828,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-36-9-C.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "29s"
     },
     "_sourceFile": "110 36 9C.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-36-9-C.mp4",
+        "duration": "29s"
+      }
+    ]
   },
   {
     "code": "110.36(9)(D)(i)",
@@ -6551,11 +6959,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-36-9-D-i.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "35s"
     },
     "_sourceFile": "110 36 9D i.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-36-9-D-i.mp4",
+        "duration": "35s"
+      }
+    ]
   },
   {
     "code": "110.36(9)(D)(ii)",
@@ -6674,11 +7090,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-36-9-D-ii.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "29s"
     },
     "_sourceFile": "110 36 9D ii.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-36-9-D-ii.mp4",
+        "duration": "29s"
+      }
+    ]
   },
   {
     "code": "110.36(9)(D)(iii)",
@@ -6801,11 +7225,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-36-9-D-iii.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "28s"
     },
     "_sourceFile": "110 36 9D iii.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-36-9-D-iii.mp4",
+        "duration": "28s"
+      }
+    ]
   },
   {
     "code": "110.36(9)(D)(iv)",
@@ -6925,11 +7357,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-36-9-D-iv.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "33s"
     },
     "_sourceFile": "110 36 9D iv.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-36-9-D-iv.mp4",
+        "duration": "33s"
+      }
+    ]
   },
   {
     "code": "110.36(9)(D)(v)",
@@ -7047,11 +7487,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-36-9-D-v.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "30s"
     },
     "_sourceFile": "110 36 9D v.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-36-9-D-v.mp4",
+        "duration": "30s"
+      }
+    ]
   },
   {
     "code": "110.36(9)(D)(vi)",
@@ -7170,11 +7618,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-36-9-D-vi.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "29s"
     },
     "_sourceFile": "110 36 9D vi.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-36-9-D-vi.mp4",
+        "duration": "29s"
+      }
+    ]
   },
   {
     "code": "110.36(9)(E)",
@@ -7297,11 +7753,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-36-9-E.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "27s"
     },
     "_sourceFile": "110 36 9E.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-36-9-E.mp4",
+        "duration": "27s"
+      }
+    ]
   },
   {
     "code": "110.36(10)(A)",
@@ -7419,11 +7883,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-36-10-A.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "29s"
     },
     "_sourceFile": "110 36 10A.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-36-10-A.mp4",
+        "duration": "29s"
+      }
+    ]
   },
   {
     "code": "110.36(10)(B)",
@@ -7550,11 +8022,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-36-10-B.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "31s"
     },
     "_sourceFile": "110 36 10B.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-36-10-B.mp4",
+        "duration": "31s"
+      }
+    ]
   },
   {
     "code": "110.36(10)(C)",
@@ -7677,11 +8157,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-36-10-C.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "35s"
     },
     "_sourceFile": "110 36 10C.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-36-10-C.mp4",
+        "duration": "35s"
+      }
+    ]
   },
   {
     "code": "110.36(10)(D)",
@@ -7800,11 +8288,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-36-10-D.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "31s"
     },
     "_sourceFile": "110 36 10D.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-36-10-D.mp4",
+        "duration": "31s"
+      }
+    ]
   },
   {
     "code": "110.36(11)(A)",
@@ -7927,11 +8423,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-36-11-A.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "35s"
     },
     "_sourceFile": "110 36 11A.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-36-11-A.mp4",
+        "duration": "35s"
+      }
+    ]
   },
   {
     "code": "110.36(11)(B)",
@@ -8054,11 +8558,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-36-11-B.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "30s"
     },
     "_sourceFile": "110 36 11B.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-36-11-B.mp4",
+        "duration": "30s"
+      }
+    ]
   },
   {
     "code": "110.36(11)(C)",
@@ -8181,11 +8693,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-36-11-C.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "31s"
     },
     "_sourceFile": "110 36 11C.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-36-11-C.mp4",
+        "duration": "31s"
+      }
+    ]
   },
   {
     "code": "110.36(11)(D)",
@@ -8304,11 +8824,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-36-11-D.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "28s"
     },
     "_sourceFile": "110 36 11D.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-36-11-D.mp4",
+        "duration": "28s"
+      }
+    ]
   },
   {
     "code": "110.36(11)(E)",
@@ -8427,11 +8955,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-36-11-E.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "32s"
     },
     "_sourceFile": "110 36 11E.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-36-11-E.mp4",
+        "duration": "32s"
+      }
+    ]
   },
   {
     "code": "110.36(11)(F)",
@@ -8550,11 +9086,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-36-11-F.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "29s"
     },
     "_sourceFile": "110 36 11F.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-36-11-F.mp4",
+        "duration": "29s"
+      }
+    ]
   },
   {
     "code": "110.36(11)(G)(i)",
@@ -8674,11 +9218,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-36-11-G-i.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "31s"
     },
     "_sourceFile": "110 36 11G i.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-36-11-G-i.mp4",
+        "duration": "31s"
+      }
+    ]
   },
   {
     "code": "110.36(11)(G)(ii)",
@@ -8798,11 +9350,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-36-11-G-ii.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "31s"
     },
     "_sourceFile": "110 36 11G ii.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-36-11-G-ii.mp4",
+        "duration": "31s"
+      }
+    ]
   },
   {
     "code": "110.36(11)(H)",
@@ -8925,11 +9485,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-36-11-H.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "37s"
     },
     "_sourceFile": "110 36 11H.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-36-11-H.mp4",
+        "duration": "37s"
+      }
+    ]
   },
   {
     "code": "110.36(11)(I)",
@@ -9052,11 +9620,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-36-11-I.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "28s"
     },
     "_sourceFile": "110 36 11I.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-36-11-I.mp4",
+        "duration": "28s"
+      }
+    ]
   },
   {
     "code": "110.37(1)(A)",
@@ -9176,11 +9752,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-37-1-A.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "27s"
     },
     "_sourceFile": "110 37 1A.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-37-1-A.mp4",
+        "duration": "27s"
+      }
+    ]
   },
   {
     "code": "110.37(1)(B)",
@@ -9300,11 +9884,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-37-1-B.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "28s"
     },
     "_sourceFile": "110 37 1B.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-37-1-B.mp4",
+        "duration": "28s"
+      }
+    ]
   },
   {
     "code": "110.37(1)(C)",
@@ -9428,11 +10020,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-37-1-C.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "30s"
     },
     "_sourceFile": "110 37 1C.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-37-1-C.mp4",
+        "duration": "30s"
+      }
+    ]
   },
   {
     "code": "110.37(1)(D)",
@@ -9556,11 +10156,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-37-1-D.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "28s"
     },
     "_sourceFile": "110 37 1D.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-37-1-D.mp4",
+        "duration": "28s"
+      }
+    ]
   },
   {
     "code": "110.37(2)(A)",
@@ -9680,11 +10288,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-37-2-A.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "31s"
     },
     "_sourceFile": "110 37 2A.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-37-2-A.mp4",
+        "duration": "31s"
+      }
+    ]
   },
   {
     "code": "110.37(2)(B)",
@@ -9807,11 +10423,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-37-2-B.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "25s"
     },
     "_sourceFile": "110 37 2B.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-37-2-B.mp4",
+        "duration": "25s"
+      }
+    ]
   },
   {
     "code": "110.37(2)(C)",
@@ -9929,11 +10553,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-37-2-C.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "29s"
     },
     "_sourceFile": "110 37 2C.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-37-2-C.mp4",
+        "duration": "29s"
+      }
+    ]
   },
   {
     "code": "110.37(3)",
@@ -10056,11 +10688,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-37-3.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "28s"
     },
     "_sourceFile": "110 37 3.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-37-3.mp4",
+        "duration": "28s"
+      }
+    ]
   },
   {
     "code": "110.37(4)(A)",
@@ -10179,11 +10819,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-37-4-A.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "26s"
     },
     "_sourceFile": "110 37 4A.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-37-4-A.mp4",
+        "duration": "26s"
+      }
+    ]
   },
   {
     "code": "110.37(4)(B)",
@@ -10303,11 +10951,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-37-4-B.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "28s"
     },
     "_sourceFile": "110 37 4B.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-37-4-B.mp4",
+        "duration": "28s"
+      }
+    ]
   },
   {
     "code": "110.37(4)(C)",
@@ -10430,11 +11086,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-37-4-C.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "28s"
     },
     "_sourceFile": "110 37 4C.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-37-4-C.mp4",
+        "duration": "28s"
+      }
+    ]
   },
   {
     "code": "110.37(4)(E)",
@@ -10557,11 +11221,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-37-4-E.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "33s"
     },
     "_sourceFile": "110 37 4E.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-37-4-E.mp4",
+        "duration": "33s"
+      }
+    ]
   },
   {
     "code": "110.37(4)(F)",
@@ -10680,11 +11352,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-37-4-F.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "30s"
     },
     "_sourceFile": "110 37 4F.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-37-4-F.mp4",
+        "duration": "30s"
+      }
+    ]
   },
   {
     "code": "110.37(4)(G)",
@@ -10804,11 +11484,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-37-4-G.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "32s"
     },
     "_sourceFile": "110 37 4G.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-37-4-G.mp4",
+        "duration": "32s"
+      }
+    ]
   },
   {
     "code": "110.37(4)(H)",
@@ -10928,11 +11616,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-37-4-H.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "28s"
     },
     "_sourceFile": "110 37 4H.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-37-4-H.mp4",
+        "duration": "28s"
+      }
+    ]
   },
   {
     "code": "110.37(4)(I)",
@@ -11055,11 +11751,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-37-4-I.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "33s"
     },
     "_sourceFile": "110 37 4I.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-37-4-I.mp4",
+        "duration": "33s"
+      }
+    ]
   },
   {
     "code": "110.37(5)(A)",
@@ -11178,11 +11882,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-37-5-A.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "33s"
     },
     "_sourceFile": "110 37 5A.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-37-5-A.mp4",
+        "duration": "33s"
+      }
+    ]
   },
   {
     "code": "110.37(5)(B)",
@@ -11306,11 +12018,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-37-5-B.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "32s"
     },
     "_sourceFile": "110 37 5B.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-37-5-B.mp4",
+        "duration": "32s"
+      }
+    ]
   },
   {
     "code": "110.37(5)(C)",
@@ -11429,11 +12149,31 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-37-5-C.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "28s"
     },
     "_sourceFile": "110 37 5C.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 1,
+        "title": "Define",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-37-5-C-s1.mp4",
+        "duration": "26s"
+      },
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-37-5-C.mp4",
+        "duration": "28s"
+      },
+      {
+        "section": 3,
+        "title": "Two Things That Trip Them Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-37-5-C-s3.mp4",
+        "duration": "30s"
+      }
+    ]
   },
   {
     "code": "110.37(5)(D)",
@@ -11556,11 +12296,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-37-5-D.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "27s"
     },
     "_sourceFile": "110 37 5D.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-37-5-D.mp4",
+        "duration": "27s"
+      }
+    ]
   },
   {
     "code": "110.37(5)(E)",
@@ -11679,11 +12427,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-37-5-E.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "31s"
     },
     "_sourceFile": "110 37 5E.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-37-5-E.mp4",
+        "duration": "31s"
+      }
+    ]
   },
   {
     "code": "110.37(5)(F)",
@@ -11802,11 +12558,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-37-5-F.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "27s"
     },
     "_sourceFile": "110 37 5F.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-37-5-F.mp4",
+        "duration": "27s"
+      }
+    ]
   },
   {
     "code": "110.37(5)(G)",
@@ -11930,11 +12694,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-37-5-G.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "28s"
     },
     "_sourceFile": "110 37 5G.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-37-5-G.mp4",
+        "duration": "28s"
+      }
+    ]
   },
   {
     "code": "110.37(5)(H)",
@@ -12057,11 +12829,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-37-5-H.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "29s"
     },
     "_sourceFile": "110 37 5H.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-37-5-H.mp4",
+        "duration": "29s"
+      }
+    ]
   },
   {
     "code": "110.37(5)(I)",
@@ -12181,11 +12961,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-37-5-I.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "26s"
     },
     "_sourceFile": "110 37 5I.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-37-5-I.mp4",
+        "duration": "26s"
+      }
+    ]
   },
   {
     "code": "110.37(5)(J)",
@@ -12309,11 +13097,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-37-5-J.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "32s"
     },
     "_sourceFile": "110 37 5J.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-37-5-J.mp4",
+        "duration": "32s"
+      }
+    ]
   },
   {
     "code": "110.37(6)(A)",
@@ -12436,11 +13232,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-37-6-A.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "29s"
     },
     "_sourceFile": "110 37 6A.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-37-6-A.mp4",
+        "duration": "29s"
+      }
+    ]
   },
   {
     "code": "110.37(6)(B)",
@@ -12559,11 +13363,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-37-6-B.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "30s"
     },
     "_sourceFile": "110 37 6B.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-37-6-B.mp4",
+        "duration": "30s"
+      }
+    ]
   },
   {
     "code": "110.37(6)(C)",
@@ -12686,11 +13498,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-37-6-C.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "26s"
     },
     "_sourceFile": "110 37 6C.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-37-6-C.mp4",
+        "duration": "26s"
+      }
+    ]
   },
   {
     "code": "110.37(6)(D)",
@@ -12814,11 +13634,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-37-6-D.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "31s"
     },
     "_sourceFile": "110 37 6D.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-37-6-D.mp4",
+        "duration": "31s"
+      }
+    ]
   },
   {
     "code": "110.37(7)(A)",
@@ -12946,11 +13774,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-37-7-A.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "28s"
     },
     "_sourceFile": "110 37 7A.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-37-7-A.mp4",
+        "duration": "28s"
+      }
+    ]
   },
   {
     "code": "110.37(7)(B)",
@@ -13070,11 +13906,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-37-7-B.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "28s"
     },
     "_sourceFile": "110 37 7B.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-37-7-B.mp4",
+        "duration": "28s"
+      }
+    ]
   },
   {
     "code": "110.37(7)(C)",
@@ -13198,11 +14042,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-37-7-C.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "30s"
     },
     "_sourceFile": "110 37 7C.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-37-7-C.mp4",
+        "duration": "30s"
+      }
+    ]
   },
   {
     "code": "110.37(7)(D)(i)",
@@ -13326,11 +14178,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-37-7-D-i.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "27s"
     },
     "_sourceFile": "110 37 7D i.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-37-7-D-i.mp4",
+        "duration": "27s"
+      }
+    ]
   },
   {
     "code": "110.37(7)(D)(ii)",
@@ -13453,11 +14313,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-37-7-D-ii.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "25s"
     },
     "_sourceFile": "110 37 7D ii.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-37-7-D-ii.mp4",
+        "duration": "25s"
+      }
+    ]
   },
   {
     "code": "110.37(7)(E)(i)",
@@ -13581,11 +14449,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-37-7-E-i.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "31s"
     },
     "_sourceFile": "110 37 7E i.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-37-7-E-i.mp4",
+        "duration": "31s"
+      }
+    ]
   },
   {
     "code": "110.37(7)(E)(ii)",
@@ -13713,11 +14589,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-37-7-E-ii.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "33s"
     },
     "_sourceFile": "110 37 7E ii.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-37-7-E-ii.mp4",
+        "duration": "33s"
+      }
+    ]
   },
   {
     "code": "110.37(7)(E)(iii)",
@@ -13837,11 +14721,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-37-7-E-iii.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "31s"
     },
     "_sourceFile": "110 37 7E iii.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-37-7-E-iii.mp4",
+        "duration": "31s"
+      }
+    ]
   },
   {
     "code": "110.37(7)(F)",
@@ -13964,11 +14856,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-37-7-F.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "29s"
     },
     "_sourceFile": "110 37 7F.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-37-7-F.mp4",
+        "duration": "29s"
+      }
+    ]
   },
   {
     "code": "110.37(8)(A)",
@@ -14090,9 +14990,21 @@
       "DOK 3 justification: students must move beyond retrieval to explain the relationship between purpose, audience, and message using evidence from the text — reasoning about how the elements connect qualifies as strategic thinking.",
       "STAAR tests this standard heavily in the literary and informational reading passages; stems in the form \"The author MOST likely included paragraph X in order to —\" are among the most common item types across all grade-level STAAR ELA assessments."
     ],
-    "explainerVideo": null,
+    "explainerVideo": {
+      "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-37-8-A.mp4",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
+      "duration": "29s"
+    },
     "_sourceFile": "110 37 8A.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-37-8-A.mp4",
+        "duration": "29s"
+      }
+    ]
   },
   {
     "code": "110.37(8)(B)",
@@ -14210,9 +15122,21 @@
       "DOK 3 justification: students must move beyond retrieval and into reasoning about the relationship between structure and purpose, requiring strategic thinking about how multiple structural decisions work together.",
       "STAAR tests this TEK through informational and argumentative paired passages, frequently asking about why an author chose a specific organizational move at a particular point in the text rather than asking students to name the structure."
     ],
-    "explainerVideo": null,
+    "explainerVideo": {
+      "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-37-8-B.mp4",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
+      "duration": "33s"
+    },
     "_sourceFile": "110 37 8B.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-37-8-B.mp4",
+        "duration": "33s"
+      }
+    ]
   },
   {
     "code": "110.37(8)(C)",
@@ -14334,9 +15258,21 @@
       "DOK 3 justification: evaluation of effectiveness requires students to apply criteria for success, weigh evidence, and produce a reasoned judgment — extending beyond identification or description.",
       "This TEK is STAAR-testable primarily in informational and argumentative reading passages; stems referencing paragraph numbers, image captions, and text layout are common in released items. The stems above reflect that testing context."
     ],
-    "explainerVideo": null,
+    "explainerVideo": {
+      "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-37-8-C.mp4",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
+      "duration": "28s"
+    },
     "_sourceFile": "110 37 8C.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-37-8-C.mp4",
+        "duration": "28s"
+      }
+    ]
   },
   {
     "code": "110.37(8)(D)",
@@ -14456,11 +15392,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-37-8-D.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
-      "duration": "30s"
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
+      "duration": "29s"
     },
     "_sourceFile": "110 37 8D.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-37-8-D.mp4",
+        "duration": "29s"
+      }
+    ]
   },
   {
     "code": "110.37(8)(E)",
@@ -14582,9 +15526,21 @@
       "DOK 3 justification: purposive analysis requires strategic thinking — students must draw inferences about authorial intent that go beyond text-level identification and require synthesis across multiple moments in the text.",
       "STAAR tests this TEK through literary and expository reading passages. Stems typically embed the device name or present a line that enacts the device and ask about effect or purpose. Motif questions may reference multiple paragraphs explicitly."
     ],
-    "explainerVideo": null,
+    "explainerVideo": {
+      "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-37-8-E.mp4",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
+      "duration": "29s"
+    },
     "_sourceFile": "110 37 8E.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-37-8-E.mp4",
+        "duration": "29s"
+      }
+    ]
   },
   {
     "code": "110.37(8)(F)",
@@ -14705,9 +15661,21 @@
       "DOK 3 justification: analysis requires students to move beyond identifying diction/syntax features (DOK 2) to explaining how those features produce effects across three distinct dimensions (mood, voice, tone) — a multi-causal relationship requiring extended reasoning.",
       "STAAR regularly tests this TEK through questions that ask students to explain how a specific word or sentence contributes to tone, infer mood from descriptive language, or identify a shift in the narrator's attitude. Stems in this entry mirror that assessment pattern."
     ],
-    "explainerVideo": null,
+    "explainerVideo": {
+      "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-37-8-F.mp4",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
+      "duration": "32s"
+    },
     "_sourceFile": "110 37 8F.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-37-8-F.mp4",
+        "duration": "32s"
+      }
+    ]
   },
   {
     "code": "110.37(8)(G)",
@@ -14829,9 +15797,21 @@
       "DOK 3 justification: students must reason about purpose and effect within and across texts, not just identify or define devices — requires strategic thinking rather than recall.",
       "STAAR tests this TEK through argumentative and informational paired selections; stems typically ask students to analyze the purpose or effect of a specific passage, identify the appeal type operative in a paragraph, or choose which sentence best illustrates a named device."
     ],
-    "explainerVideo": null,
+    "explainerVideo": {
+      "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-37-8-G.mp4",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
+      "duration": "33s"
+    },
     "_sourceFile": "110 37 8G.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-37-8-G.mp4",
+        "duration": "33s"
+      }
+    ]
   },
   {
     "code": "110.37(9)(A)",
@@ -14951,11 +15931,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-37-9-A.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "31s"
     },
     "_sourceFile": "110 37 9A.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-37-9-A.mp4",
+        "duration": "31s"
+      }
+    ]
   },
   {
     "code": "110.37(9)(B)(i)",
@@ -15079,11 +16067,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-37-9-B-i.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "31s"
     },
     "_sourceFile": "110 37 9B i.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-37-9-B-i.mp4",
+        "duration": "31s"
+      }
+    ]
   },
   {
     "code": "110.37(9)(B)(ii)",
@@ -15207,11 +16203,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-37-9-B-ii.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "30s"
     },
     "_sourceFile": "110 37 9B ii.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-37-9-B-ii.mp4",
+        "duration": "30s"
+      }
+    ]
   },
   {
     "code": "110.37(9)(C)",
@@ -15339,11 +16343,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-37-9-C.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "31s"
     },
     "_sourceFile": "110 37 9C.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-37-9-C.mp4",
+        "duration": "31s"
+      }
+    ]
   },
   {
     "code": "110.37(9)(D)(i)",
@@ -15463,11 +16475,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-37-9-D-i.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "34s"
     },
     "_sourceFile": "110 37 9D i.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-37-9-D-i.mp4",
+        "duration": "34s"
+      }
+    ]
   },
   {
     "code": "110.37(9)(D)(ii)",
@@ -15590,11 +16610,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-37-9-D-ii.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "30s"
     },
     "_sourceFile": "110 37 9D ii.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-37-9-D-ii.mp4",
+        "duration": "30s"
+      }
+    ]
   },
   {
     "code": "110.37(9)(D)(iv)",
@@ -15717,11 +16745,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-37-9-D-iv.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "31s"
     },
     "_sourceFile": "110 37 9D iv.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-37-9-D-iv.mp4",
+        "duration": "31s"
+      }
+    ]
   },
   {
     "code": "110.37(9)(D)(v)",
@@ -15848,11 +16884,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-37-9-D-v.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "30s"
     },
     "_sourceFile": "110 37 9D v.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-37-9-D-v.mp4",
+        "duration": "30s"
+      }
+    ]
   },
   {
     "code": "110.37(9)(D)(vi)",
@@ -15975,11 +17019,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-37-9-D-vi.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "29s"
     },
     "_sourceFile": "110 37 9D vi.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-37-9-D-vi.mp4",
+        "duration": "29s"
+      }
+    ]
   },
   {
     "code": "110.37(9)(E)",
@@ -16098,11 +17150,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-37-9-E.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "28s"
     },
     "_sourceFile": "110 37 9E.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-37-9-E.mp4",
+        "duration": "28s"
+      }
+    ]
   },
   {
     "code": "110.37(10)(B)",
@@ -16226,11 +17286,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-37-10-B.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "30s"
     },
     "_sourceFile": "110 37 10B.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-37-10-B.mp4",
+        "duration": "30s"
+      }
+    ]
   },
   {
     "code": "110.37(10)(C)",
@@ -16353,11 +17421,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-37-10-C.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "29s"
     },
     "_sourceFile": "110 37 10C.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-37-10-C.mp4",
+        "duration": "29s"
+      }
+    ]
   },
   {
     "code": "110.37(10)(D)",
@@ -16476,11 +17552,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-37-10-D.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "29s"
     },
     "_sourceFile": "110 37 10D.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-37-10-D.mp4",
+        "duration": "29s"
+      }
+    ]
   },
   {
     "code": "110.37(11)(A)",
@@ -16603,11 +17687,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-37-11-A.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "30s"
     },
     "_sourceFile": "110 37 11A.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-37-11-A.mp4",
+        "duration": "30s"
+      }
+    ]
   },
   {
     "code": "110.37(11)(AI)",
@@ -16730,11 +17822,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-37-11-AI.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "29s"
     },
     "_sourceFile": "110 37 11AI.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-37-11-AI.mp4",
+        "duration": "29s"
+      }
+    ]
   },
   {
     "code": "110.37(11)(B)",
@@ -16853,11 +17953,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-37-11-B.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "30s"
     },
     "_sourceFile": "110 37 11B.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-37-11-B.mp4",
+        "duration": "30s"
+      }
+    ]
   },
   {
     "code": "110.37(11)(C)",
@@ -16976,11 +18084,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-37-11-C.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "26s"
     },
     "_sourceFile": "110 37 11C.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-37-11-C.mp4",
+        "duration": "26s"
+      }
+    ]
   },
   {
     "code": "110.37(11)(D)",
@@ -17099,11 +18215,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-37-11-D.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "33s"
     },
     "_sourceFile": "110 37 11D.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-37-11-D.mp4",
+        "duration": "33s"
+      }
+    ]
   },
   {
     "code": "110.37(11)(E)",
@@ -17222,11 +18346,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-37-11-E.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "28s"
     },
     "_sourceFile": "110 37 11E.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-37-11-E.mp4",
+        "duration": "28s"
+      }
+    ]
   },
   {
     "code": "110.37(11)(F)",
@@ -17349,11 +18481,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-37-11-F.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "31s"
     },
     "_sourceFile": "110 37 11F.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-37-11-F.mp4",
+        "duration": "31s"
+      }
+    ]
   },
   {
     "code": "110.37(11)(G)(i)",
@@ -17477,11 +18617,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-37-11-G-i.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "29s"
     },
     "_sourceFile": "110 37 11G i.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-37-11-G-i.mp4",
+        "duration": "29s"
+      }
+    ]
   },
   {
     "code": "110.37(11)(H)",
@@ -17604,11 +18752,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-37-11-H.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "31s"
     },
     "_sourceFile": "110 37 11H.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-37-11-H.mp4",
+        "duration": "31s"
+      }
+    ]
   },
   {
     "code": "110.38(1)(A)",
@@ -17734,11 +18890,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-38-1-A.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "29s"
     },
     "_sourceFile": "110 38 1A.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-38-1-A.mp4",
+        "duration": "29s"
+      }
+    ]
   },
   {
     "code": "110.38(1)(B)",
@@ -17859,11 +19023,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-38-1-B.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "29s"
     },
     "_sourceFile": "110 38 1B.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-38-1-B.mp4",
+        "duration": "29s"
+      }
+    ]
   },
   {
     "code": "110.38(1)(C)",
@@ -17989,11 +19161,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-38-1-C.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "31s"
     },
     "_sourceFile": "110 38 1C.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-38-1-C.mp4",
+        "duration": "31s"
+      }
+    ]
   },
   {
     "code": "110.38(1)(D)",
@@ -18120,11 +19300,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-38-1-D.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "32s"
     },
     "_sourceFile": "110 38 1D.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-38-1-D.mp4",
+        "duration": "32s"
+      }
+    ]
   },
   {
     "code": "110.38(2)(A)",
@@ -18245,11 +19433,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-38-2-A.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "30s"
     },
     "_sourceFile": "110 38 2A.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-38-2-A.mp4",
+        "duration": "30s"
+      }
+    ]
   },
   {
     "code": "110.38(2)(B)",
@@ -18375,11 +19571,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-38-2-B.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "29s"
     },
     "_sourceFile": "110 38 2B.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-38-2-B.mp4",
+        "duration": "29s"
+      }
+    ]
   },
   {
     "code": "110.38(2)(C)",
@@ -18501,11 +19705,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-38-2-C.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "29s"
     },
     "_sourceFile": "110 38 2C.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-38-2-C.mp4",
+        "duration": "29s"
+      }
+    ]
   },
   {
     "code": "110.38(3)",
@@ -18628,11 +19840,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-38-3.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "31s"
     },
     "_sourceFile": "110 38 3.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-38-3.mp4",
+        "duration": "31s"
+      }
+    ]
   },
   {
     "code": "110.38(4)(A)",
@@ -18754,11 +19974,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-38-4-A.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "32s"
     },
     "_sourceFile": "110 38 4A.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-38-4-A.mp4",
+        "duration": "32s"
+      }
+    ]
   },
   {
     "code": "110.38(4)(B)",
@@ -18884,11 +20112,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-38-4-B.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "26s"
     },
     "_sourceFile": "110 38 4B.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-38-4-B.mp4",
+        "duration": "26s"
+      }
+    ]
   },
   {
     "code": "110.38(4)(C)",
@@ -19014,11 +20250,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-38-4-C.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "30s"
     },
     "_sourceFile": "110 38 4C.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-38-4-C.mp4",
+        "duration": "30s"
+      }
+    ]
   },
   {
     "code": "110.38(4)(D)",
@@ -19144,11 +20388,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-38-4-D.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "31s"
     },
     "_sourceFile": "110 38 4D.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-38-4-D.mp4",
+        "duration": "31s"
+      }
+    ]
   },
   {
     "code": "110.38(4)(E)",
@@ -19274,11 +20526,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-38-4-E.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "28s"
     },
     "_sourceFile": "110 38 4E.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-38-4-E.mp4",
+        "duration": "28s"
+      }
+    ]
   },
   {
     "code": "110.38(4)(F)",
@@ -19404,11 +20664,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-38-4-F.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "27s"
     },
     "_sourceFile": "110 38 4F.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-38-4-F.mp4",
+        "duration": "27s"
+      }
+    ]
   },
   {
     "code": "110.38(4)(G)",
@@ -19534,11 +20802,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-38-4-G.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "27s"
     },
     "_sourceFile": "110 38 4G.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-38-4-G.mp4",
+        "duration": "27s"
+      }
+    ]
   },
   {
     "code": "110.38(4)(H)",
@@ -19665,11 +20941,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-38-4-H.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "28s"
     },
     "_sourceFile": "110 38 4H.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-38-4-H.mp4",
+        "duration": "28s"
+      }
+    ]
   },
   {
     "code": "110.38(4)(I)",
@@ -19796,11 +21080,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-38-4-I.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "30s"
     },
     "_sourceFile": "110 38 4I.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-38-4-I.mp4",
+        "duration": "30s"
+      }
+    ]
   },
   {
     "code": "110.38(5)(A)",
@@ -19927,11 +21219,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-38-5-A.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "28s"
     },
     "_sourceFile": "110 38 5A.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-38-5-A.mp4",
+        "duration": "28s"
+      }
+    ]
   },
   {
     "code": "110.38(5)(B)",
@@ -20058,11 +21358,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-38-5-B.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "30s"
     },
     "_sourceFile": "110 38 5B.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-38-5-B.mp4",
+        "duration": "30s"
+      }
+    ]
   },
   {
     "code": "110.38(5)(C)",
@@ -20189,11 +21497,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-38-5-C.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "32s"
     },
     "_sourceFile": "110 38 5C.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-38-5-C.mp4",
+        "duration": "32s"
+      }
+    ]
   },
   {
     "code": "110.38(5)(D)",
@@ -20321,11 +21637,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-38-5-D.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "30s"
     },
     "_sourceFile": "110 38 5D.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-38-5-D.mp4",
+        "duration": "30s"
+      }
+    ]
   },
   {
     "code": "110.38(5)(E)",
@@ -20453,11 +21777,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-38-5-E.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "29s"
     },
     "_sourceFile": "110 38 5E.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-38-5-E.mp4",
+        "duration": "29s"
+      }
+    ]
   },
   {
     "code": "110.38(5)(F)",
@@ -20585,11 +21917,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-38-5-F.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "30s"
     },
     "_sourceFile": "110 38 5F.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-38-5-F.mp4",
+        "duration": "30s"
+      }
+    ]
   },
   {
     "code": "110.38(5)(G)",
@@ -20717,11 +22057,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-38-5-G.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "34s"
     },
     "_sourceFile": "110 38 5G.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-38-5-G.mp4",
+        "duration": "34s"
+      }
+    ]
   },
   {
     "code": "110.38(5)(H)",
@@ -20849,11 +22197,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-38-5-H.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "26s"
     },
     "_sourceFile": "110 38 5H.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-38-5-H.mp4",
+        "duration": "26s"
+      }
+    ]
   },
   {
     "code": "110.38(5)(I)",
@@ -20972,11 +22328,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-38-5-I.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "29s"
     },
     "_sourceFile": "110 38 5I.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-38-5-I.mp4",
+        "duration": "29s"
+      }
+    ]
   },
   {
     "code": "110.38(5)(J)",
@@ -21099,11 +22463,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-38-5-J.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "28s"
     },
     "_sourceFile": "110 38 5J.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-38-5-J.mp4",
+        "duration": "28s"
+      }
+    ]
   },
   {
     "code": "110.38(6)(A)",
@@ -21230,11 +22602,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-38-6-A.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "30s"
     },
     "_sourceFile": "110 38 6A.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-38-6-A.mp4",
+        "duration": "30s"
+      }
+    ]
   },
   {
     "code": "110.38(6)(B)",
@@ -21357,11 +22737,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-38-6-B.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "27s"
     },
     "_sourceFile": "110 38 6B.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-38-6-B.mp4",
+        "duration": "27s"
+      }
+    ]
   },
   {
     "code": "110.38(6)(C)",
@@ -21484,11 +22872,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-38-6-C.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "30s"
     },
     "_sourceFile": "110 38 6C.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-38-6-C.mp4",
+        "duration": "30s"
+      }
+    ]
   },
   {
     "code": "110.38(6)(D)",
@@ -21611,11 +23007,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-38-6-D.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "31s"
     },
     "_sourceFile": "110 38 6D.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-38-6-D.mp4",
+        "duration": "31s"
+      }
+    ]
   },
   {
     "code": "110.38(7)(A)",
@@ -21739,11 +23143,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-38-7-A.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "29s"
     },
     "_sourceFile": "110 38 7A.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-38-7-A.mp4",
+        "duration": "29s"
+      }
+    ]
   },
   {
     "code": "110.38(7)(B)",
@@ -21866,11 +23278,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-38-7-B.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "32s"
     },
     "_sourceFile": "110 38 7B.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-38-7-B.mp4",
+        "duration": "32s"
+      }
+    ]
   },
   {
     "code": "110.38(7)(C)",
@@ -21997,11 +23417,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-38-7-C.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "33s"
     },
     "_sourceFile": "110 38 7C.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-38-7-C.mp4",
+        "duration": "33s"
+      }
+    ]
   },
   {
     "code": "110.38(7)(D)(i)",
@@ -22124,11 +23552,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-38-7-D-i.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "28s"
     },
     "_sourceFile": "110 38 7D i.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-38-7-D-i.mp4",
+        "duration": "28s"
+      }
+    ]
   },
   {
     "code": "110.38(7)(D)(ii)",
@@ -22251,11 +23687,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-38-7-D-ii.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "33s"
     },
     "_sourceFile": "110 38 7D ii.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-38-7-D-ii.mp4",
+        "duration": "33s"
+      }
+    ]
   },
   {
     "code": "110.38(7)(E)(i)",
@@ -22379,11 +23823,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-38-7-E-i.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "33s"
     },
     "_sourceFile": "110 38 7E i.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-38-7-E-i.mp4",
+        "duration": "33s"
+      }
+    ]
   },
   {
     "code": "110.38(7)(E)(ii)",
@@ -22510,11 +23962,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-38-7-E-ii.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "33s"
     },
     "_sourceFile": "110 38 7E ii.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-38-7-E-ii.mp4",
+        "duration": "33s"
+      }
+    ]
   },
   {
     "code": "110.38(7)(E)(iii)",
@@ -22634,11 +24094,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-38-7-E-iii.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "31s"
     },
     "_sourceFile": "110 38 7E iii.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-38-7-E-iii.mp4",
+        "duration": "31s"
+      }
+    ]
   },
   {
     "code": "110.38(7)(F)",
@@ -22761,11 +24229,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-38-7-F.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "30s"
     },
     "_sourceFile": "110 38 7F.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-38-7-F.mp4",
+        "duration": "30s"
+      }
+    ]
   },
   {
     "code": "110.38(8)(A)",
@@ -22888,11 +24364,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-38-8-A.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "28s"
     },
     "_sourceFile": "110 38 8A.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-38-8-A.mp4",
+        "duration": "28s"
+      }
+    ]
   },
   {
     "code": "110.38(8)(B)",
@@ -23015,11 +24499,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-38-8-B.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "31s"
     },
     "_sourceFile": "110 38 8B.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-38-8-B.mp4",
+        "duration": "31s"
+      }
+    ]
   },
   {
     "code": "110.38(8)(C)",
@@ -23142,11 +24634,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-38-8-C.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "29s"
     },
     "_sourceFile": "110 38 8C.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-38-8-C.mp4",
+        "duration": "29s"
+      }
+    ]
   },
   {
     "code": "110.38(8)(D)",
@@ -23269,11 +24769,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-38-8-D.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "31s"
     },
     "_sourceFile": "110 38 8D.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-38-8-D.mp4",
+        "duration": "31s"
+      }
+    ]
   },
   {
     "code": "110.38(8)(E)",
@@ -23396,11 +24904,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-38-8-E.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "30s"
     },
     "_sourceFile": "110 38 8E.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-38-8-E.mp4",
+        "duration": "30s"
+      }
+    ]
   },
   {
     "code": "110.38(8)(F)",
@@ -23523,11 +25039,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-38-8-F.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "33s"
     },
     "_sourceFile": "110 38 8F.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-38-8-F.mp4",
+        "duration": "33s"
+      }
+    ]
   },
   {
     "code": "110.38(8)(G)",
@@ -23654,11 +25178,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-38-8-G.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "33s"
     },
     "_sourceFile": "110 38 8G.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-38-8-G.mp4",
+        "duration": "33s"
+      }
+    ]
   },
   {
     "code": "110.38(9)(A)",
@@ -23781,11 +25313,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-38-9-A.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "32s"
     },
     "_sourceFile": "110 38 9A.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-38-9-A.mp4",
+        "duration": "32s"
+      }
+    ]
   },
   {
     "code": "110.38(9)(B)(i)",
@@ -23909,11 +25449,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-38-9-B-i.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "32s"
     },
     "_sourceFile": "110 38 9B i.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-38-9-B-i.mp4",
+        "duration": "32s"
+      }
+    ]
   },
   {
     "code": "110.38(9)(B)(ii)",
@@ -24041,11 +25589,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-38-9-B-ii.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "36s"
     },
     "_sourceFile": "110 38 9B ii.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-38-9-B-ii.mp4",
+        "duration": "36s"
+      }
+    ]
   },
   {
     "code": "110.38(9)(C)",
@@ -24164,11 +25720,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-38-9-C.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "33s"
     },
     "_sourceFile": "110 38 9C.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-38-9-C.mp4",
+        "duration": "33s"
+      }
+    ]
   },
   {
     "code": "110.38(9)(D)",
@@ -24295,11 +25859,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-38-9-D.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "33s"
     },
     "_sourceFile": "110 38 9D.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-38-9-D.mp4",
+        "duration": "33s"
+      }
+    ]
   },
   {
     "code": "110.38(9)(E)",
@@ -24422,11 +25994,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-38-9-E.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "28s"
     },
     "_sourceFile": "110 38 9E.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-38-9-E.mp4",
+        "duration": "28s"
+      }
+    ]
   },
   {
     "code": "110.38(10)(A)",
@@ -24545,11 +26125,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-38-10-A.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "31s"
     },
     "_sourceFile": "110 38 10A.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-38-10-A.mp4",
+        "duration": "31s"
+      }
+    ]
   },
   {
     "code": "110.38(10)(B)",
@@ -24676,11 +26264,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-38-10-B.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "31s"
     },
     "_sourceFile": "110 38 10B.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-38-10-B.mp4",
+        "duration": "31s"
+      }
+    ]
   },
   {
     "code": "110.38(10)(C)",
@@ -24807,11 +26403,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-38-10-C.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "30s"
     },
     "_sourceFile": "110 38 10C.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-38-10-C.mp4",
+        "duration": "30s"
+      }
+    ]
   },
   {
     "code": "110.38(10)(D)",
@@ -24934,11 +26538,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-38-10-D.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "33s"
     },
     "_sourceFile": "110 38 10D.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-38-10-D.mp4",
+        "duration": "33s"
+      }
+    ]
   },
   {
     "code": "110.38(10)(E)",
@@ -25062,11 +26674,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-38-10-E.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "33s"
     },
     "_sourceFile": "110 38 10E.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-38-10-E.mp4",
+        "duration": "33s"
+      }
+    ]
   },
   {
     "code": "110.38(10)(F)",
@@ -25194,11 +26814,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-38-10-F.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "32s"
     },
     "_sourceFile": "110 38 10F.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-38-10-F.mp4",
+        "duration": "32s"
+      }
+    ]
   },
   {
     "code": "110.38(11)(A)",
@@ -25325,11 +26953,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-38-11-A.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "31s"
     },
     "_sourceFile": "110 38 11A.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-38-11-A.mp4",
+        "duration": "31s"
+      }
+    ]
   },
   {
     "code": "110.38(11)(B)",
@@ -25449,11 +27085,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-38-11-B.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "29s"
     },
     "_sourceFile": "110 38 11B.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-38-11-B.mp4",
+        "duration": "29s"
+      }
+    ]
   },
   {
     "code": "110.38(11)(C)",
@@ -25573,11 +27217,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-38-11-C.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "33s"
     },
     "_sourceFile": "110 38 11C.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-38-11-C.mp4",
+        "duration": "33s"
+      }
+    ]
   },
   {
     "code": "110.38(11)(D)",
@@ -25696,11 +27348,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-38-11-D.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "30s"
     },
     "_sourceFile": "110 38 11D.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-38-11-D.mp4",
+        "duration": "30s"
+      }
+    ]
   },
   {
     "code": "110.38(11)(E)",
@@ -25823,11 +27483,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-38-11-E.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "31s"
     },
     "_sourceFile": "110 38 11E.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-38-11-E.mp4",
+        "duration": "31s"
+      }
+    ]
   },
   {
     "code": "110.38(11)(F)",
@@ -25950,11 +27618,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-38-11-F.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "34s"
     },
     "_sourceFile": "110 38 11F.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-38-11-F.mp4",
+        "duration": "34s"
+      }
+    ]
   },
   {
     "code": "110.38(11)(G)(i)",
@@ -26077,11 +27753,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-38-11-G-i.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "31s"
     },
     "_sourceFile": "110 38 11G i.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-38-11-G-i.mp4",
+        "duration": "31s"
+      }
+    ]
   },
   {
     "code": "110.38(11)(G)(ii)",
@@ -26204,11 +27888,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-38-11-G-ii.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "32s"
     },
     "_sourceFile": "110 38 11G ii.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-38-11-G-ii.mp4",
+        "duration": "32s"
+      }
+    ]
   },
   {
     "code": "110.38(11)(H)",
@@ -26331,11 +28023,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-38-11-H.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "30s"
     },
     "_sourceFile": "110 38 11H.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-38-11-H.mp4",
+        "duration": "30s"
+      }
+    ]
   },
   {
     "code": "110.38(11)(I)",
@@ -26458,11 +28158,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-38-11-I.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "28s"
     },
     "_sourceFile": "110 38 11I.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-38-11-I.mp4",
+        "duration": "28s"
+      }
+    ]
   },
   {
     "code": "110.39(1)(A)",
@@ -26590,11 +28298,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-39-1-A.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "28s"
     },
     "_sourceFile": "110 39 1A.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-39-1-A.mp4",
+        "duration": "28s"
+      }
+    ]
   },
   {
     "code": "110.39(1)(B)",
@@ -26717,11 +28433,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-39-1-B.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "37s"
     },
     "_sourceFile": "110 39 1B.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-39-1-B.mp4",
+        "duration": "37s"
+      }
+    ]
   },
   {
     "code": "110.39(1)(C)",
@@ -26848,11 +28572,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-39-1-C.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "27s"
     },
     "_sourceFile": "110 39 1C.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-39-1-C.mp4",
+        "duration": "27s"
+      }
+    ]
   },
   {
     "code": "110.39(1)(D)",
@@ -26979,11 +28711,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-39-1-D.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "30s"
     },
     "_sourceFile": "110 39 1D.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-39-1-D.mp4",
+        "duration": "30s"
+      }
+    ]
   },
   {
     "code": "110.39(2)(A)",
@@ -27102,11 +28842,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-39-2-A.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "31s"
     },
     "_sourceFile": "110 39 2A.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-39-2-A.mp4",
+        "duration": "31s"
+      }
+    ]
   },
   {
     "code": "110.39(2)(B)",
@@ -27229,11 +28977,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-39-2-B.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "27s"
     },
     "_sourceFile": "110 39 2B.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-39-2-B.mp4",
+        "duration": "27s"
+      }
+    ]
   },
   {
     "code": "110.39(2)(C)",
@@ -27357,11 +29113,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-39-2-C.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "30s"
     },
     "_sourceFile": "110 39 2C.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-39-2-C.mp4",
+        "duration": "30s"
+      }
+    ]
   },
   {
     "code": "110.39(3)",
@@ -27484,11 +29248,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-39-3.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "24s"
     },
     "_sourceFile": "110 39 3.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-39-3.mp4",
+        "duration": "24s"
+      }
+    ]
   },
   {
     "code": "110.39(4)(A)",
@@ -27607,11 +29379,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-39-4-A.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "31s"
     },
     "_sourceFile": "110 39 4A.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-39-4-A.mp4",
+        "duration": "31s"
+      }
+    ]
   },
   {
     "code": "110.39(4)(B)",
@@ -27738,11 +29518,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-39-4-B.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "29s"
     },
     "_sourceFile": "110 39 4B.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-39-4-B.mp4",
+        "duration": "29s"
+      }
+    ]
   },
   {
     "code": "110.39(4)(C)",
@@ -27861,11 +29649,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-39-4-C.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "28s"
     },
     "_sourceFile": "110 39 4C.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-39-4-C.mp4",
+        "duration": "28s"
+      }
+    ]
   },
   {
     "code": "110.39(4)(D)",
@@ -27988,11 +29784,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-39-4-D.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "30s"
     },
     "_sourceFile": "110 39 4D.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-39-4-D.mp4",
+        "duration": "30s"
+      }
+    ]
   },
   {
     "code": "110.39(4)(E)",
@@ -28115,11 +29919,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-39-4-E.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "27s"
     },
     "_sourceFile": "110 39 4E.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-39-4-E.mp4",
+        "duration": "27s"
+      }
+    ]
   },
   {
     "code": "110.39(4)(F)",
@@ -28242,11 +30054,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-39-4-F.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "25s"
     },
     "_sourceFile": "110 39 4F.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-39-4-F.mp4",
+        "duration": "25s"
+      }
+    ]
   },
   {
     "code": "110.39(4)(G)",
@@ -28373,11 +30193,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-39-4-G.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "30s"
     },
     "_sourceFile": "110 39 4G.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-39-4-G.mp4",
+        "duration": "30s"
+      }
+    ]
   },
   {
     "code": "110.39(4)(H)",
@@ -28504,11 +30332,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-39-4-H.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "29s"
     },
     "_sourceFile": "110 39 4H.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-39-4-H.mp4",
+        "duration": "29s"
+      }
+    ]
   },
   {
     "code": "110.39(4)(I)",
@@ -28631,11 +30467,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-39-4-I.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "26s"
     },
     "_sourceFile": "110 39 4I.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-39-4-I.mp4",
+        "duration": "26s"
+      }
+    ]
   },
   {
     "code": "110.39(5)(A)",
@@ -28758,11 +30602,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-39-5-A.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "27s"
     },
     "_sourceFile": "110 39 5A.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-39-5-A.mp4",
+        "duration": "27s"
+      }
+    ]
   },
   {
     "code": "110.39(5)(B)",
@@ -28889,11 +30741,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-39-5-B.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "28s"
     },
     "_sourceFile": "110 39 5B.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-39-5-B.mp4",
+        "duration": "28s"
+      }
+    ]
   },
   {
     "code": "110.39(5)(C)",
@@ -29020,11 +30880,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-39-5-C.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "28s"
     },
     "_sourceFile": "110 39 5C.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-39-5-C.mp4",
+        "duration": "28s"
+      }
+    ]
   },
   {
     "code": "110.39(5)(D)",
@@ -29143,11 +31011,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-39-5-D.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "28s"
     },
     "_sourceFile": "110 39 5D.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-39-5-D.mp4",
+        "duration": "28s"
+      }
+    ]
   },
   {
     "code": "110.39(5)(E)",
@@ -29270,11 +31146,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-39-5-E.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "30s"
     },
     "_sourceFile": "110 39 5E.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-39-5-E.mp4",
+        "duration": "30s"
+      }
+    ]
   },
   {
     "code": "110.39(5)(F)",
@@ -29393,11 +31277,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-39-5-F.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "33s"
     },
     "_sourceFile": "110 39 5F.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-39-5-F.mp4",
+        "duration": "33s"
+      }
+    ]
   },
   {
     "code": "110.39(5)(G)",
@@ -29524,11 +31416,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-39-5-G.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "31s"
     },
     "_sourceFile": "110 39 5G.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-39-5-G.mp4",
+        "duration": "31s"
+      }
+    ]
   },
   {
     "code": "110.39(5)(H)",
@@ -29651,11 +31551,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-39-5-H.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "36s"
     },
     "_sourceFile": "110 39 5H.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-39-5-H.mp4",
+        "duration": "36s"
+      }
+    ]
   },
   {
     "code": "110.39(5)(I)",
@@ -29778,11 +31686,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-39-5-I.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "29s"
     },
     "_sourceFile": "110 39 5I.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-39-5-I.mp4",
+        "duration": "29s"
+      }
+    ]
   },
   {
     "code": "110.39(5)(J)",
@@ -29905,11 +31821,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-39-5-J.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "33s"
     },
     "_sourceFile": "110 39 5J.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-39-5-J.mp4",
+        "duration": "33s"
+      }
+    ]
   },
   {
     "code": "110.39(6)(A)",
@@ -30036,11 +31960,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-39-6-A.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "25s"
     },
     "_sourceFile": "110 39 6A.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-39-6-A.mp4",
+        "duration": "25s"
+      }
+    ]
   },
   {
     "code": "110.39(6)(B)",
@@ -30163,11 +32095,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-39-6-B.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "31s"
     },
     "_sourceFile": "110 39 6B.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-39-6-B.mp4",
+        "duration": "31s"
+      }
+    ]
   },
   {
     "code": "110.39(6)(C)",
@@ -30290,11 +32230,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-39-6-C.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "32s"
     },
     "_sourceFile": "110 39 6C.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-39-6-C.mp4",
+        "duration": "32s"
+      }
+    ]
   },
   {
     "code": "110.39(6)(D)",
@@ -30417,11 +32365,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-39-6-D.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "30s"
     },
     "_sourceFile": "110 39 6D.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-39-6-D.mp4",
+        "duration": "30s"
+      }
+    ]
   },
   {
     "code": "110.39(7)(A)",
@@ -30544,11 +32500,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-39-7-A.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "30s"
     },
     "_sourceFile": "110 39 7A.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-39-7-A.mp4",
+        "duration": "30s"
+      }
+    ]
   },
   {
     "code": "110.39(7)(B)",
@@ -30672,11 +32636,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-39-7-B.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "30s"
     },
     "_sourceFile": "110 39 7B.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-39-7-B.mp4",
+        "duration": "30s"
+      }
+    ]
   },
   {
     "code": "110.39(7)(C)",
@@ -30799,11 +32771,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-39-7-C.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "29s"
     },
     "_sourceFile": "110 39 7C.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-39-7-C.mp4",
+        "duration": "29s"
+      }
+    ]
   },
   {
     "code": "110.39(7)(D)(i)",
@@ -30923,11 +32903,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-39-7-D-i.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "28s"
     },
     "_sourceFile": "110 39 7D i.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-39-7-D-i.mp4",
+        "duration": "28s"
+      }
+    ]
   },
   {
     "code": "110.39(7)(D)(ii)",
@@ -31046,11 +33034,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-39-7-D-ii.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "28s"
     },
     "_sourceFile": "110 39 7D ii.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-39-7-D-ii.mp4",
+        "duration": "28s"
+      }
+    ]
   },
   {
     "code": "110.39(7)(E)(i)",
@@ -31178,11 +33174,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-39-7-E-i.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "25s"
     },
     "_sourceFile": "110 39 7E i.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-39-7-E-i.mp4",
+        "duration": "25s"
+      }
+    ]
   },
   {
     "code": "110.39(7)(E)(ii)",
@@ -31309,11 +33313,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-39-7-E-ii.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "33s"
     },
     "_sourceFile": "110 39 7E ii.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-39-7-E-ii.mp4",
+        "duration": "33s"
+      }
+    ]
   },
   {
     "code": "110.39(7)(E)(iii)",
@@ -31436,11 +33448,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-39-7-E-iii.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "31s"
     },
     "_sourceFile": "110 39 7E iii.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-39-7-E-iii.mp4",
+        "duration": "31s"
+      }
+    ]
   },
   {
     "code": "110.39(7)(F)",
@@ -31563,11 +33583,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-39-7-F.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "29s"
     },
     "_sourceFile": "110 39 7F.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-39-7-F.mp4",
+        "duration": "29s"
+      }
+    ]
   },
   {
     "code": "110.39(8)(A)",
@@ -31690,11 +33718,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-39-8-A.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "28s"
     },
     "_sourceFile": "110 39 8A.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-39-8-A.mp4",
+        "duration": "28s"
+      }
+    ]
   },
   {
     "code": "110.39(8)(B)",
@@ -31818,11 +33854,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-39-8-B.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "26s"
     },
     "_sourceFile": "110 39 8B.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-39-8-B.mp4",
+        "duration": "26s"
+      }
+    ]
   },
   {
     "code": "110.39(8)(C)",
@@ -31945,11 +33989,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-39-8-C.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "33s"
     },
     "_sourceFile": "110 39 8C.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-39-8-C.mp4",
+        "duration": "33s"
+      }
+    ]
   },
   {
     "code": "110.39(8)(D)",
@@ -32072,11 +34124,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-39-8-D.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "31s"
     },
     "_sourceFile": "110 39 8D.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-39-8-D.mp4",
+        "duration": "31s"
+      }
+    ]
   },
   {
     "code": "110.39(8)(E)",
@@ -32199,11 +34259,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-39-8-E.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "27s"
     },
     "_sourceFile": "110 39 8E.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-39-8-E.mp4",
+        "duration": "27s"
+      }
+    ]
   },
   {
     "code": "110.39(8)(F)",
@@ -32326,11 +34394,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-39-8-F.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "26s"
     },
     "_sourceFile": "110 39 8F.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-39-8-F.mp4",
+        "duration": "26s"
+      }
+    ]
   },
   {
     "code": "110.39(8)(G)",
@@ -32453,11 +34529,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-39-8-G.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "29s"
     },
     "_sourceFile": "110 39 8G.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-39-8-G.mp4",
+        "duration": "29s"
+      }
+    ]
   },
   {
     "code": "110.39(9)(A)",
@@ -32584,11 +34668,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-39-9-A.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "25s"
     },
     "_sourceFile": "110 39 9A.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-39-9-A.mp4",
+        "duration": "25s"
+      }
+    ]
   },
   {
     "code": "110.39(9)(B)(i)",
@@ -32712,11 +34804,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-39-9-B-i.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "27s"
     },
     "_sourceFile": "110 39 9B i.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-39-9-B-i.mp4",
+        "duration": "27s"
+      }
+    ]
   },
   {
     "code": "110.39(9)(B)(ii)",
@@ -32843,11 +34943,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-39-9-B-ii.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "27s"
     },
     "_sourceFile": "110 39 9B ii.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-39-9-B-ii.mp4",
+        "duration": "27s"
+      }
+    ]
   },
   {
     "code": "110.39(9)(C)",
@@ -32974,11 +35082,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-39-9-C.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "28s"
     },
     "_sourceFile": "110 39 9C.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-39-9-C.mp4",
+        "duration": "28s"
+      }
+    ]
   },
   {
     "code": "110.39(9)(D)",
@@ -33101,11 +35217,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-39-9-D.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "26s"
     },
     "_sourceFile": "110 39 9D.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-39-9-D.mp4",
+        "duration": "26s"
+      }
+    ]
   },
   {
     "code": "110.39(9)(E)",
@@ -33232,11 +35356,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-39-9-E.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "27s"
     },
     "_sourceFile": "110 39 9E.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-39-9-E.mp4",
+        "duration": "27s"
+      }
+    ]
   },
   {
     "code": "110.39(10)(A)",
@@ -33363,11 +35495,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-39-10-A.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "31s"
     },
     "_sourceFile": "110 39 10A.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-39-10-A.mp4",
+        "duration": "31s"
+      }
+    ]
   },
   {
     "code": "110.39(10)(B)",
@@ -33491,11 +35631,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-39-10-B.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "31s"
     },
     "_sourceFile": "110 39 10B.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-39-10-B.mp4",
+        "duration": "31s"
+      }
+    ]
   },
   {
     "code": "110.39(10)(C)",
@@ -33622,11 +35770,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-39-10-C.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "31s"
     },
     "_sourceFile": "110 39 10C.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-39-10-C.mp4",
+        "duration": "31s"
+      }
+    ]
   },
   {
     "code": "110.39(10)(D)",
@@ -33753,11 +35909,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-39-10-D.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "25s"
     },
     "_sourceFile": "110 39 10D.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-39-10-D.mp4",
+        "duration": "25s"
+      }
+    ]
   },
   {
     "code": "110.39(10)(E)",
@@ -33884,11 +36048,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-39-10-E.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "28s"
     },
     "_sourceFile": "110 39 10E.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-39-10-E.mp4",
+        "duration": "28s"
+      }
+    ]
   },
   {
     "code": "110.39(10)(F)",
@@ -34015,11 +36187,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-39-10-F.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "29s"
     },
     "_sourceFile": "110 39 10F.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-39-10-F.mp4",
+        "duration": "29s"
+      }
+    ]
   },
   {
     "code": "110.39(11)(A)",
@@ -34142,11 +36322,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-39-11-A.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "30s"
     },
     "_sourceFile": "110 39 11A.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-39-11-A.mp4",
+        "duration": "30s"
+      }
+    ]
   },
   {
     "code": "110.39(11)(B)",
@@ -34269,11 +36457,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-39-11-B.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "29s"
     },
     "_sourceFile": "110 39 11B.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-39-11-B.mp4",
+        "duration": "29s"
+      }
+    ]
   },
   {
     "code": "110.39(11)(C)",
@@ -34392,11 +36588,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-39-11-C.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "27s"
     },
     "_sourceFile": "110 39 11C.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-39-11-C.mp4",
+        "duration": "27s"
+      }
+    ]
   },
   {
     "code": "110.39(11)(D)",
@@ -34515,11 +36719,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-39-11-D.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "28s"
     },
     "_sourceFile": "110 39 11D.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-39-11-D.mp4",
+        "duration": "28s"
+      }
+    ]
   },
   {
     "code": "110.39(11)(E)",
@@ -34642,11 +36854,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-39-11-E.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "28s"
     },
     "_sourceFile": "110 39 11E.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-39-11-E.mp4",
+        "duration": "28s"
+      }
+    ]
   },
   {
     "code": "110.39(11)(F)",
@@ -34769,11 +36989,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-39-11-F.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "26s"
     },
     "_sourceFile": "110 39 11F.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-39-11-F.mp4",
+        "duration": "26s"
+      }
+    ]
   },
   {
     "code": "110.39(11)(G)(i)",
@@ -34896,11 +37124,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-39-11-G-i.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "31s"
     },
     "_sourceFile": "110 39 11G i.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-39-11-G-i.mp4",
+        "duration": "31s"
+      }
+    ]
   },
   {
     "code": "110.39(11)(G)(ii)",
@@ -35024,11 +37260,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-39-11-G-ii.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "28s"
     },
     "_sourceFile": "110 39 11G ii.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-39-11-G-ii.mp4",
+        "duration": "28s"
+      }
+    ]
   },
   {
     "code": "110.39(11)(H)",
@@ -35155,11 +37399,19 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-39-11-H.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "28s"
     },
     "_sourceFile": "110 39 11H.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-39-11-H.mp4",
+        "duration": "28s"
+      }
+    ]
   },
   {
     "code": "110.39(11)(I)",
@@ -35282,10 +37534,18 @@
     ],
     "explainerVideo": {
       "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-39-11-I.mp4",
-      "label": "Teacher Explainer — Section 2 (Lessons & Tips)",
+      "label": "Teacher Explainer — Section 2 (Two Tricks I've Picked Up)",
       "duration": "30s"
     },
     "_sourceFile": "110 39 11I.md",
-    "_format": "new"
+    "_format": "new",
+    "explainerVideos": [
+      {
+        "section": 2,
+        "title": "Two Tricks I've Picked Up",
+        "videoUrl": "https://pub-743d1f08ab39488cb06581d0d25f3af1.r2.dev/110-39-11-I.mp4",
+        "duration": "30s"
+      }
+    ]
   }
 ]

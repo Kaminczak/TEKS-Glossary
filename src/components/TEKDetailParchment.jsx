@@ -339,13 +339,13 @@ function VideoCard({ video, sectionTitle }) {
 // section that has a local (own-voice) render, written by teks_wire_videos_to_site.py —
 // and the older single `explainerVideo` for everything that hasn't. Three word-links
 // switch the clip; the caption under it changes with the section so each one reads as
-// its own thing: Define → the standard in plain language, Lessons & Tips → the moves,
-// Assess & Watch For → the misconceptions. Sections not rendered yet show as disabled
+// its own thing: Define → the standard in plain language, Two Tricks I've Picked Up → the
+// moves, Two Things That Trip Them Up → the misconceptions. Sections not rendered yet show as disabled
 // so the page already has its final shape while the catalog catches up.
 const SECTION_ORDER = [
   { n: 1, title: 'Define' },
-  { n: 2, title: 'Lessons & Tips' },
-  { n: 3, title: 'Assess & Watch For' },
+  { n: 2, title: "Two Tricks I've Picked Up" },
+  { n: 3, title: 'Two Things That Trip Them Up' },
 ];
 
 function SectionVideo({ tek, resolveUrl }) {
