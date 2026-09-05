@@ -746,7 +746,7 @@ export default function TEKListPage({ navigate, initialFilters = {} }) {
                       className="text-[10px] font-mono uppercase tracking-[0.22em]"
                       style={{ color: PALETTE.monoGold }}
                     >
-                      {videoTeks.length} live · more in production
+                      {videoTeks.length} of {stats.total} with video
                     </span>
                   </div>
                   <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4">
