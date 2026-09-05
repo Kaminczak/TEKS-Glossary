@@ -1,6 +1,17 @@
 import stats from "../data/stats.json";
 import { linkProps } from "../hooks/useRoute";
-import { IconArrowUpRight, IconArrowRight } from "../components/icons/TablerIcons";
+// Two Tabler arrows inlined rather than imported: pulling icons/TablerIcons.jsx
+// into the entry chunk would ship every glossary icon on the landing page.
+const arrowProps = (size) => ({
+  width: size, height: size, viewBox: "0 0 24 24", fill: "none", stroke: "currentColor",
+  strokeWidth: 2, strokeLinecap: "round", strokeLinejoin: "round", "aria-hidden": "true",
+});
+const IconArrowRight = ({ size = 16 }) => (
+  <svg {...arrowProps(size)}><path d="M5 12h14" /><path d="M13 18l6-6" /><path d="M13 6l6 6" /></svg>
+);
+const IconArrowUpRight = ({ size = 16 }) => (
+  <svg {...arrowProps(size)}><path d="M17 7l-10 10" /><path d="M8 7h9v9" /></svg>
+);
 
 // Same parchment system as the glossary (see TEKListPage / TEKDetailParchment).
 const PALETTE = {

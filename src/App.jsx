@@ -1,10 +1,14 @@
-import { useEffect } from "react";
-import GeneratePage from "./pages/GeneratePage";
-import TEKGlossaryOld from "./pages/TEKGlossary";
-import ParchmentPreview from "./pages/ParchmentPreview";
-import TEKListPage from "./pages/TEKListPage";
+import { Suspense, lazy, useEffect } from "react";
 import LandingPage from "./pages/LandingPage";
 import { useRoute, linkProps } from "./hooks/useRoute";
+
+// Only the landing page ships in the entry chunk. The glossary (list + detail,
+// which share Sidebar/icons) and the admin tools (TipTap editor, SSE client)
+// load on demand, so `/` stays small.
+const TEKListPage = lazy(() => import("./pages/TEKListPage"));
+const ParchmentPreview = lazy(() => import("./pages/ParchmentPreview"));
+const GeneratePage = lazy(() => import("./pages/GeneratePage"));
+const TEKGlossaryOld = lazy(() => import("./pages/TEKGlossary"));
 
 /**
  * Path-routed shell (see hooks/useRoute.js for the route table).
@@ -31,8 +35,13 @@ export default function App() {
     return <LandingPage navigate={navigate} />;
   }
 
+  if (route.view === "notfound") {
+    return <NotFound path={route.path} navigate={navigate} />;
+  }
+
+  let page;
   if (route.view === "detail") {
-    return (
+    page = (
       <ParchmentPreview
         courseCode={route.courseCode}
         letter={route.letter}
@@ -40,18 +49,25 @@ export default function App() {
         navigate={navigate}
       />
     );
+  } else if (route.view === "admin") {
+    page = <AdminShell subview={route.subview} navigate={navigate} />;
+  } else {
+    // List view (route.filters may pre-fill course/strand/dok/video)
+    page = <TEKListPage navigate={navigate} initialFilters={route.filters || {}} />;
   }
 
-  if (route.view === "admin") {
-    return <AdminShell subview={route.subview} navigate={navigate} />;
-  }
+  return <Suspense fallback={<ChunkLoading />}>{page}</Suspense>;
+}
 
-  if (route.view === "notfound") {
-    return <NotFound path={route.path} navigate={navigate} />;
-  }
-
-  // List view (route.filters may pre-fill course/strand/dok/video)
-  return <TEKListPage navigate={navigate} initialFilters={route.filters || {}} />;
+function ChunkLoading() {
+  return (
+    <div
+      className="min-h-screen"
+      style={{ background: "#F6F2EC" }}
+      aria-busy="true"
+      aria-label="Loading"
+    />
+  );
 }
 
 function titleFor(route) {

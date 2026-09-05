@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import stats from "../data/stats.json";
 import { useIndex } from "../data/loader";
 import { tekPath, listPath, linkProps } from "../hooks/useRoute";
@@ -63,6 +63,13 @@ export const DOK_COLORS = {
   4: "oklch(0.60 0.13 75)",  // warm amber/gold
 };
 export const DOK_LABELS = { 1: "Recall", 2: "Skill", 3: "Strategic", 4: "Extended" };
+
+// Cards rendered before the first "show more". 24 fills a 3-up grid eight rows
+// deep, which is more than one screen on any phone or laptop. The rest stream
+// in as the sentinel below the grid scrolls into view (or on click).
+const PAGE = 24;
+// How many video cards the unfiltered browse page features before "See all".
+const FEATURED_VIDEOS = 6;
 
 // Strand filter options — derived from the index once it arrives.
 function strandOptions(teks) {
@@ -241,6 +248,39 @@ function TEKCard({ tek, onOpen, onFilter }) {
           </button>
         </div>
       </div>
+    </div>
+  );
+}
+
+function LoadMore({ onMore, remaining }) {
+  const ref = useRef(null);
+  useEffect(() => {
+    const el = ref.current;
+    if (!el || typeof IntersectionObserver === "undefined") return undefined;
+    const io = new IntersectionObserver(
+      (entries) => {
+        if (entries.some((e) => e.isIntersecting)) onMore();
+      },
+      { rootMargin: "600px 0px" }
+    );
+    io.observe(el);
+    return () => io.disconnect();
+  }, [onMore]);
+
+  return (
+    <div ref={ref} className="flex justify-center py-6">
+      <button
+        type="button"
+        onClick={onMore}
+        className="px-4 py-2 rounded-md text-sm font-medium outline-none focus-visible:ring-2 focus-visible:ring-[#1A1713]"
+        style={{
+          background: PALETTE.bone,
+          border: `1px solid ${PALETTE.tagBorder}`,
+          color: PALETTE.inkPrimary,
+        }}
+      >
+        Show more · {remaining} remaining
+      </button>
     </div>
   );
 }
@@ -503,6 +543,9 @@ export default function TEKListPage({ navigate, initialFilters = {} }) {
 
   const strands = useMemo(() => strandOptions(teks), [teks]);
 
+  const [visibleCount, setVisibleCount] = useState(PAGE);
+  const showMore = useCallback(() => setVisibleCount((n) => n + PAGE), []);
+
   // TEKS that already have an explainer video wired — featured at the top of the
   // unfiltered browse view so visitors land on working video content first.
   const videoTeks = useMemo(() => (teks || []).filter((t) => t.hasVideo), [teks]);
@@ -531,6 +574,11 @@ export default function TEKListPage({ navigate, initialFilters = {} }) {
     });
   }, [teks, search, course, strand, substrand, dok, videoOnly]);
 
+  // Any change to the result set starts the grid over at the first page.
+  useEffect(() => {
+    setVisibleCount(PAGE);
+  }, [filtered]);
+
   // Group filtered TEKs by course → strand for visual clarity.
   const grouped = useMemo(() => {
     const m = new Map();
@@ -543,6 +591,27 @@ export default function TEKListPage({ navigate, initialFilters = {} }) {
     }
     return m;
   }, [filtered]);
+
+  // The grouped view, cut down to the first `visibleCount` cards. Each course
+  // section keeps its full count in the header so the totals still read true
+  // while the later strands haven't been rendered yet.
+  const pagedSections = useMemo(() => {
+    let budget = visibleCount;
+    const out = [];
+    for (const [courseName, strandMap] of grouped) {
+      if (budget <= 0) break;
+      const total = Array.from(strandMap.values()).reduce((s, arr) => s + arr.length, 0);
+      const strands = [];
+      for (const [strandName, items] of strandMap) {
+        if (budget <= 0) break;
+        const slice = items.slice(0, budget);
+        budget -= slice.length;
+        strands.push([strandName, slice]);
+      }
+      out.push({ courseName, total, strands });
+    }
+    return out;
+  }, [grouped, visibleCount]);
 
   const handleOpen = (tek) => {
     navigate(tekPath(tek));
@@ -637,16 +706,21 @@ export default function TEKListPage({ navigate, initialFilters = {} }) {
           // When a filter is active that flattens results, just show a grid.
           // Otherwise, group by course → strand with section headers for orientation.
           course !== "All courses" || strand !== "All strands" || substrand || dok || search || videoOnly ? (
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-              {filtered.map((t) => (
-                <TEKCard
-                  key={t.code}
-                  tek={t}
-                  onOpen={handleOpen}
-                  onFilter={handleCardFilter}
-                />
-              ))}
-            </div>
+            <>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                {filtered.slice(0, visibleCount).map((t) => (
+                  <TEKCard
+                    key={t.code}
+                    tek={t}
+                    onOpen={handleOpen}
+                    onFilter={handleCardFilter}
+                  />
+                ))}
+              </div>
+              {visibleCount < filtered.length && (
+                <LoadMore onMore={showMore} remaining={filtered.length - visibleCount} />
+              )}
+            </>
           ) : (
             <div className="flex flex-col gap-12">
               {videoTeks.length > 0 && (
@@ -674,7 +748,7 @@ export default function TEKListPage({ navigate, initialFilters = {} }) {
                     </span>
                   </div>
                   <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                    {videoTeks.map((t) => (
+                    {videoTeks.slice(0, FEATURED_VIDEOS).map((t) => (
                       <TEKCard
                         key={`vid-${t.code}`}
                         tek={t}
@@ -683,9 +757,21 @@ export default function TEKListPage({ navigate, initialFilters = {} }) {
                       />
                     ))}
                   </div>
+                  {videoTeks.length > FEATURED_VIDEOS && (
+                    <div className="mt-4">
+                      <a
+                        {...linkProps(navigate, listPath({ video: "1" }))}
+                        className="inline-flex items-center gap-1.5 text-sm font-medium underline underline-offset-4 outline-none rounded focus-visible:ring-2 focus-visible:ring-[#1A1713]"
+                        style={{ color: PALETTE.inkPrimary }}
+                      >
+                        See all {videoTeks.length} TEKS with video
+                        <IconArrowUpRight size={14} />
+                      </a>
+                    </div>
+                  )}
                 </section>
               )}
-              {Array.from(grouped.entries()).map(([courseName, strandMap]) => (
+              {pagedSections.map(({ courseName, total, strands: strandBlocks }) => (
                 <section key={courseName}>
                   <div className="flex items-end justify-between mb-4 flex-wrap gap-2">
                     <h2
@@ -701,12 +787,12 @@ export default function TEKListPage({ navigate, initialFilters = {} }) {
                       className="text-[10px] font-mono uppercase tracking-[0.22em]"
                       style={{ color: PALETTE.monoGold }}
                     >
-                      {Array.from(strandMap.values()).reduce((s, arr) => s + arr.length, 0)} TEKs
+                      {total} TEKs
                     </span>
                   </div>
 
                   <div className="flex flex-col gap-6">
-                    {Array.from(strandMap.entries()).map(([strandName, items]) => (
+                    {strandBlocks.map(([strandName, items]) => (
                       <div key={strandName}>
                         <p
                           className="text-[11px] font-mono uppercase tracking-[0.22em] mb-3"
@@ -729,6 +815,9 @@ export default function TEKListPage({ navigate, initialFilters = {} }) {
                   </div>
                 </section>
               ))}
+              {visibleCount < filtered.length && (
+                <LoadMore onMore={showMore} remaining={filtered.length - visibleCount} />
+              )}
             </div>
           )
         )}
