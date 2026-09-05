@@ -181,7 +181,7 @@ function TEKCard({ tek, onOpen, onFilter }) {
           identity — the rail and chip already carry its colour. Merging what were
           two rows puts the course on the same baseline as the strand name. */}
       <div
-        className="mt-auto pt-3 flex items-center justify-between gap-3"
+        className="mt-auto pt-3 flex flex-wrap items-center justify-between gap-x-3 gap-y-2"
         style={{ borderTop: `1px solid ${PALETTE.hairline}` }}
       >
         {/* Glyph above its own label. Every card has a strand, so this block is the
@@ -201,25 +201,27 @@ function TEKCard({ tek, onOpen, onFilter }) {
         <button
           type="button"
           onClick={(e) => filterClick(e, { strand: tek.strand })}
-          className="flex items-center gap-3 min-w-0 text-left group/strand"
+          className="flex items-center gap-3 flex-1 text-left group/strand"
           title={`Show all ${tek.strand}`}
-          style={{ background: "none", border: "none", padding: 0, cursor: "pointer" }}
+          style={{
+            background: "none",
+            border: "none",
+            padding: 0,
+            cursor: "pointer",
+            // Enough room for "Foundational" on one line at 14px next to the 44px
+            // tile. Below this the course/DOK block wraps under the strand instead
+            // of squeezing it — the old 2-line clamp with overflow:hidden cut the
+            // longest names mid-glyph ("Foundatior Languag") on ~200px cards.
+            minWidth: "10.5rem",
+          }}
         >
           <StrandChip strand={tek.strand} color={courseColor} size={44} />
-          {/* Wraps to at most two lines instead of truncating. The band is 44px and
-              the line is 15px, so two lines fit inside it — that is what lets the
-              full names survive at three-up, where even mixed case clipped 109 of
-              294 on one line. */}
           <span
-            className="text-[15px] group-hover/strand:underline underline-offset-2"
+            className="text-[14px] group-hover/strand:underline underline-offset-2"
             style={{
               color: PALETTE.inkPrimary,
               fontWeight: 600,
-              lineHeight: 1.15,
-              display: "-webkit-box",
-              WebkitLineClamp: 2,
-              WebkitBoxOrient: "vertical",
-              overflow: "hidden",
+              lineHeight: 1.2,
               textWrap: "balance",
             }}
           >
@@ -707,7 +709,7 @@ export default function TEKListPage({ navigate, initialFilters = {} }) {
           // Otherwise, group by course → strand with section headers for orientation.
           course !== "All courses" || strand !== "All strands" || substrand || dok || search || videoOnly ? (
             <>
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4">
                 {filtered.slice(0, visibleCount).map((t) => (
                   <TEKCard
                     key={t.code}
@@ -747,7 +749,7 @@ export default function TEKListPage({ navigate, initialFilters = {} }) {
                       {videoTeks.length} live · more in production
                     </span>
                   </div>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4">
                     {videoTeks.slice(0, FEATURED_VIDEOS).map((t) => (
                       <TEKCard
                         key={`vid-${t.code}`}
@@ -800,7 +802,7 @@ export default function TEKListPage({ navigate, initialFilters = {} }) {
                         >
                           {strandName}
                         </p>
-                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4">
                           {items.map((t) => (
                             <TEKCard
                               key={t.code}
