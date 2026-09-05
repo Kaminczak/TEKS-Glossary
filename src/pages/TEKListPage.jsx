@@ -107,7 +107,7 @@ function TEKCard({ tek, onOpen, onFilter }) {
           onOpen(tek);
         }
       }}
-      className="text-left flex flex-col gap-3 p-5 rounded-2xl transition-all duration-200 group relative cursor-pointer outline-none focus-visible:ring-2"
+      className="text-left flex flex-col gap-3 p-5 rounded-2xl transition-all duration-200 group relative cursor-pointer outline-none focus-visible:ring-2 focus-visible:ring-[#1A1713]"
       style={{
         background: PALETTE.bone,
         // Left rail = strand color (3px), rest subtle
@@ -154,7 +154,7 @@ function TEKCard({ tek, onOpen, onFilter }) {
               className="inline-flex items-center gap-1 px-1.5 py-0.5 rounded text-[10px] font-mono uppercase tracking-[0.12em]"
               style={{ background: courseColor, color: PALETTE.bone }}
             >
-              ▶ video
+              <span aria-hidden="true">▶</span> video
             </span>
           )}
         </div>
@@ -233,7 +233,7 @@ function TEKCard({ tek, onOpen, onFilter }) {
           <button
             type="button"
             onClick={(e) => filterClick(e, { course: tek.course })}
-            className="text-[15px] font-mono uppercase tracking-[0.08em] hover:underline underline-offset-2 transition-colors"
+            className="inline-flex items-center min-h-6 text-[15px] font-mono uppercase tracking-[0.08em] hover:underline underline-offset-2 transition-colors outline-none rounded focus-visible:ring-2 focus-visible:ring-[#1A1713]"
             title={`Filter to ${tek.course} only`}
             style={{ color: courseColor, fontWeight: 600 }}
           >
@@ -242,9 +242,9 @@ function TEKCard({ tek, onOpen, onFilter }) {
           <button
             type="button"
             onClick={(e) => filterClick(e, { dok: tek.dok })}
-            className="text-[11px] font-mono uppercase tracking-[0.12em] hover:underline underline-offset-2 transition-colors"
+            className="inline-flex items-center min-h-6 text-[11px] font-mono uppercase tracking-[0.12em] hover:underline underline-offset-2 transition-colors outline-none rounded focus-visible:ring-2 focus-visible:ring-[#1A1713]"
             title={`Filter to DOK ${tek.dok} (${DOK_LABELS[tek.dok] || ""}) only`}
-            style={{ color: PALETTE.stone }}
+            style={{ color: PALETTE.inkTertiary }}
           >
             DOK {tek.dok}
           </button>
@@ -336,13 +336,15 @@ function TopBar({
       </span>
 
       <div
-        className="ml-auto flex items-center gap-2 w-72 max-w-full px-3 py-1.5 rounded-md"
+        className="ml-auto flex items-center gap-2 w-72 max-w-full px-3 py-1.5 rounded-md focus-within:ring-2 focus-within:ring-[#1A1713]"
         style={{ background: PALETTE.sand, border: `1px solid ${PALETTE.soft}` }}
       >
-        <span style={{ color: PALETTE.stone }}>
+        <span style={{ color: PALETTE.inkTertiary }} aria-hidden="true">
           <IconSearch size={14} />
         </span>
         <input
+          type="search"
+          aria-label="Search TEKS by code, title, or keyword"
           value={search}
           onChange={(e) => setSearch(e.target.value)}
           placeholder="Search code, title, or keyword…"
@@ -352,9 +354,10 @@ function TopBar({
       </div>
 
       <select
+        aria-label="Course"
         value={course}
         onChange={(e) => setCourse(e.target.value)}
-        className="text-sm px-3 py-1.5 rounded-md outline-none"
+        className="text-sm px-3 py-1.5 rounded-md outline-none focus-visible:ring-2 focus-visible:ring-[#1A1713]"
         style={{
           background: PALETTE.sand,
           border: `1px solid ${PALETTE.soft}`,
@@ -369,9 +372,10 @@ function TopBar({
       </select>
 
       <select
+        aria-label="Strand"
         value={strand}
         onChange={(e) => setStrand(e.target.value)}
-        className="text-sm px-3 py-1.5 rounded-md outline-none max-w-[14rem]"
+        className="text-sm px-3 py-1.5 rounded-md outline-none max-w-[14rem] focus-visible:ring-2 focus-visible:ring-[#1A1713]"
         style={{
           background: PALETTE.sand,
           border: `1px solid ${PALETTE.soft}`,
@@ -386,9 +390,10 @@ function TopBar({
       </select>
 
       <select
+        aria-label="Depth of Knowledge level"
         value={dok || ""}
         onChange={(e) => setDok(e.target.value ? Number(e.target.value) : null)}
-        className="text-sm px-3 py-1.5 rounded-md outline-none"
+        className="text-sm px-3 py-1.5 rounded-md outline-none focus-visible:ring-2 focus-visible:ring-[#1A1713]"
         style={{
           background: PALETTE.sand,
           border: `1px solid ${PALETTE.soft}`,
@@ -449,8 +454,8 @@ function TopBar({
         <button
           type="button"
           onClick={() => onClearFilter("all")}
-          className="text-[10px] font-mono uppercase tracking-[0.18em] underline underline-offset-2 ml-1"
-          style={{ color: PALETTE.stone }}
+          className="inline-flex items-center min-h-6 text-[10px] font-mono uppercase tracking-[0.18em] underline underline-offset-2 ml-1 outline-none rounded focus-visible:ring-2 focus-visible:ring-[#1A1713]"
+          style={{ color: PALETTE.inkTertiary }}
         >
           Clear all
         </button>

@@ -234,21 +234,16 @@ function TopBar({ onNavHome, navigate }) {
       >
         TEKS Glossary
       </button>
-      <nav className="hidden md:flex items-center gap-5 ml-6 text-sm">
-        {(SHOW_GENERATORS ? ['Standards', 'Resources', 'Generators', 'Glossary'] : ['Standards', 'Resources', 'Glossary']).map((label) => (
-          <a key={label} className="hover:underline" style={{ color: PALETTE.inkTertiary }} href="#">
-            {label}
-          </a>
-        ))}
-      </nav>
       <div
         className="ml-auto flex items-center gap-2 w-72 max-w-full px-3 py-1.5 rounded-md"
         style={{ background: PALETTE.sand, border: `1px solid ${PALETTE.soft}` }}
       >
-        <span style={{ color: PALETTE.stone }}>
+        <span style={{ color: PALETTE.inkTertiary }} aria-hidden="true">
           <IconSearch size={14} />
         </span>
         <input
+          type="search"
+          aria-label="Search a TEK code, keyword, or strand"
           placeholder="Search a TEK code, keyword, or strand…"
           className="bg-transparent outline-none w-full text-sm"
           style={{ color: PALETTE.inkPrimary }}

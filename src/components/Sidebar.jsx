@@ -245,7 +245,9 @@ function SidebarSubject({ subject, activeSubject, expanded, onToggle, onNavigate
                           setOpenCourse(isCourseOpen ? null : courseName);
                         }}
                         className="px-1.5 py-1 rounded hover:bg-white/40 transition-colors"
-                        title={isCourseOpen ? "Collapse" : "Expand strands"}
+                        title={isCourseOpen ? "Collapse strands" : "Expand strands"}
+                        aria-label={`${isCourseOpen ? "Collapse" : "Expand"} ${courseName} strands`}
+                        aria-expanded={isCourseOpen}
                       >
                         <span
                           className="text-[10px] transition-transform inline-block"
@@ -291,7 +293,7 @@ function SidebarSubject({ subject, activeSubject, expanded, onToggle, onNavigate
                               <span className="flex-1">{strandName}</span>
                               <span
                                 className="text-[9px] font-mono"
-                                style={{ color: PALETTE.stone }}
+                                style={{ color: PALETTE.inkTertiary }}
                               >
                                 {n}
                               </span>

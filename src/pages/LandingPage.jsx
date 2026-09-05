@@ -23,7 +23,6 @@ const PALETTE = {
   inkSecondary: "#3C352D",
   inkTertiary: "#5A5148",
   monoGold: "#6B5E3C",
-  stone: "#7A6E60",
   hairline: "rgba(26,23,19,0.05)",
   soft: "rgba(26,23,19,0.08)",
   standardBorder: "rgba(26,23,19,0.10)",
@@ -263,7 +262,7 @@ export default function LandingPage({ navigate }) {
             sk.md
             <IconArrowUpRight size={14} />
           </a>
-          <span className="ml-auto text-xs" style={{ color: PALETTE.stone }}>
+          <span className="ml-auto text-xs" style={{ color: PALETTE.inkTertiary }}>
             © {new Date().getFullYear()} Steve Kaminczak
           </span>
         </div>
