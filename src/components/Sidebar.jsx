@@ -1,9 +1,9 @@
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import {
   IconNotebook, IconLayoutList, IconChevronRight, IconHome,
 } from "./icons/TablerIcons";
 import { listPath } from "../hooks/useHashRoute";
-import teksData from "../data/teksData.json";
+import stats from "../data/stats.json";
 
 const PALETTE = {
   parchment: "#F6F2EC",
@@ -65,21 +65,24 @@ export const COURSE_ACCENT = {
 // irregular: an earlier set held lightness and chroma fixed and varied only hue, and
 // it read as one shade in four tints.
 
-// Pre-compute counts per (course, strand) so we don't recalc on every render.
-const COURSE_COUNTS = Object.fromEntries(
-  ELA_COURSES.map((c) => [c, teksData.filter((t) => t.course === c).length])
-);
-const COURSE_STRAND_COUNTS = Object.fromEntries(
-  ELA_COURSES.map((c) => [
-    c,
-    Object.fromEntries(
-      ELA_STRANDS.map((s) => [
-        s,
-        teksData.filter((t) => t.course === c && t.strand === s).length,
-      ])
-    ),
-  ])
-);
+// Counts per course and per (course, strand), derived from the fetched index.
+// `teks` is null until index.json arrives, so counts render blank, not zero.
+function useCounts(teks) {
+  return useMemo(() => {
+    const course = {};
+    const strand = {};
+    for (const c of ELA_COURSES) {
+      course[c] = 0;
+      strand[c] = Object.fromEntries(ELA_STRANDS.map((s) => [s, 0]));
+    }
+    for (const t of teks || []) {
+      if (!(t.course in course)) continue;
+      course[t.course] += 1;
+      if (t.strand in strand[t.course]) strand[t.course][t.strand] += 1;
+    }
+    return { course, strand, loaded: !!teks };
+  }, [teks]);
+}
 
 const SUBJECT_NAV = [
   { id: "home", label: "Home", icon: IconHome, accent: null, kind: "link" },
@@ -96,7 +99,7 @@ const SUBJECT_NAV = [
   },
 ];
 
-function SidebarSubject({ subject, activeSubject, expanded, onToggle, onNavigate, activeStrand, activeCourse }) {
+function SidebarSubject({ subject, activeSubject, expanded, onToggle, onNavigate, activeStrand, activeCourse, teks }) {
   const isActive = subject.id === activeSubject;
   const isExpanded = expanded;
   const Icon = subject.icon;
@@ -107,6 +110,7 @@ function SidebarSubject({ subject, activeSubject, expanded, onToggle, onNavigate
   useEffect(() => {
     if (activeCourse) setOpenCourse(activeCourse);
   }, [activeCourse]);
+  const counts = useCounts(teks);
 
   if (subject.kind === "link") {
     return (
@@ -180,7 +184,7 @@ function SidebarSubject({ subject, activeSubject, expanded, onToggle, onNavigate
                 border: `1px solid ${PALETTE.tagBorder}`,
               }}
             >
-              {subject.id === "ela" ? "278" : "—"}
+              {subject.id === "ela" ? stats.total : "—"}
             </span>
             {subject.id === "ela" && (
               <span
@@ -200,7 +204,7 @@ function SidebarSubject({ subject, activeSubject, expanded, onToggle, onNavigate
               {ELA_COURSES.map((courseName) => {
                 const isCourseActive = courseName === activeCourse;
                 const isCourseOpen = openCourse === courseName;
-                const strandCounts = COURSE_STRAND_COUNTS[courseName] || {};
+                const strandCounts = counts.strand[courseName] || {};
                 const courseAccent = COURSE_ACCENT[courseName] || subject.accent;
                 return (
                   <div key={courseName} className="flex flex-col">
@@ -232,7 +236,7 @@ function SidebarSubject({ subject, activeSubject, expanded, onToggle, onNavigate
                             border: `1px solid ${PALETTE.tagBorder}`,
                           }}
                         >
-                          {COURSE_COUNTS[courseName]}
+                          {counts.loaded ? counts.course[courseName] : ""}
                         </span>
                       </button>
                       <button
@@ -263,7 +267,7 @@ function SidebarSubject({ subject, activeSubject, expanded, onToggle, onNavigate
                       >
                         {ELA_STRANDS.map((strandName) => {
                           const n = strandCounts[strandName] || 0;
-                          if (n === 0) return null;
+                          if (counts.loaded && n === 0) return null;
                           const isStrandActive =
                             isCourseActive && strandName === activeStrand;
                           return (
@@ -320,8 +324,10 @@ function SidebarSubject({ subject, activeSubject, expanded, onToggle, onNavigate
  *   onNavigate     — (path: string) => void, called when user clicks a
  *                    strand or "{Subject} TEKs" link. Receives a path like
  *                    '/list/strand/Response%20Skills' or '/'.
+ *   teks           — the slim index from useIndex() (null while loading);
+ *                    drives the per-course / per-strand counts.
  */
-export default function Sidebar({ activeSubject = "ela", activeStrand, activeCourse, onNavigate }) {
+export default function Sidebar({ activeSubject = "ela", activeStrand, activeCourse, onNavigate, teks }) {
   // Re-expand the active subject whenever activeSubject changes (e.g. when
   // navigating between pages or filtering to a different strand within ELA).
   const [expandedId, setExpandedId] = useState(activeSubject);
@@ -357,6 +363,7 @@ export default function Sidebar({ activeSubject = "ela", activeStrand, activeCou
           activeStrand={activeStrand}
           activeCourse={activeCourse}
           onNavigate={onNavigate}
+          teks={teks}
           expanded={expandedId === subject.id}
           onToggle={() => setExpandedId(expandedId === subject.id ? null : subject.id)}
         />

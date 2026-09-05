@@ -458,6 +458,8 @@ function GeneratorCard({ gen, tekCode }) {
 
 export default function TEKDetailParchment({
   tek,
+  teksIndex,
+  navigate,
   onNavPrev,
   onNavNext,
   onNavHome,
@@ -485,7 +487,8 @@ export default function TEKDetailParchment({
           activeSubject="ela"
           activeStrand={tek.strand}
           activeCourse={tek.course}
-          onNavigate={(path) => { window.location.hash = path; }}
+          onNavigate={(path) => navigate?.(path)}
+          teks={teksIndex}
         />
 
         <main className="flex-1 max-w-[1500px] mx-auto w-full px-4 sm:px-6 lg:px-8 pb-20 pt-6 relative">

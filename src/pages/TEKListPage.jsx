@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
-import teksData from "../data/teksData.json";
+import stats from "../data/stats.json";
+import { useIndex } from "../data/loader";
 import { tekPath, listPath } from "../hooks/useHashRoute";
 import Sidebar, { COURSE_ACCENT } from "../components/Sidebar";
 import { StrandChip } from "../components/icons/StrandIcons";
@@ -63,18 +64,12 @@ export const DOK_COLORS = {
 };
 export const DOK_LABELS = { 1: "Recall", 2: "Skill", 3: "Strategic", 4: "Extended" };
 
-// Strands available across the data — derived once.
-const ALL_STRANDS = (() => {
+// Strand filter options — derived from the index once it arrives.
+function strandOptions(teks) {
   const s = new Set();
-  teksData.forEach((t) => t.strand && s.add(t.strand));
+  (teks || []).forEach((t) => t.strand && s.add(t.strand));
   return ["All strands", ...Array.from(s).sort()];
-})();
-
-// TEKs that already have an explainer video wired — featured at the top of the
-// unfiltered browse view so visitors land on working video content first.
-const VIDEO_TEKS = teksData.filter(
-  (t) => t.explainerVideo?.videoUrl || t.explainerVideo?.youtubeId
-);
+}
 
 function TEKCard({ tek, onOpen, onFilter }) {
   // 2026-08-29: the card's colour encodes the COURSE, not the strand, so every
@@ -82,7 +77,7 @@ function TEKCard({ tek, onOpen, onFilter }) {
   // is carried by the icon glyph in the identity row, which needs no colour at all.
   const courseColor = COURSE_ACCENT[tek.course] || PALETTE.stone;
   const dokColor = DOK_COLORS[tek.dok] || PALETTE.stone;
-  const hasVideo = !!tek.explainerVideo?.videoUrl || !!tek.explainerVideo?.youtubeId;
+  const hasVideo = !!tek.hasVideo;
 
   // Inner-click helper: stop the outer card-open behavior and call onFilter.
   const filterClick = (e, payload) => {
@@ -258,6 +253,7 @@ function TopBar({
   substrand, setSubstrand,
   onClearFilter,
   count,
+  strands,
 }) {
   const hasActiveFilters =
     course !== "All courses" ||
@@ -278,7 +274,7 @@ function TopBar({
         className="text-[10px] font-mono uppercase tracking-[0.22em]"
         style={{ color: PALETTE.monoGold }}
       >
-        {count} / {teksData.length} TEKs
+        {count} / {stats.total} TEKs
       </span>
 
       <div
@@ -324,7 +320,7 @@ function TopBar({
           color: PALETTE.inkPrimary,
         }}
       >
-        {ALL_STRANDS.map((s) => (
+        {strands.map((s) => (
           <option key={s} value={s}>
             {s}
           </option>
@@ -425,6 +421,7 @@ function FilterChip({ label, accent, onClear }) {
 }
 
 export default function TEKListPage({ navigate, initialFilters = {} }) {
+  const { data: teks, error } = useIndex();
   const [search, setSearch] = useState("");
   const [course, setCourse] = useState(initialFilters.course || "All courses");
   const [strand, setStrand] = useState(initialFilters.strand || "All strands");
@@ -476,9 +473,15 @@ export default function TEKListPage({ navigate, initialFilters = {} }) {
     navigate(listPath(current));
   };
 
+  const strands = useMemo(() => strandOptions(teks), [teks]);
+
+  // TEKS that already have an explainer video wired — featured at the top of the
+  // unfiltered browse view so visitors land on working video content first.
+  const videoTeks = useMemo(() => (teks || []).filter((t) => t.hasVideo), [teks]);
+
   const filtered = useMemo(() => {
     const q = search.trim().toLowerCase();
-    return teksData.filter((t) => {
+    return (teks || []).filter((t) => {
       if (course !== "All courses" && t.course !== course) return false;
       if (strand !== "All strands" && t.strand !== strand) return false;
       if (substrand && t.substrand !== substrand) return false;
@@ -487,9 +490,9 @@ export default function TEKListPage({ navigate, initialFilters = {} }) {
       const hay = [
         t.code,
         t.title,
+        t.strand,
+        t.substrand,
         t.studentFriendly,
-        t.overview,
-        t.expectation,
         ...(t.displayTags || []),
       ]
         .filter(Boolean)
@@ -497,7 +500,7 @@ export default function TEKListPage({ navigate, initialFilters = {} }) {
         .toLowerCase();
       return hay.includes(q);
     });
-  }, [search, course, strand, substrand, dok]);
+  }, [teks, search, course, strand, substrand, dok]);
 
   // Group filtered TEKs by course → strand for visual clarity.
   const grouped = useMemo(() => {
@@ -539,6 +542,7 @@ export default function TEKListPage({ navigate, initialFilters = {} }) {
         setSubstrand={setSubstrand}
         onClearFilter={handleClearFilter}
         count={filtered.length}
+        strands={strands}
       />
 
       <div className="flex">
@@ -547,6 +551,7 @@ export default function TEKListPage({ navigate, initialFilters = {} }) {
           activeStrand={strand !== "All strands" ? strand : null}
           activeCourse={course !== "All courses" ? course : null}
           onNavigate={navigate}
+          teks={teks}
         />
 
         <main className="flex-1 max-w-[1500px] mx-auto px-5 sm:px-8 lg:px-12 py-10">
@@ -573,7 +578,19 @@ export default function TEKListPage({ navigate, initialFilters = {} }) {
           </p>
         </header>
 
-        {filtered.length === 0 ? (
+        {!teks ? (
+          <div
+            className="rounded-3xl p-12 text-center"
+            style={{ background: PALETTE.bone, border: `1px solid ${PALETTE.standardBorder}` }}
+          >
+            <p
+              className="text-[10px] font-mono uppercase tracking-[0.22em]"
+              style={{ color: PALETTE.monoGold }}
+            >
+              {error ? "Couldn't load the glossary index. Refresh to try again." : "Loading the glossary…"}
+            </p>
+          </div>
+        ) : filtered.length === 0 ? (
           <div
             className="rounded-3xl p-12 text-center"
             style={{ background: PALETTE.bone, border: `1px solid ${PALETTE.standardBorder}` }}
@@ -596,7 +613,7 @@ export default function TEKListPage({ navigate, initialFilters = {} }) {
             </div>
           ) : (
             <div className="flex flex-col gap-12">
-              {VIDEO_TEKS.length > 0 && (
+              {videoTeks.length > 0 && (
                 <section>
                   <div className="flex items-end justify-between mb-4 flex-wrap gap-2">
                     <div>
@@ -617,11 +634,11 @@ export default function TEKListPage({ navigate, initialFilters = {} }) {
                       className="text-[10px] font-mono uppercase tracking-[0.22em]"
                       style={{ color: PALETTE.monoGold }}
                     >
-                      {VIDEO_TEKS.length} live · more in production
+                      {videoTeks.length} live · more in production
                     </span>
                   </div>
                   <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                    {VIDEO_TEKS.map((t) => (
+                    {videoTeks.map((t) => (
                       <TEKCard
                         key={`vid-${t.code}`}
                         tek={t}

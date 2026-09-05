@@ -1,21 +1,38 @@
 import TEKDetailParchment from "../components/TEKDetailParchment";
-import teksData from "../data/teksData.json";
+import { useCourse, useIndex } from "../data/loader";
 import { reconstructCode, tekPath } from "../hooks/useHashRoute";
 
+const SHELL = {
+  background: "#F6F2EC",
+  color: "#1A1713",
+  fontFamily: '"Manrope", system-ui, sans-serif',
+};
+
 /**
- * Detail-view shell. Looks up the TEK by code (or by courseCode+letter+roman)
- * from the bundled teksData.json. Renders a "not found" state if missing.
+ * Detail-view shell. Fetches the course's JSON (public/data/<courseCode>.json),
+ * finds the TEK by code, and hands it to the parchment page along with its
+ * prev/next siblings. Renders a "not found" state if missing.
  */
-export default function ParchmentPreview({ code, courseCode, letter, roman, navigate }) {
-  const resolvedCode = code || reconstructCode(courseCode, letter, roman);
-  const tek = teksData.find((t) => t.code === resolvedCode);
+export default function ParchmentPreview({ courseCode, letter, roman, navigate }) {
+  const resolvedCode = reconstructCode(courseCode, letter, roman);
+  const { data: course, error } = useCourse(courseCode);
+  const { data: index } = useIndex();
+
+  if (!course && !error) {
+    return (
+      <div className="min-h-screen flex items-center justify-center p-10" style={SHELL}>
+        <p className="text-[10px] font-mono uppercase tracking-[0.22em]" style={{ color: "#6B5E3C" }}>
+          Loading {resolvedCode || "…"}
+        </p>
+      </div>
+    );
+  }
+
+  const tek = course?.find((t) => t.code === resolvedCode);
 
   if (!tek) {
     return (
-      <div
-        className="min-h-screen flex items-center justify-center p-10"
-        style={{ background: "#F6F2EC", color: "#1A1713", fontFamily: '"Manrope", system-ui, sans-serif' }}
-      >
+      <div className="min-h-screen flex items-center justify-center p-10" style={SHELL}>
         <div className="max-w-md text-center">
           <p
             className="text-[10px] font-mono uppercase tracking-[0.22em] mb-2"
@@ -42,15 +59,16 @@ export default function ParchmentPreview({ code, courseCode, letter, roman, navi
     );
   }
 
-  // Compute prev/next siblings in the same course for arrow navigation.
-  const same = teksData.filter((t) => t.course === tek.course);
-  const idx = same.findIndex((t) => t.code === tek.code);
-  const prev = idx > 0 ? same[idx - 1] : null;
-  const next = idx >= 0 && idx < same.length - 1 ? same[idx + 1] : null;
+  // Prev/next siblings in the same course for arrow navigation.
+  const idx = course.findIndex((t) => t.code === tek.code);
+  const prev = idx > 0 ? course[idx - 1] : null;
+  const next = idx >= 0 && idx < course.length - 1 ? course[idx + 1] : null;
 
   return (
     <TEKDetailParchment
       tek={tek}
+      teksIndex={index}
+      navigate={navigate}
       onNavPrev={prev ? () => navigate?.(tekPath(prev)) : null}
       onNavNext={next ? () => navigate?.(tekPath(next)) : null}
       onNavHome={() => navigate?.("/")}
