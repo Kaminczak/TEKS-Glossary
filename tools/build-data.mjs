@@ -9,9 +9,14 @@
 //   src/data/stats.json        {total, withVideo} — tiny, imported by the landing
 //                              page so it can show real numbers without a fetch.
 //
+// Worksheets: drop a PDF in public/worksheets/ named "<slug> - <Title>.pdf", e.g.
+// "110-36-4-G - The Detail Sorter.pdf", and it is attached to that TEK as
+// { worksheet: { title, url } } — no JSON to edit. The slug is the same one the
+// video keys use (110.36(4)(G) -> 110-36-4-G).
+//
 // Runs automatically before `vite dev` and `vite build` (see package.json).
 // public/data/ is gitignored; stats.json is committed so a stale count can't ship.
-import { readFileSync, writeFileSync, mkdirSync, rmSync } from "node:fs";
+import { readFileSync, writeFileSync, mkdirSync, rmSync, readdirSync, existsSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -28,6 +33,18 @@ const blurb = (s = "", max = 180) => {
   return `${cut}…`;
 };
 
+// Same slug the R2 video keys use: 110.36(7)(D)(i) -> 110-36-7-D-i
+export const tekSlug = (code) => code.replace(/[().]+/g, "-").replace(/-+$/, "");
+
+const wsDir = join(root, "public", "worksheets");
+const worksheets = new Map(); // slug -> { title, url }
+if (existsSync(wsDir)) {
+  for (const f of readdirSync(wsDir)) {
+    const m = /^(\S+) - (.+)\.pdf$/i.exec(f);
+    if (m) worksheets.set(m[1], { title: m[2], url: `/worksheets/${f}` });
+  }
+}
+
 rmSync(outDir, { recursive: true, force: true });
 mkdirSync(outDir, { recursive: true });
 
@@ -41,13 +58,11 @@ const index = teks.map((t) => ({
   substrand: t.substrand || null,
   dok: t.dok,
   hasVideo: hasVideo(t),
+  hasWorksheet: worksheets.has(tekSlug(t.code)),
   studentFriendly: blurb(t.studentFriendly),
   displayTags: t.displayTags || [],
 }));
 writeFileSync(join(outDir, "index.json"), JSON.stringify(index));
-
-// Same slug the R2 video keys use: 110.36(7)(D)(i) -> 110-36-7-D-i
-export const tekSlug = (code) => code.replace(/[().]+/g, "-").replace(/-+$/, "");
 
 const byCourse = new Map();
 mkdirSync(join(outDir, "tek"), { recursive: true });
@@ -55,7 +70,11 @@ for (const t of teks) {
   const key = String(t.courseCode);
   if (!byCourse.has(key)) byCourse.set(key, []);
   byCourse.get(key).push(t);
-  writeFileSync(join(outDir, "tek", `${tekSlug(t.code)}.json`), JSON.stringify({ ...t, courseCode: key }));
+  const ws = worksheets.get(tekSlug(t.code));
+  writeFileSync(
+    join(outDir, "tek", `${tekSlug(t.code)}.json`),
+    JSON.stringify({ ...t, courseCode: key, ...(ws ? { worksheet: ws } : {}) })
+  );
 }
 
 const stats = {
@@ -68,5 +87,5 @@ writeFileSync(join(root, "src", "data", "stats.json"), JSON.stringify(stats, nul
 const kb = (s) => `${(Buffer.byteLength(s) / 1024).toFixed(0)} KB`;
 console.log(
   `data: ${teks.length} TEKS → index.json ${kb(JSON.stringify(index))}, ` +
-  `${teks.length} per-TEK files, ${stats.withVideo} with video`
+  `${teks.length} per-TEK files, ${stats.withVideo} with video, ${worksheets.size} worksheets`
 );

@@ -491,6 +491,34 @@ function SectionVideo({ tek, resolveUrl }) {
             </li>
           ))}
         </ul>
+
+        {/* Print & practice: a PDF dropped in public/worksheets/ (see tools/build-data.mjs).
+            Only rendered when one exists — nothing on the page promises what isn't live. */}
+        {tek.worksheet && (
+          <a
+            href={resolveUrl(tek.worksheet.url)}
+            target="_blank"
+            rel="noopener"
+            className="mt-5 flex items-center gap-3 rounded-xl px-4 py-3 outline-none focus-visible:ring-2 focus-visible:ring-[#1A1713] hover:-translate-y-px transition-transform"
+            style={{ background: PALETTE.linen, border: `1px solid ${PALETTE.tagBorder}`, color: PALETTE.inkPrimary }}
+          >
+            <span
+              className="inline-flex items-center justify-center w-9 h-9 rounded-lg shrink-0"
+              style={{ background: PALETTE.bone, color: 'var(--accent)', border: `1px solid ${PALETTE.tagBorder}` }}
+            >
+              <IconFilePencil size={18} />
+            </span>
+            <span className="flex flex-col min-w-0">
+              <span className="text-[10px] font-mono uppercase tracking-[0.18em]" style={{ color: PALETTE.monoGold }}>
+                Print &amp; practice · PDF
+              </span>
+              <span className="text-sm font-semibold truncate">{tek.worksheet.title}</span>
+            </span>
+            <span className="ml-auto shrink-0" style={{ color: PALETTE.inkTertiary }}>
+              <IconArrowUpRight size={16} />
+            </span>
+          </a>
+        )}
       </div>
     </>
   );

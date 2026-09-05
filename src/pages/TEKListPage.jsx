@@ -148,6 +148,15 @@ function TEKCard({ tek, onOpen, onFilter }) {
           {tek.code}
         </span>
         <div className="flex items-center gap-2">
+          {tek.hasWorksheet && (
+            <span
+              title="Has a printable worksheet"
+              className="inline-flex items-center gap-1 px-1.5 py-0.5 rounded text-[10px] font-mono uppercase tracking-[0.12em]"
+              style={{ background: PALETTE.linen, color: PALETTE.inkTertiary, border: `1px solid ${PALETTE.tagBorder}` }}
+            >
+              worksheet
+            </span>
+          )}
           {hasVideo && (
             <span
               title="Has explainer video"
