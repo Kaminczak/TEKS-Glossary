@@ -343,9 +343,9 @@ function VideoCard({ video, sectionTitle }) {
 // moves, Two Things That Trip Them Up → the misconceptions. Sections not rendered yet show as disabled
 // so the page already has its final shape while the catalog catches up.
 const SECTION_ORDER = [
-  { n: 1, title: 'Define' },
-  { n: 2, title: "Two Tricks I've Picked Up" },
-  { n: 3, title: 'Two Things That Trip Them Up' },
+  { n: 1, title: 'TEK Defined' },
+  { n: 2, title: 'Teaching Tips' },
+  { n: 3, title: 'Student Misconceptions' },
 ];
 
 function SectionVideo({ tek, resolveUrl }) {
@@ -377,7 +377,7 @@ function SectionVideo({ tek, resolveUrl }) {
   return (
     <>
       {sections && (
-        <div className="px-7 pb-4 flex flex-wrap items-center gap-x-5 gap-y-2" role="tablist" aria-label="Explainer sections">
+        <div className="px-7 pb-4 flex flex-wrap items-center gap-x-6 gap-y-2" role="tablist" aria-label="Explainer sections">
           {SECTION_ORDER.map(({ n, title }) => {
             const has = sections.some((v) => v.section === n);
             const on = has && n === active;
@@ -394,7 +394,7 @@ function SectionVideo({ tek, resolveUrl }) {
                   setActive(n);
                   setSwitched(true);
                 }}
-                className="inline-flex items-center gap-2 min-h-6 text-[11px] font-mono uppercase tracking-[0.18em] outline-none rounded focus-visible:ring-2 focus-visible:ring-[#1A1713] disabled:cursor-not-allowed"
+                className="inline-flex items-center gap-2 min-h-6 whitespace-nowrap text-[10.5px] font-mono uppercase tracking-[0.1em] outline-none rounded focus-visible:ring-2 focus-visible:ring-[#1A1713] disabled:cursor-not-allowed"
                 style={{
                   color: on ? 'var(--accent)' : has ? PALETTE.inkTertiary : PALETTE.boneStone,
                   fontWeight: on ? 700 : 500,
@@ -932,7 +932,7 @@ export default function TEKDetailParchment({
               className="rounded-3xl overflow-hidden flex flex-col"
               style={{ background: PALETTE.linen, border: `1px solid ${PALETTE.standardBorder}` }}
             >
-              <div className="p-7 pb-5">
+              <div className="p-7 pb-2">
                 <BlockHeading
                   icon={IconPlayerPlayFilled}
                   eyebrow="Mr. K explains"
